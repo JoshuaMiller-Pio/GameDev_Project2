@@ -14,6 +14,8 @@ namespace GameDev_Project2
         }
 
         //If a move is possible this moves the player object and changes the tile types of both the new and old positions
+        
+        //THIS DOES NOT WORK YET
         public bool MovePlayer(Hero h)
         {
             //Empties the players current tile
@@ -35,8 +37,11 @@ namespace GameDev_Project2
                     h.SetX(h.GetX() - 1);
                     break;
                 case Character.Movement.Right:
-                    h.SetX(h.GetX() + 1);
+                    //h.SetX(h.GetX() + 1);
+                    h.Move(Character.Movement.Right);
                     break;
+
+                   
                 default:
                     break;
             }

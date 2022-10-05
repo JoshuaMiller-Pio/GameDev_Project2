@@ -147,6 +147,7 @@ namespace GameDev_Project2
 
                 x = x + 1;
                 SetX(x);
+                
             }
             if (move == Movement.Up)
             {

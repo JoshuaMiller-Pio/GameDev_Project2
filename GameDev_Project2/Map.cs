@@ -124,7 +124,7 @@ namespace GameDev_Project2
                     MapArray[X, Y] = new Hero(X, Y, "unset hero name");
                     break;
                 case TileType.Enemy:
-                    MapArray[X, Y] = new Swamp_Creature(X, Y); //create an if else with random chance to choose different enemies
+                    MapArray[X, Y] = new Swamp_Creature(X, Y); //create an if else with random chance to choose differeSnt enemies
                     break;
                 case TileType.Gold:
                     break;
