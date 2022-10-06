@@ -8,7 +8,7 @@ namespace GameDev_Project2
 {
    public class Mage : Enemy
     {
-        public Mage(int x, int y) : base(x, y, 5, 5, 1, "Swamp Creature")
+        public Mage(int x, int y) : base(x, y, 5, 5, 1, "Mage")
         {
 
         }
