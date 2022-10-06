@@ -57,6 +57,7 @@
     </Compile>
     <Compile Include="GameEngine.cs" />
     <Compile Include="Hero.cs" />
+    <Compile Include="Mage.cs" />
     <Compile Include="Map.cs" />
     <Compile Include="Obstacle.cs" />
     <Compile Include="Program.cs" />

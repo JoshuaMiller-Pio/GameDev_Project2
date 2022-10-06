@@ -162,6 +162,10 @@ namespace GameDev_Project2
                 y = y + 1;
                 SetY(y);
             }
+            if (move == Movement.NoMovement)
+            {
+                return;
+            }
         }
 
         //checks if the character is dead or not
@@ -181,7 +185,7 @@ namespace GameDev_Project2
         }
 
         //Gets the Hero's and a targets position, then calculates the distance between them
-        public int CheckDistanceToTarget(Hero h, Tile target)
+        public int CheckDistanceToTarget(Character h, Tile target)
         {
             int HeroX = h.GetX();
             int HeroY = h.GetY();
@@ -208,7 +212,7 @@ namespace GameDev_Project2
             return ActualDistance;
         }
 
-        public virtual bool CheckRange(Hero h, Tile target)
+        public virtual bool CheckRange(Character h, Tile target)
         {
             double CurrentRange = h.Range;
             int CurrentDistance = CheckDistanceToTarget(h, target);
