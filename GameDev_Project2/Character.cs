@@ -10,6 +10,7 @@ namespace GameDev_Project2
         protected double Damage;
         protected double Range;
         protected char symbol;
+        protected double heldGold;
         protected TileType type;
         protected Movement move;
         public Tile[,] CharacterVision;
@@ -30,7 +31,7 @@ namespace GameDev_Project2
         }
 
         //Constructor for Character
-        public Character(int x, int y, TileType type, int symbolIndex, double MaxHP, double Damage, double Range) : base(x, y, type, symbolIndex)
+        public Character(int x, int y, TileType type, int symbolIndex, double MaxHP, double Damage, double Range, double heldGold) : base(x, y, type, symbolIndex)
         {
             this.MaxHP = MaxHP;
             this.HP = MaxHP;
@@ -49,6 +50,11 @@ namespace GameDev_Project2
         public void SetHP(double HP)
         {
             this.HP = HP;
+        }
+
+        public void SetCurrentHeldGold(double HeldGold)
+        {
+            this.heldGold = heldGold;
         }
         public void SetSymbol(char symbol)
         {
@@ -88,6 +94,10 @@ namespace GameDev_Project2
             return HP;
         }
 
+        public double GetHeldGold()
+        {
+            return heldGold;
+        }
         public char GetSymbol()
         {
             return symbol;
@@ -228,6 +238,14 @@ namespace GameDev_Project2
             return InRange;
         }
 
+        public void PickUp(Item i)
+        {
+            if(i.GetCurrentTileType() == TileType.Gold)
+            {
+                Gold g = (Gold)i;
+                heldGold = heldGold + g.getCurrentGold();
+            }
+        }
         public abstract override string ToString();
 
 
