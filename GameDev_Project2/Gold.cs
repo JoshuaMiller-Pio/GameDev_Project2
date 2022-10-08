@@ -11,11 +11,11 @@ namespace GameDev_Project2
        private int currentgold;
        private Random random;
 
-        public Gold(int x, int y, int CurrentGold ):base(x,y, TileType.Gold, 3)
+        public Gold(int x, int y, int ValueOfGold) :base(x,y, TileType.Gold, 2)
         {
             random = new Random();
-            CurrentGold = random.Next(1, 6);
-            currentgold = CurrentGold;
+            ValueOfGold = random.Next(2, 6);
+           
         }
 
         #region accessors and mutators

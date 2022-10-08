@@ -16,29 +16,37 @@ namespace GameDev_Project2
         //If a move is possible this moves the player object and changes the tile types of both the new and old positions
         
         //THIS DOES NOT WORK YET
-        public bool MovePlayer(Hero h)
+        public bool MovePlayer(Character.Movement c)
         {
-            //Empties the players current tile
-            map.GetXY(h.GetX(), h.GetY()).SetCurrentTileType(Tile.TileType.Empty);
+
             PlayerMoves = true;
             //Moves the player if able
-            switch (h.ReturnMove(h.GetMove()))
+            switch (map.hero.ReturnMove(map.hero.GetMove()))
             {
+                
                 case Character.Movement.NoMovement:
                     PlayerMoves = false;
                     break;
+
                 case Character.Movement.Up:
-                    h.SetY(h.GetY() - 1);
+
+                    map.hero.Move(Character.Movement.Up);
+                    map.GetXY(map.hero.GetX(), map.hero.GetY()).SetCurrentTileType(Tile.TileType.Empty);
                     break;
+
                 case Character.Movement.Down:
-                    h.SetY(h.GetY() + 1);
+                    map.hero.SetY(map.hero.GetY() + 1);
+                    map.GetXY(map.hero.GetX(), map.hero.GetY()).SetCurrentTileType(Tile.TileType.Empty);
                     break;
+
                 case Character.Movement.Left:
-                    h.SetX(h.GetX() - 1);
+                    map.hero.SetX(map.hero.GetX() - 1);
+                    map.GetXY(map.hero.GetX(), map.hero.GetY()).SetCurrentTileType(Tile.TileType.Empty);
                     break;
+
                 case Character.Movement.Right:
-                    //h.SetX(h.GetX() + 1);
-                    h.Move(Character.Movement.Right);
+                    map.hero.SetX(map.hero.GetX() + 1);
+                    map.GetXY(map.hero.GetX(), map.hero.GetY()).SetCurrentTileType(Tile.TileType.Empty);
                     break;
 
                    
@@ -46,7 +54,7 @@ namespace GameDev_Project2
                     break;
             }
             //Fills the players new position by setting the tile type
-            map.GetXY(h.GetX(), h.GetY()).SetCurrentTileType(Tile.TileType.Hero);
+            map.GetXY(map.hero.GetX(), map.hero.GetY()).SetCurrentTileType(Tile.TileType.Hero);
             return PlayerMoves;
         }
 
