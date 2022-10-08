@@ -12,11 +12,13 @@ namespace GameDev_Project2
        private int CurrentGold;
        private Random random;
 
+
         public Gold(int x, int y, int ValueOfGold ):base(x,y, TileType.Gold, 2)
         {
             random = new Random();
             ValueOfGold = random.Next(1, 6);
             
+
         }
 
         #region accessors and mutators

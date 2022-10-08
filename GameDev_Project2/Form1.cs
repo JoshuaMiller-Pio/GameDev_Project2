@@ -246,15 +246,13 @@ namespace  GameDev_Project2
             if (gameEngine.map.GetXY(selectedX, selectedY ).GetCurrentTileType() != Tile.TileType.Border && gameEngine.map.GetXY(selectedX+1, selectedY+1).GetCurrentTileType() != Tile.TileType.Enemy)    
             {
 
-                gameEngine.map.hero.Move(move);
                 
+                gameEngine.MovePlayer(move);
+                Console.WriteLine(gameEngine.map.hero.GetY()+1 + " " + gameEngine.map.hero.GetX()+1);
             }
 
         }
 
-        private void txt00_TextChanged(object sender, EventArgs e)
-        {
 
-        }
     }
 }

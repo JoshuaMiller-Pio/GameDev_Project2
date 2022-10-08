@@ -1296,7 +1296,7 @@
             this.txt00.Size = new System.Drawing.Size(70, 66);
             this.txt00.TabIndex = 106;
             this.txt00.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txt00.TextChanged += new System.EventHandler(this.txt00_TextChanged);
+
             // 
             // btnMove
             // 
