@@ -253,9 +253,6 @@ namespace  GameDev_Project2
 
         }
 
-        private void txt00_TextChanged(object sender, EventArgs e)
-        {
 
-        }
     }
 }
