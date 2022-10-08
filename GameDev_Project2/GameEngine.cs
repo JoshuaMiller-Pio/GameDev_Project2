@@ -9,7 +9,7 @@ namespace GameDev_Project2
         public GameEngine()
         {
 
-            map = new Map(10, 9);
+            map = new Map(10, 9, 7);
 
         }
 
