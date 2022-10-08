@@ -152,5 +152,21 @@ namespace GameDev_Project2
 
             return MapArray[X, Y];
         }
+
+        //Ask Muhammad about setting the item in the array to null before return
+        public Item GetItemAtPosition(int x, int y)
+        {
+            Tile currentPosition = MapArray[x, y];
+            for (int i = 0; i < items.Length; i++)
+            {
+                if(items[i] == currentPosition)
+                {
+                    Item item = items[i];
+                    items[i] = null;
+                    return item;
+                }
+            }
+            return null;
+        }
     }
 }
