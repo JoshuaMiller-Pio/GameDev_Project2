@@ -7,7 +7,7 @@ namespace GameDev_Project2
     {
         public Enemy[] enemies;
         public Hero hero;
-
+        public Item[] items;
         private int MapWidth;
         private int MapHeight;
         private Random randomGenerator;
@@ -24,12 +24,14 @@ namespace GameDev_Project2
         }
 
         //Constructs the map, set its various statistics, creates the hero object through the Create() and does the same for all enemies by runing the Create() through a for loop as long as the enemies array
-        public Map(int randomWidthMax, int randomHeightMax)
+        public Map(int randomWidthMax, int randomHeightMax, int numberOfItemsMax)
         {
             randomGenerator = new Random();
             MapWidth = randomGenerator.Next(5, randomWidthMax);
             MapHeight = randomGenerator.Next(5, randomHeightMax);
+            int numberOfItems = randomGenerator.Next(1, numberOfItemsMax);
 
+           
 
             MapArray = new Tile[MapWidth, MapHeight];
 
@@ -58,9 +60,15 @@ namespace GameDev_Project2
             enemies = new Enemy[randomGenerator.Next(1, 5)];
             for (int i = 0; i < enemies.Length; i++)
             {
-                enemies[i] = (Enemy)Create(Tile.TileType.Enemy);
+                    enemies[i] = (Enemy)Create(Tile.TileType.Enemy);
             }
 
+            //Calls the create function and tells it to create a gold spawn by passing through the Gold TileType, this is done through a for loop to create as many gold spawns as the enemies array requires
+            items = new Item[numberOfItems];
+            for (int i = 0; i < items.Length; i++)
+            {
+                items[i] = (Gold)Create(TileType.Gold);
+            }
             ////Calls the create function and tells it to create a hero by passing through the Hero TileType
             hero = (Hero)Create(Tile.TileType.Hero);
             //UpdateVision(hero, hero.ReturnMove(Character.Movement.Up));
@@ -124,9 +132,19 @@ namespace GameDev_Project2
                     MapArray[X, Y] = new Hero(X, Y, "unset hero name");
                     break;
                 case TileType.Enemy:
-                    MapArray[X, Y] = new Swamp_Creature(X, Y); //create an if else with random chance to choose differeSnt enemies
+                    int EnemyType = randomGenerator.Next(0, 2);
+                    if(EnemyType == 0)
+                    {
+                        MapArray[X, Y] = new Mage(X, Y);
+                    }
+                    if (EnemyType == 1)
+                    {
+                        MapArray[X, Y] = new Swamp_Creature(X, Y); //create an if else with random chance to choose differeSnt enemies
+                    }
                     break;
                 case TileType.Gold:
+                    int ValueOfGold = randomGenerator.Next(1, 5);
+                    MapArray[X, Y] = new Gold(X, Y, ValueOfGold);
                     break;
                 case TileType.Weapon:
                     break;
