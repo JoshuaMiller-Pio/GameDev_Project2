@@ -21,7 +21,7 @@ namespace GameDev_Project2
         }
         public override string ToString()
         {
-            return String.Format("Enemy Info:\n{0} at position: [{1},{2}] \nHP: {3} \nDamage: ({4})", EnemyName, GetX() + 1, GetY() + 1, this.HP, this.Damage);
+            return String.Format("Enemy Info:\n{0} at position: [{1},{2}] \nHP: {3} \nDamage: {4}", EnemyName, GetX() + 1, GetY() + 1, this.HP, this.Damage);
         }
     }
 }

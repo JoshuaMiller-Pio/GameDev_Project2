@@ -129,9 +129,11 @@ namespace GameDev_Project2
             switch (type)
             {
                 case TileType.Hero:
-                    MapArray[X, Y] = new Hero(X, Y, "unset hero name");
+                    MapArray[X, Y] = new Hero(X, Y, "Unset hero name");
                     break;
+
                 case TileType.Enemy:
+                    //Uses random number generator to decide between enemy types
                     int EnemyType = randomGenerator.Next(0, 2);
                     if(EnemyType == 0)
                     {
@@ -139,13 +141,16 @@ namespace GameDev_Project2
                     }
                     if (EnemyType == 1)
                     {
-                        MapArray[X, Y] = new Swamp_Creature(X, Y); //create an if else with random chance to choose differeSnt enemies
+                        MapArray[X, Y] = new Swamp_Creature(X, Y); 
                     }
                     break;
+
                 case TileType.Gold:
+                    //Uses random number generator to assign the value of the gold tile
                     int ValueOfGold = randomGenerator.Next(1, 5);
                     MapArray[X, Y] = new Gold(X, Y, ValueOfGold);
                     break;
+
                 case TileType.Weapon:
                     break;
             }
@@ -159,7 +164,7 @@ namespace GameDev_Project2
             Tile currentPosition = MapArray[x, y];
             for (int i = 0; i < items.Length; i++)
             {
-                if(items[i] == currentPosition)
+                if(items[i].GetX() == currentPosition.GetX() && items[i].GetY() == currentPosition.GetY())
                 {
                     Item item = items[i];
                     items[i] = null;
