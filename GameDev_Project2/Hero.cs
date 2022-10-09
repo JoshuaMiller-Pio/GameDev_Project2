@@ -10,7 +10,7 @@ namespace GameDev_Project2
     {
         public string HeroName;
 
-        public Hero(int x, int y, string HeroName) : base(x, y, TileType.Hero, 0, 10, 2, 1)
+        public Hero(int x, int y, string HeroName) : base(x, y, TileType.Hero, 0, 10, 2, 1, 0)
         {
             this.HeroName = HeroName;
         }
@@ -40,7 +40,7 @@ namespace GameDev_Project2
 
         public override string ToString()
         {
-            return String.Format("Player Stats:\n {0}\n {1}/{2}\n Damage: {3}\n [{4},{5}]", HeroName, this.HP, this.MaxHP, Damage, GetX() + 1, GetY() + 1);
+            return String.Format("Player Stats:\n{0}\n{1}/{2}\nDamage: {3}\nPosition: [{4},{5}]\nGold: {6}", HeroName, this.HP, this.MaxHP, Damage, GetX() + 1, GetY() + 1, heldGold);
         }
     }
 }
