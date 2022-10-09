@@ -54,7 +54,7 @@ namespace GameDev_Project2
 
         public void SetCurrentHeldGold(double HeldGold)
         {
-            this.heldGold = heldGold;
+            this.heldGold = HeldGold;
         }
         public void SetSymbol(char symbol)
         {
@@ -238,12 +238,12 @@ namespace GameDev_Project2
             return InRange;
         }
 
-        public void PickUp(Item i)
+        public void PickUp(Item i, Hero h)
         {
             if(i.GetCurrentTileType() == TileType.Gold)
             {
                 Gold g = (Gold)i;
-                heldGold = heldGold + g.getCurrentGold();
+                h.SetCurrentHeldGold(h.GetHeldGold() + g.getCurrentGold());
             }
         }
         public abstract override string ToString();
