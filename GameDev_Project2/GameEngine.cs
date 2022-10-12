@@ -15,7 +15,6 @@ namespace GameDev_Project2
 
         //If a move is possible this moves the player object and changes the tile types of both the new and old positions
         
-        //THIS DOES NOT WORK YET
         public bool MovePlayer(Character.Movement c)
         {
 
@@ -31,24 +30,24 @@ namespace GameDev_Project2
 
                 case Character.Movement.Up:
 
-                    map.hero.Move(Character.Movement.Up);
                     map.GetXY(map.hero.GetX(), map.hero.GetY()).SetCurrentTileType(Tile.TileType.Empty);
+                    map.hero.SetY(map.hero.GetY() - 1);
                     break;
 
                 case Character.Movement.Down:
-                    map.hero.SetY(map.hero.GetY() + 1);
                     map.GetXY(map.hero.GetX(), map.hero.GetY()).SetCurrentTileType(Tile.TileType.Empty);
+                    map.hero.SetY(map.hero.GetY() + 1);
                     break;
 
                 case Character.Movement.Left:
+                    map.GetXY(map.hero.GetX(), map.hero.GetY()).SetCurrentTileType(Tile.TileType.Empty);
                     map.hero.SetX(map.hero.GetX() - 1);
                    
-                    map.GetXY(map.hero.GetX(), map.hero.GetY()).SetCurrentTileType(Tile.TileType.Empty);
                     break;
 
                 case Character.Movement.Right:
-                    map.hero.SetX(map.hero.GetX() + 1);
                     map.GetXY(map.hero.GetX(), map.hero.GetY()).SetCurrentTileType(Tile.TileType.Empty);
+                    map.hero.SetX(map.hero.GetX() + 1);
                     break;
 
                    
