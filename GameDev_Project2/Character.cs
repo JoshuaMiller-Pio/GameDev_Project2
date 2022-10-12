@@ -130,15 +130,9 @@ namespace GameDev_Project2
 
         #endregion
 
-        public virtual void Attack(Character target, Character attacker)
+        public virtual void Attack(Character target)
         {
-            double leftover;
-            //Calls HP value of the attacked character
-            HP = target.GetHP();
-            //Calls Damage value for attacking character
-            Damage = attacker.GetDamage();
-            leftover = HP - Damage;
-            target.SetHP(leftover);
+            target.SetHP(target.GetHP()-GetDamage());
         }
 
         //gets value from movment-num to move a character

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -43,20 +44,6 @@ namespace  GameDev_Project2
                 {txt07,txt17,txt27,txt37,txt47,txt57,txt67,txt77,txt87,txt97},
                 {txt08,txt18,txt28,txt38,txt48,txt58,txt68,txt78,txt88,txt98}
             };
-            Console.WriteLine(gameEngine.ShowMap());
-
-            txtStats.Text = gameEngine.map.hero.ToString() + "\n";
-            for (int i = 0; i < 74; i++)
-            {
-                txtStats.AppendText("-");
-            }
-            for (int i = 0; i < gameEngine.map.enemies.Length; i++)
-            {
-                txtStats.AppendText("-");
-                txtStats.AppendText("\n" + gameEngine.map.enemies[i].ToString());
-            }
-
-
             for (int i = 0; i <= 9; i++)
             {
 
@@ -69,6 +56,9 @@ namespace  GameDev_Project2
 
                 }
             }
+            Console.WriteLine(gameEngine.ShowMap());
+            Updatestats();
+
         }
 
         //displays the map
@@ -202,6 +192,7 @@ namespace  GameDev_Project2
         private void btnAttack_Click_1(object sender, EventArgs e)
         {
             int EX, EY, EX1, EY1;
+
             //Hightlight(selectedX,selectedY);
             TextBox[,] textBoxes =
           {
@@ -215,7 +206,7 @@ namespace  GameDev_Project2
                 {txt07,txt17,txt27,txt37,txt47,txt57,txt67,txt77,txt87,txt97},
                 {txt08,txt18,txt28,txt38,txt48,txt58,txt68,txt78,txt88,txt98}
             };
-            //selectedX
+            
             EX = selectedX + 1;
             EY = selectedY + 1;
 
@@ -225,8 +216,10 @@ namespace  GameDev_Project2
                 if (gameEngine.map.enemies[i].GetX() + 1 == EX && gameEngine.map.enemies[i].GetY() + 1 == EY)
                 {
 
-                    gameEngine.map.hero.Attack(gameEngine.map.enemies[i], gameEngine.map.hero);
+                    gameEngine.map.hero.Attack(gameEngine.map.enemies[i]);
+                    Updatestats();
 
+                    
 
 
                     if (gameEngine.map.enemies[i].CheckisDead(gameEngine.map.enemies[i]) == true)
@@ -234,25 +227,86 @@ namespace  GameDev_Project2
                         gameEngine.map.enemies[i].SetCurrentTileType(Tile.TileType.Empty);
                         textBoxes[gameEngine.map.enemies[i].GetY(), gameEngine.map.enemies[i].GetX()].Text = ".";
                     }
-
                 }
             }
-
+            //updatemap();
+            gameEngine.EnemyAttacks();
 
         }
         //allows the hero to move
         private void Move()
         {
-            if (gameEngine.map.GetXY(selectedX, selectedY ).GetCurrentTileType() != Tile.TileType.Border && gameEngine.map.GetXY(selectedX+1, selectedY+1).GetCurrentTileType() != Tile.TileType.Enemy)    
-            {
-
-                
+            if (gameEngine.map.GetXY(selectedX+1, selectedY+1 ).GetCurrentTileType() != Tile.TileType.Border && gameEngine.map.GetXY(selectedX+1, selectedY+1).GetCurrentTileType() != Tile.TileType.Enemy)    
+            {    
                 gameEngine.MovePlayer(move);
                 Console.WriteLine(gameEngine.map.hero.GetY()+1 + " " + gameEngine.map.hero.GetX()+1);
+                
             }
+           // updatemap();
+
+            gameEngine.MoveEnemies();
+            Updatestats();
 
         }
 
+        private void Updatestats()
+        {
+            txtStats.Text = gameEngine.map.hero.ToString() + "\n";
+            for (int i = 0; i < 74; i++)
+            {
+                txtStats.AppendText("-");
+            }
+            for (int i = 0; i < gameEngine.map.enemies.Length; i++)
+            {
+                txtStats.AppendText("-");
+                txtStats.AppendText("\n" + gameEngine.map.enemies[i].ToString());
+            }
+
+
+        }
+        public void updatemap()
+            {
+                TextBox[,] textBoxes =
+          {
+                {txt00,txt10,txt20,txt30,txt40,txt50,txt60,txt70,txt80,txt90},
+                {txt01,txt11,txt21,txt31,txt41,txt51,txt61,txt71,txt81,txt91},
+                {txt02,txt12,txt22,txt32,txt42,txt52,txt62,txt72,txt82,txt92},
+                {txt03,txt13,txt23,txt33,txt43,txt53,txt63,txt73,txt83,txt93},
+                {txt04,txt14,txt24,txt34,txt44,txt54,txt64,txt74,txt84,txt94},
+                {txt05,txt15,txt25,txt35,txt45,txt55,txt65,txt75,txt85,txt95},
+                {txt06,txt16,txt26,txt36,txt46,txt56,txt66,txt76,txt86,txt96},
+                {txt07,txt17,txt27,txt37,txt47,txt57,txt67,txt77,txt87,txt97},
+                {txt08,txt18,txt28,txt38,txt48,txt58,txt68,txt78,txt88,txt98}
+            };
+
+                for(int i = 0; i< gameEngine.map.GetMapWidth(); i++)
+                {
+                     for (int j = 0; j < gameEngine.map.GetMapHeight(); j++)
+                     { 
+                        Tile.TileType type;
+                        type = gameEngine.map.GetXY(j,i).GetCurrentTileType();
+                        switch (type)
+                        {
+                            case Tile.TileType.Hero:
+                            textBoxes[j, i].Text = "H";
+                            break;
+
+                            case Tile.TileType.Empty:
+                            textBoxes[j, i].Text = ".";
+                            break;
+
+                         
+
+
+
+                        default:
+                            break;
+                        }
+                     }
+                
+                }
+
+            }
 
     }
 }

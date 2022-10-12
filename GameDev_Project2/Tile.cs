@@ -11,7 +11,7 @@ namespace GameDev_Project2
         protected int X;
         protected int Y;
         protected TileType type;
-        protected char[] Symbols = new char[6] { 'H', 'E', 'G', 'W', '#', '.' };
+        protected char[] Symbols = new char[7] { 'H', 'E', 'G', 'W', '#', '.', 'M'};
         protected char Symbol;
         public enum TileType
         {

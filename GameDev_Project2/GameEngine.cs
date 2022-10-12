@@ -21,7 +21,8 @@ namespace GameDev_Project2
 
             PlayerMoves = true;
             //Moves the player if able
-            switch (map.hero.ReturnMove(map.hero.GetMove()))
+            
+            switch (c)
             {
                 
                 case Character.Movement.NoMovement:
@@ -41,6 +42,7 @@ namespace GameDev_Project2
 
                 case Character.Movement.Left:
                     map.hero.SetX(map.hero.GetX() - 1);
+                   
                     map.GetXY(map.hero.GetX(), map.hero.GetY()).SetCurrentTileType(Tile.TileType.Empty);
                     break;
 
@@ -62,6 +64,20 @@ namespace GameDev_Project2
         {
             string DisplayMap = Convert.ToString(map.MapArray);
             return string.Format(DisplayMap);
+        }
+
+
+
+        //still in progress
+        public void EnemyAttacks()
+        {
+
+
+        }
+        public void MoveEnemies()
+        {
+
+            EnemyAttacks();
         }
     }
 }
