@@ -32,33 +32,9 @@ namespace  GameDev_Project2
         {
             Size = new Size(1050, 1000);
 
-            TextBox[,] textBoxes =
-          {
-                {txt00,txt10,txt20,txt30,txt40,txt50,txt60,txt70,txt80,txt90},
-                {txt01,txt11,txt21,txt31,txt41,txt51,txt61,txt71,txt81,txt91},
-                {txt02,txt12,txt22,txt32,txt42,txt52,txt62,txt72,txt82,txt92},
-                {txt03,txt13,txt23,txt33,txt43,txt53,txt63,txt73,txt83,txt93},
-                {txt04,txt14,txt24,txt34,txt44,txt54,txt64,txt74,txt84,txt94},
-                {txt05,txt15,txt25,txt35,txt45,txt55,txt65,txt75,txt85,txt95},
-                {txt06,txt16,txt26,txt36,txt46,txt56,txt66,txt76,txt86,txt96},
-                {txt07,txt17,txt27,txt37,txt47,txt57,txt67,txt77,txt87,txt97},
-                {txt08,txt18,txt28,txt38,txt48,txt58,txt68,txt78,txt88,txt98}
-            };
-            for (int i = 0; i <= 9; i++)
-            {
-
-                for (int j = 0; j <= 8; j++)
-                {
-                    if (textBoxes[j, i].Text == "")
-                    {
-                        textBoxes[j, i].Hide();
-                    }
-
-                }
-            }
-            Console.WriteLine(gameEngine.ShowMap());
+            Console.WriteLine(gameEngine.map.GetMapHeight() +" "+ gameEngine.map.GetMapWidth());
             Updatestats();
-
+           
         }
 
         //displays the map
@@ -77,14 +53,28 @@ namespace  GameDev_Project2
                 { txt08,txt18,txt28,txt38,txt48,txt58,txt68,txt78,txt88,txt98}
             };
 
-
+            //defult starting map
             for (int x = 0; x < gameEngine.map.GetMapWidth(); x++)
             {
                 for (int y = 0; y < gameEngine.map.GetMapHeight(); y++)
                 {
-                    textBoxes[y, x].Text = gameEngine.map.GetXY(y, x).GetCurrentSymbol().ToString();
+                    textBoxes[y,x].Text = gameEngine.map.GetXY(x, y).GetCurrentSymbol().ToString();
                 }
             }
+            //hides blanked blocks
+            /*
+            for (int i = 0; i <= 9; i++)
+            {
+
+                for (int j = 0; j <= 8; j++)
+                {
+                    if (textBoxes[j, i].Text == "")
+                    {
+                        textBoxes[j, i].Hide();
+                    }
+
+                }
+            }*/
         }
 
         //looks up
@@ -229,21 +219,24 @@ namespace  GameDev_Project2
                     }
                 }
             }
-            //updatemap();
+            //#############
+         //   updatemap();
+            //#############
             gameEngine.EnemyAttacks();
 
         }
         //allows the hero to move
         private void Move()
         {
-            if (gameEngine.map.GetXY(selectedX+1, selectedY+1 ).GetCurrentTileType() != Tile.TileType.Border && gameEngine.map.GetXY(selectedX+1, selectedY+1).GetCurrentTileType() != Tile.TileType.Enemy)    
+            if (gameEngine.map.GetXY(selectedX, selectedY ).GetCurrentTileType() != Tile.TileType.Border && gameEngine.map.GetXY(selectedX, selectedY).GetCurrentTileType() != Tile.TileType.Enemy)    
             {    
                 gameEngine.MovePlayer(move);
                 Console.WriteLine(gameEngine.map.hero.GetY()+1 + " " + gameEngine.map.hero.GetX()+1);
                 
             }
-           // updatemap();
-
+            //#############
+             updatemap();
+            //#############
             gameEngine.MoveEnemies();
             Updatestats();
 
@@ -261,7 +254,7 @@ namespace  GameDev_Project2
                 txtStats.AppendText("-");
                 txtStats.AppendText("\n" + gameEngine.map.enemies[i].ToString());
             }
-
+                                             
 
         }
         public void updatemap()
@@ -279,27 +272,27 @@ namespace  GameDev_Project2
                 {txt08,txt18,txt28,txt38,txt48,txt58,txt68,txt78,txt88,txt98}
             };
 
-                for(int i = 0; i< gameEngine.map.GetMapWidth(); i++)
+                for(int i = 0; i< gameEngine.map.GetMapHeight()-1; i++)
                 {
-                     for (int j = 0; j < gameEngine.map.GetMapHeight(); j++)
+                     for (int j = 0; j < gameEngine.map.GetMapWidth()-1; j++)
                      { 
                         Tile.TileType type;
                         type = gameEngine.map.GetXY(j,i).GetCurrentTileType();
                         switch (type)
                         {
                             case Tile.TileType.Hero:
-                            textBoxes[j, i].Text = "H";
+                            textBoxes[i, j].Text = "H";
                             break;
 
                             case Tile.TileType.Empty:
-                            textBoxes[j, i].Text = ".";
+                            textBoxes[i, j].Text = ".";
                             break;
 
-                         
+                            case Tile.TileType.Enemy:
+                            textBoxes[i, j].Text = "E";
+                            break;
 
-
-
-                        default:
+                            default:
                             break;
                         }
                      }

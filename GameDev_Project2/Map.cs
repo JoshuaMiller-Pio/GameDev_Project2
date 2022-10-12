@@ -78,7 +78,7 @@ namespace GameDev_Project2
         //Returns a tile in the map array at position XY
         internal Tile GetXY(int X, int Y)
         {
-            return MapArray[Y, X];
+            return MapArray[X, Y];
         }
 
         public Tile UpdateVision(Character h, Character.Movement move)
