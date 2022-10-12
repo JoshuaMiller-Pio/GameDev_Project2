@@ -40,7 +40,7 @@ namespace GameDev_Project2
 
         public override string ToString()
         {
-            return String.Format("Player Stats:\n{0}\nHP: {1}/{2}\nDamage: {3}\nPosition: [{4},{5}]\nGold: {6}", HeroName, this.HP, this.MaxHP, Damage, GetX() + 1, GetY() + 1, heldGold);
+            return String.Format("Player Stats:\n{0}\nHP: {1}/{2}\nDamage: {3}\nPosition: [{4},{5}]\nGold: {6}", HeroName, GetHP(), this.MaxHP, GetDamage(), GetX() + 1, GetY() + 1, heldGold);
         }
     }
 }
