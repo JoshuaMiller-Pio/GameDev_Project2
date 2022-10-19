@@ -237,7 +237,7 @@ namespace  GameDev_Project2
             //#############
              updatemap();
             //#############
-            gameEngine.MoveEnemies();
+            gameEngine.MoveEnemies(gameEngine.map.hero);
             Updatestats();
 
         }

@@ -190,16 +190,16 @@ namespace GameDev_Project2
         }
 
         //Gets the Hero's and a targets position, then calculates the distance between them
-        public int CheckDistanceToTarget(Character h, Tile target)
+        public int CheckDistanceToTarget(Character c, Tile target)
         {
-            int HeroX = h.GetX();
-            int HeroY = h.GetY();
+            int CharacterX = c.GetX();
+            int CharacterY = c.GetY();
 
             int targetX = target.GetX();
             int targetY = target.GetY();
 
-            DistanceToTargetX = HeroX - targetX;
-            DistanceToTargetY = HeroY - targetY;
+            DistanceToTargetX = CharacterX - targetX;
+            DistanceToTargetY = CharacterY - targetY;
 
             ActualDistanceX = 0;
 

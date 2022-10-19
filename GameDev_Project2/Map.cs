@@ -57,7 +57,7 @@ namespace GameDev_Project2
             }
 
             //Calls the create function and tells it to create an enemy by passing through the enemy TileType, this is done through a for loop to create as many enemies as the enemies array requires
-            enemies = new Enemy[randomGenerator.Next(1, 5)];
+            enemies = new Enemy[1 /*randomGenerator.Next(1, 5)*/];
             for (int i = 0; i < enemies.Length; i++)
             {
                     enemies[i] = (Enemy)Create(Tile.TileType.Enemy);

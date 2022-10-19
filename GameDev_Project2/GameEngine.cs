@@ -73,9 +73,50 @@ namespace GameDev_Project2
 
 
         }
-        public void MoveEnemies()
+        public void MoveEnemies(Character h)
         {
+            Tile[] pTile = new Tile[map.enemies.Length - 1];
+            for (int i = 0; i <= pTile.Length; i++)
+            {
+                Console.WriteLine("hello1");
+                if (map.enemies[i].GetY() < h.GetY())
+                {
+                    Console.WriteLine("hello2");
+                    map.enemies[i].SetY(map.enemies[i].GetY() + 1);
+                    
+                    if (map.enemies[i].GetX() < h.GetX())
+                    {
+                        Console.WriteLine("hello3");
+                        map.enemies[i].SetX(map.enemies[i].GetX() + 1);
 
+                    }
+                   else if (map.enemies[i].GetX() < h.GetX())
+                    {
+                        Console.WriteLine("hello4");
+                        map.enemies[i].SetX(map.enemies[i].GetX() - 1);
+                    }
+                }
+
+                else if (map.enemies[i].GetY() > h.GetY())
+                {
+                    Console.WriteLine("hello5");
+                    map.enemies[i].SetY(map.enemies[i].GetY() - 1);
+
+                    if (map.enemies[i].GetX() < h.GetX())
+                    {
+                        Console.WriteLine("hello6");
+                        map.enemies[i].SetX(map.enemies[i].GetX() + 1);
+                    }
+                    else if (map.enemies[i].GetX() < h.GetX())
+                    {
+                        Console.WriteLine("hello6");
+                        map.enemies[i].SetX(map.enemies[i].GetX() - 1);
+                        
+                    }
+                }
+                map.GetXY(map.enemies[i].GetX(), map.enemies[i].GetY()).SetCurrentTileType(Tile.TileType.Enemy);
+            }
+            
             EnemyAttacks();
         }
     }
