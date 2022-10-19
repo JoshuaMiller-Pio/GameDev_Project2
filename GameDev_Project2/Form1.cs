@@ -219,9 +219,9 @@ namespace  GameDev_Project2
                     }
                 }
             }
-            //#############
-         //   updatemap();
-            //#############
+            
+            updatemap();
+            
             gameEngine.EnemyAttacks();
 
         }
@@ -230,13 +230,13 @@ namespace  GameDev_Project2
         {
             if (gameEngine.map.GetXY(selectedX, selectedY ).GetCurrentTileType() != Tile.TileType.Border && gameEngine.map.GetXY(selectedX, selectedY).GetCurrentTileType() != Tile.TileType.Enemy)    
             {    
-                gameEngine.MovePlayer(move);
+                gameEngine.MovePlayer(gameEngine.map.hero, move);
                 Console.WriteLine(gameEngine.map.hero.GetY()+1 + " " + gameEngine.map.hero.GetX()+1);
                 
             }
-            //#############
+            
              updatemap();
-            //#############
+            
             gameEngine.MoveEnemies(gameEngine.map.hero);
             Updatestats();
 
@@ -256,6 +256,19 @@ namespace  GameDev_Project2
             }
                                              
 
+        }
+        private void HeroGameOver()
+        {
+            if (gameEngine.map.hero.CheckisDead(gameEngine.map.hero) == true)
+            {
+                MessageBox.Show("Game Over");
+                btnAttack.Enabled = false;
+                btnDown.Enabled = false;
+                btnUp.Enabled = false;
+                btnLeft.Enabled = false;
+                btnRight.Enabled = false;
+                btnMove.Enabled = false;
+            }
         }
         public void updatemap()
             {
@@ -298,8 +311,8 @@ namespace  GameDev_Project2
                      }
                 
                 }
-
-            }
+          //  HeroGameOver();
+        }
 
     }
 }
