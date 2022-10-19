@@ -68,14 +68,65 @@ namespace GameDev_Project2
 
 
         //still in progress
-        public void EnemyAttacks()
+        public void EnemyAttacks() 
         {
+            for (int i = 0; i < map.MapArray.Length-1; i++)
+            {
+                if (map.enemies[0].CheckDistanceToTarget(map.enemies[0], map.hero) == 1)
+                {
+                    map.enemies[0].Attack(map.hero);
+                }
+                else
+                {
 
-
+                }
+            }
         }
-        public void MoveEnemies()
-        {
 
+        public void MoveEnemies(Character h)
+        {
+            Tile[] pTile = new Tile[map.enemies.Length - 1];
+            for (int i = 0; i <= pTile.Length; i++)
+            {
+               
+                if (map.enemies[i].GetY() < h.GetY())
+                {
+                    
+                    map.enemies[i].SetY(map.enemies[i].GetY() + 1);
+                    
+                    if (map.enemies[i].GetX() < h.GetX())
+                    {
+                       
+                        map.enemies[i].SetX(map.enemies[i].GetX() + 1);
+
+                    }
+                   else if (map.enemies[i].GetX() < h.GetX())
+                    {
+                       
+                        map.enemies[i].SetX(map.enemies[i].GetX() - 1);
+                    }
+                }
+
+                else if (map.enemies[i].GetY() > h.GetY())
+                {
+                  
+                    map.enemies[i].SetY(map.enemies[i].GetY() - 1);
+
+                    if (map.enemies[i].GetX() < h.GetX())
+                    {
+                      
+                        map.enemies[i].SetX(map.enemies[i].GetX() + 1);
+                    }
+                    else if (map.enemies[i].GetX() < h.GetX())
+                    {
+                       
+                        map.enemies[i].SetX(map.enemies[i].GetX() - 1);
+                        
+                    }
+                }
+                map.GetXY(map.enemies[i].GetX(), map.enemies[i].GetY()).SetCurrentTileType(Tile.TileType.Enemy);
+            }
+            
             EnemyAttacks();
         }
     }
