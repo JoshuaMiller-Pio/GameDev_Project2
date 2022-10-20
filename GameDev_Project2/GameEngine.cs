@@ -30,24 +30,57 @@ namespace GameDev_Project2
 
                 case Character.Movement.Up:
 
+                    
                     map.GetXY(map.hero.GetX(), map.hero.GetY()).SetCurrentTileType(Tile.TileType.Empty);
+                    
+                    
                     map.hero.SetY(map.hero.GetY() - 1);
+
+                    Item i = map.GetItemAtPosition(map.hero.GetX(), map.hero.GetY());
+
+                    if (i != null)
+                    {
+                        map.hero.PickUp(i, map.hero);
+                    }
                     break;
 
                 case Character.Movement.Down:
                     map.GetXY(map.hero.GetX(), map.hero.GetY()).SetCurrentTileType(Tile.TileType.Empty);
+                    
                     map.hero.SetY(map.hero.GetY() + 1);
+
+                    i = map.GetItemAtPosition(map.hero.GetX(), map.hero.GetY());
+
+                    if (i != null)
+                    {
+                        map.hero.PickUp(i, map.hero);
+                    }
                     break;
 
                 case Character.Movement.Left:
                     map.GetXY(map.hero.GetX(), map.hero.GetY()).SetCurrentTileType(Tile.TileType.Empty);
-                    map.hero.SetX(map.hero.GetX() - 1);
                    
+                    map.hero.SetX(map.hero.GetX() - 1);
+
+                    i = map.GetItemAtPosition(map.hero.GetX(), map.hero.GetY());
+
+                    if (i != null)
+                    {
+                        map.hero.PickUp(i, map.hero);
+                    }
                     break;
 
                 case Character.Movement.Right:
                     map.GetXY(map.hero.GetX(), map.hero.GetY()).SetCurrentTileType(Tile.TileType.Empty);
+                    
                     map.hero.SetX(map.hero.GetX() + 1);
+
+                    i = map.GetItemAtPosition(map.hero.GetX(), map.hero.GetY());
+
+                    if (i != null)
+                    {
+                        map.hero.PickUp(i, map.hero);
+                    }
                     break;
 
                    
