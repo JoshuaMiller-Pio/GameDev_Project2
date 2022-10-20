@@ -232,12 +232,13 @@ namespace GameDev_Project2
             return InRange;
         }
 
-        public void PickUp(Item i, Hero h)
+        public void PickUp(Item i)
         {
             if(i.GetCurrentTileType() == TileType.Gold)
             {
                 Gold g = (Gold)i;
-                h.SetCurrentHeldGold(h.GetHeldGold() + g.getCurrentGold());
+
+                SetCurrentHeldGold(GetHeldGold() + g.getCurrentGold());
             }
         }
         public abstract override string ToString();

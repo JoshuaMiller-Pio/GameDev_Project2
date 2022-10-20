@@ -40,7 +40,7 @@ namespace GameDev_Project2
 
                     if (i != null)
                     {
-                        map.hero.PickUp(i, map.hero);
+                        map.hero.PickUp(i);
                     }
                     break;
 
@@ -53,7 +53,7 @@ namespace GameDev_Project2
 
                     if (i != null)
                     {
-                        map.hero.PickUp(i, map.hero);
+                        map.hero.PickUp(i);
                     }
                     break;
 
@@ -66,7 +66,7 @@ namespace GameDev_Project2
 
                     if (i != null)
                     {
-                        map.hero.PickUp(i, map.hero);
+                        map.hero.PickUp(i);
                     }
                     break;
 
@@ -79,7 +79,7 @@ namespace GameDev_Project2
 
                     if (i != null)
                     {
-                        map.hero.PickUp(i, map.hero);
+                        map.hero.PickUp(i);
                     }
                     break;
 
