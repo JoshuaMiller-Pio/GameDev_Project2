@@ -32,7 +32,7 @@ namespace  GameDev_Project2
         {
             Size = new Size(1050, 1000);
 
-            Console.WriteLine(gameEngine.map.GetMapHeight() +" "+ gameEngine.map.GetMapWidth());
+           
             Updatestats();
            
         }
@@ -62,7 +62,7 @@ namespace  GameDev_Project2
                 }
             }
             //hides blanked blocks
-            /*
+        
             for (int i = 0; i <= 9; i++)
             {
 
@@ -74,7 +74,7 @@ namespace  GameDev_Project2
                     }
 
                 }
-            }*/
+            }
         }
 
         //looks up
@@ -114,8 +114,7 @@ namespace  GameDev_Project2
         private void btnLeft_Click(object sender, EventArgs e)
         {
 
-            //gameEngine.map.hero.SetMove(Character.Movement.Left);
-            // gameEngine.map.hero.ReturnMove(Character.Movement.Left);
+
 
             int hightlighty;
             int highlightx;
@@ -219,25 +218,21 @@ namespace  GameDev_Project2
                     }
                 }
             }
-            //#############
-         //   updatemap();
-            //#############
+            
+            updatemap();
+            
             gameEngine.EnemyAttacks();
 
         }
         //allows the hero to move
         private void Move()
         {
-            if (gameEngine.map.GetXY(selectedX, selectedY ).GetCurrentTileType() != Tile.TileType.Border && gameEngine.map.GetXY(selectedX, selectedY).GetCurrentTileType() != Tile.TileType.Enemy)    
-            {    
-                gameEngine.MovePlayer(move);
-                Console.WriteLine(gameEngine.map.hero.GetY()+1 + " " + gameEngine.map.hero.GetX()+1);
-                
-            }
-            //#############
-             updatemap();
-            //#############
+            
+           gameEngine.MovePlayer(gameEngine.map.hero, move);
+
             gameEngine.MoveEnemies(gameEngine.map.hero);
+             updatemap();
+            
             Updatestats();
 
         }
@@ -256,6 +251,19 @@ namespace  GameDev_Project2
             }
                                              
 
+        }
+        private void HeroGameOver()
+        {
+            if (gameEngine.map.hero.CheckisDead(gameEngine.map.hero) == true)
+            {
+                MessageBox.Show("Game Over");
+                btnAttack.Enabled = false;
+                btnDown.Enabled = false;
+                btnUp.Enabled = false;
+                btnLeft.Enabled = false;
+                btnRight.Enabled = false;
+                btnMove.Enabled = false;
+            }
         }
         public void updatemap()
             {
@@ -298,8 +306,8 @@ namespace  GameDev_Project2
                      }
                 
                 }
-
-            }
+          //  HeroGameOver();
+        }
 
     }
 }

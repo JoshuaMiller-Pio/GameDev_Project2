@@ -90,6 +90,7 @@ namespace GameDev_Project2
                 case Character.Movement.NoMovement:
                     return h;
                 case Character.Movement.Up:
+                   
                     Tile n = MapArray[h.GetX(), h.GetY() - 1];
                     n.SetY(h.GetY() - 1);
                     n.SetX(h.GetX());
