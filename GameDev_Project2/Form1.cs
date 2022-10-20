@@ -310,5 +310,9 @@ namespace  GameDev_Project2
           //  HeroGameOver();
         }
 
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            gameEngine.Save();
+        }
     }
 }

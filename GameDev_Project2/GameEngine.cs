@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+
 
 namespace GameDev_Project2
 {
@@ -6,11 +8,12 @@ namespace GameDev_Project2
     {
         public Map map;
         private bool PlayerMoves , Enemymoves;
-     
+        Utility myUtility = new Utility();
         public GameEngine()
         {
 
             map = new Map(10, 9, 7);
+            
             
         }
 
@@ -249,7 +252,20 @@ namespace GameDev_Project2
             }
         }
 
-
+        public void Save()
+        {
+            
+            BinaryWriter writer = new BinaryWriter(myUtility.saveFile);
+            
+            for (int i = 0; i < map.GetMapWidth(); i++)
+            {
+                for (int j = 0; j < map.GetMapHeight(); j++)
+                {
+                    string currentTile = Convert.ToString(map.MapArray[i, j]);
+                    writer.Write(currentTile);
+                }
+            }
+        }
         
     }
 }
