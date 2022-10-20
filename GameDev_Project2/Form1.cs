@@ -324,5 +324,9 @@ namespace  GameDev_Project2
             Console.WriteLine(gameEngine.map.GetXY(2, 5).GetCurrentTileType());
         }
 
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            gameEngine.Save();
+        }
     }
 }

@@ -152,6 +152,7 @@ namespace GameDev_Project2
                     //Uses random number generator to assign the value of the gold tile
                     int ValueOfGold = randomGenerator.Next(1, 5);
                     MapArray[X, Y] = new Gold(X, Y, ValueOfGold);
+                    
                     break;
 
                 case TileType.Weapon:
