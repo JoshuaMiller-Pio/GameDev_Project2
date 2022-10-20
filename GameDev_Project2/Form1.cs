@@ -213,7 +213,16 @@ namespace  GameDev_Project2
 
                     if (gameEngine.map.enemies[i].CheckisDead(gameEngine.map.enemies[i]) == true)
                     {
+/*
+                        Item item = items[i];
+                        List<Item> Litems = new List<Item>(items);
+
+                        Litems.RemoveAt(Litems.IndexOf(Litems[i]));
+                        items = Litems.ToArray();
+*/
+
                         gameEngine.map.enemies[i].SetCurrentTileType(Tile.TileType.Empty);
+
                         textBoxes[gameEngine.map.enemies[i].GetY(), gameEngine.map.enemies[i].GetX()].Text = ".";
                     }
                 }
@@ -229,15 +238,16 @@ namespace  GameDev_Project2
         {
             
            gameEngine.MovePlayer(gameEngine.map.hero, move);
-            Console.WriteLine((gameEngine.map.enemies[0].CheckDistanceToTarget(gameEngine.map.enemies[0], gameEngine.map.hero)));
-            //  gameEngine.MoveEnemies(gameEngine.map.hero);
-           gameEngine.EnemyAttacks();
+            
+           gameEngine.MoveEnemies(gameEngine.map.hero);
+          
             updatemap();
             
             Updatestats();
 
         }
 
+        //updates the states box of all characters on the map
         private void Updatestats()
         {
             txtStats.Text = gameEngine.map.hero.ToString() + "\n";
@@ -253,17 +263,20 @@ namespace  GameDev_Project2
                                              
 
         }
+
+        //displays a message and ends the game if the hero dies
         private void HeroGameOver()
         {
             if (gameEngine.map.hero.CheckisDead(gameEngine.map.hero) == true)
             {
-                MessageBox.Show("Game Over");
+                Form1.ActiveForm.BackColor = Color.Crimson;
                 btnAttack.Enabled = false;
                 btnDown.Enabled = false;
                 btnUp.Enabled = false;
                 btnLeft.Enabled = false;
                 btnRight.Enabled = false;
                 btnMove.Enabled = false;
+                MessageBox.Show("Game Over");
             }
         }
         public void updatemap()
@@ -307,7 +320,7 @@ namespace  GameDev_Project2
                      }
                 
                 }
-          //  HeroGameOver();
+            HeroGameOver();
         }
 
     }

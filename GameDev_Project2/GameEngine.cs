@@ -13,9 +13,13 @@ namespace GameDev_Project2
             map = new Map(10, 9, 7);
             
         }
+        public string ShowMap()
+        {
+            string DisplayMap = Convert.ToString(map.MapArray);
+            return string.Format(DisplayMap);
+        }
 
         //If a move is possible this moves the player object and changes the tile types of both the new and old positions
-
         public bool MovePlayer(Character C, Character.Movement m)
         {
 
@@ -113,10 +117,13 @@ namespace GameDev_Project2
                 default:
                     break;
             }
+
             //Fills the players new position by setting the tile type
             map.GetXY(C.GetX(), C.GetY()).SetCurrentTileType(Tile.TileType.Hero);
             return PlayerMoves;
         }
+
+       // updates the map and tiles where the enemy moves
         public bool MoveEnemy(Character C, Character.Movement m)
         {
 
@@ -170,13 +177,8 @@ namespace GameDev_Project2
             return Enemymoves;
         }
 
-        public string ShowMap()
-        {
-            string DisplayMap = Convert.ToString(map.MapArray);
-            return string.Format(DisplayMap);
-        }
 
-
+        //creates some random numbers to determine with where the enemies are going to move 
         public void MoveEnemies(Character h)
         {
             Random random = new Random();
@@ -235,7 +237,7 @@ namespace GameDev_Project2
             EnemyAttacks();
         }
 
-        //still in progress
+       // allows the enemies to attack to attack the player
         public void EnemyAttacks() 
         {
             for (int i = 0; i < map.enemies.Length; i++)
