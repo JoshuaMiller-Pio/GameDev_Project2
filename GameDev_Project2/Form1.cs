@@ -229,9 +229,10 @@ namespace  GameDev_Project2
         {
             
            gameEngine.MovePlayer(gameEngine.map.hero, move);
-
-            gameEngine.MoveEnemies(gameEngine.map.hero);
-             updatemap();
+            Console.WriteLine((gameEngine.map.enemies[0].CheckDistanceToTarget(gameEngine.map.enemies[0], gameEngine.map.hero)));
+            //  gameEngine.MoveEnemies(gameEngine.map.hero);
+           gameEngine.EnemyAttacks();
+            updatemap();
             
             Updatestats();
 
