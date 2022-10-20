@@ -198,16 +198,16 @@ namespace GameDev_Project2
             int targetX = target.GetX();
             int targetY = target.GetY();
 
-            DistanceToTargetX = CharacterX - targetX;
-            DistanceToTargetY = CharacterY - targetY;
+            DistanceToTargetX = (CharacterX+1) - (targetX+1);
+            DistanceToTargetY = (CharacterY+1) - (targetY+1);
 
-            ActualDistanceX = 0;
+            ActualDistanceX = 999999999;
 
             if (DistanceToTargetX > 0 && DistanceToTargetX <= CurrentGameWidth + 1)
             {
                 ActualDistanceX = 1;
             }
-            if (DistanceToTargetX > 0 && DistanceToTargetX <= CurrentGameWidth * 2 + 1)
+           else if (DistanceToTargetX > 0 && DistanceToTargetX <= CurrentGameWidth * 2 + 1)
             {
                 ActualDistanceX = 2;
             }
@@ -221,7 +221,7 @@ namespace GameDev_Project2
         {
             double CurrentRange = h.Range;
             int CurrentDistance = CheckDistanceToTarget(h, target);
-            if (CurrentDistance <= CurrentRange)
+            if (CurrentDistance == CurrentRange || (CurrentDistance*-1) == CurrentRange)
             {
                 InRange = true;
             }

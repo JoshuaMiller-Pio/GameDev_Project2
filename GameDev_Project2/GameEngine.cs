@@ -240,8 +240,8 @@ namespace GameDev_Project2
         {
             for (int i = 0; i < map.enemies.Length; i++)
             {
-                Console.WriteLine((map.enemies[i].CheckDistanceToTarget(map.enemies[i], map.hero)));
-                if (map.enemies[i].CheckDistanceToTarget(map.enemies[i], map.hero) <= 1)
+            
+                if (map.enemies[i].CheckRange(map.enemies[i], map.hero) == true)
                 {
                     map.enemies[i].Attack(map.hero);
                 }
