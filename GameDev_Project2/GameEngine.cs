@@ -5,7 +5,7 @@ namespace GameDev_Project2
     public class GameEngine
     {
         public Map map;
-        private bool PlayerMoves , Enemymove;
+        private bool PlayerMoves , Enemymoves;
      
         public GameEngine()
         {
@@ -40,11 +40,11 @@ namespace GameDev_Project2
 
 
 
-                         i = map.GetItemAtPosition(map.hero.GetX(), map.hero.GetY());
+                         i = map.GetItemAtPosition(C.GetX(), C.GetY());
 
                         if (i != null)
                         {
-                            map.hero.PickUp(i);
+                            C.PickUp(i);
 
                         }
                     }
@@ -60,11 +60,11 @@ namespace GameDev_Project2
 
 
 
-                        i = map.GetItemAtPosition(map.hero.GetX(), map.hero.GetY());
+                        i = map.GetItemAtPosition(C.GetX(), C.GetY());
 
                         if (i != null)
                         {
-                            map.hero.PickUp(i);
+                            C.PickUp(i);
 
                         }
                     }
@@ -81,13 +81,13 @@ namespace GameDev_Project2
 
 
                    
-                    map.hero.SetX(map.hero.GetX() - 1);
+                  
 
-                    i = map.GetItemAtPosition(map.hero.GetX(), map.hero.GetY());
+                    i = map.GetItemAtPosition(C.GetX(), C.GetY());
 
                     if (i != null)
                     {
-                        map.hero.PickUp(i);
+                        C.PickUp(i);
                     }
                     break;
 
@@ -99,11 +99,11 @@ namespace GameDev_Project2
                         C.SetX(C.GetX() + 1);
 
 
-                        i = map.GetItemAtPosition(map.hero.GetX(), map.hero.GetY());
+                        i = map.GetItemAtPosition(C.GetX(), C.GetY());
 
                         if (i != null)
                         {
-                            map.hero.PickUp(i);
+                            C.PickUp(i);
 
                         }
                     }
@@ -120,7 +120,7 @@ namespace GameDev_Project2
         public bool MoveEnemy(Character C, Character.Movement m)
         {
 
-            Enemymove = true;
+            Enemymoves = true;
             //Moves the player if able
 
             switch (m)
@@ -167,7 +167,7 @@ namespace GameDev_Project2
             }
             //Fills the enemies new position by setting the tile type
             map.GetXY(C.GetX(), C.GetY()).SetCurrentTileType(Tile.TileType.Enemy);
-            return PlayerMoves;
+            return Enemymoves;
         }
 
         public string ShowMap()
