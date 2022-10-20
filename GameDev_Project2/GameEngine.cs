@@ -30,37 +30,79 @@ namespace GameDev_Project2
                     break;
 
                 case Character.Movement.Up:
+
                     if (map.GetXY(C.GetX() , C.GetY() - 1).GetCurrentTileType() != Tile.TileType.Enemy && map.GetXY(C.GetX() , C.GetY() - 1).GetCurrentTileType() != Tile.TileType.Border && map.GetXY(C.GetX(), C.GetY()- 1).GetCurrentTileType() != Tile.TileType.Hero) 
                     { 
                         map.GetXY(C.GetX(), C.GetY()).SetCurrentTileType(Tile.TileType.Empty);
                          C.SetY(C.GetY() - 1);
+
+
+                    
+                
+
+                    Item i = map.GetItemAtPosition(map.hero.GetX(), map.hero.GetY());
+
+                    if (i != null)
+                    {
+                        map.hero.PickUp(i);
+
                     }
                     break;
 
                 case Character.Movement.Down:
+
                     if (map.GetXY(C.GetX() , C.GetY() + 1).GetCurrentTileType() != Tile.TileType.Enemy && map.GetXY(C.GetX(), C.GetY() + 1).GetCurrentTileType() != Tile.TileType.Border && map.GetXY(C.GetX() , C.GetY()+1).GetCurrentTileType() != Tile.TileType.Hero)
                     {
 
                         map.GetXY(C.GetX(), C.GetY()).SetCurrentTileType(Tile.TileType.Empty);
                         C.SetY(C.GetY() + 1);
+
+                  
+
+                    i = map.GetItemAtPosition(map.hero.GetX(), map.hero.GetY());
+
+                    if (i != null)
+                    {
+                        map.hero.PickUp(i);
+
                     }
                     break;
 
                 case Character.Movement.Left:
+
                     if (map.GetXY(C.GetX() - 1, C.GetY() ).GetCurrentTileType() != Tile.TileType.Enemy && map.GetXY(C.GetX() - 1, C.GetY() ).GetCurrentTileType() != Tile.TileType.Border && map.GetXY(C.GetX() - 1, C.GetY()).GetCurrentTileType() != Tile.TileType.Hero)
                     {
 
                         map.GetXY(C.GetX(), C.GetY()).SetCurrentTileType(Tile.TileType.Empty);
                         C.SetX(C.GetX() - 1);
                     }
+
+
                    
+                    map.hero.SetX(map.hero.GetX() - 1);
+
+                    i = map.GetItemAtPosition(map.hero.GetX(), map.hero.GetY());
+
+                    if (i != null)
+                    {
+                        map.hero.PickUp(i);
+                    }
                     break;
 
                 case Character.Movement.Right:
+
                     if (map.GetXY(C.GetX() + 1, C.GetY()).GetCurrentTileType() != Tile.TileType.Enemy && map.GetXY(C.GetX() + 1, C.GetY()).GetCurrentTileType() != Tile.TileType.Border && map.GetXY(C.GetX() + 1, C.GetY()).GetCurrentTileType() != Tile.TileType.Hero) 
                     {
                        map.GetXY(C.GetX(), C.GetY()).SetCurrentTileType(Tile.TileType.Empty);
                        C.SetX(C.GetX() + 1);
+
+
+                    i = map.GetItemAtPosition(map.hero.GetX(), map.hero.GetY());
+
+                    if (i != null)
+                    {
+                        map.hero.PickUp(i);
+
                     }
                     break;
 

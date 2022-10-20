@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using static GameDev_Project2.Tile;
 
 namespace GameDev_Project2
@@ -168,7 +170,10 @@ namespace GameDev_Project2
                 if(items[i].GetX() == currentPosition.GetX() && items[i].GetY() == currentPosition.GetY())
                 {
                     Item item = items[i];
-                    items[i] = null;
+                    List < Item > Litems = new List<Item>(items);
+                    
+                    Litems.RemoveAt(Litems.IndexOf(Litems[i]));
+                    items = Litems.ToArray();
                     return item;
                 }
             }
