@@ -10,7 +10,7 @@ namespace GameDev_Project2
     {
         public string HeroName;
 
-        public Hero(int x, int y, string HeroName) : base(x, y, TileType.Hero, 0, 10, 2, 1, 0)
+        public Hero(int x, int y, string HeroName) : base(x, y, TileType.Hero, 0, 10, 2, 1, 1)
         {
             this.HeroName = HeroName;
         }

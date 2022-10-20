@@ -125,6 +125,7 @@
             this.btnDown = new System.Windows.Forms.Button();
             this.btnRight = new System.Windows.Forms.Button();
             this.btnUp = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txt88
@@ -132,7 +133,7 @@
             this.txt88.BackColor = System.Drawing.Color.White;
             this.txt88.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt88.Location = new System.Drawing.Point(1706, 782);
-            this.txt88.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt88.Margin = new System.Windows.Forms.Padding(6);
             this.txt88.Multiline = true;
             this.txt88.Name = "txt88";
             this.txt88.ReadOnly = true;
@@ -145,7 +146,7 @@
             this.txt78.BackColor = System.Drawing.Color.White;
             this.txt78.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt78.Location = new System.Drawing.Point(1598, 782);
-            this.txt78.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt78.Margin = new System.Windows.Forms.Padding(6);
             this.txt78.Multiline = true;
             this.txt78.Name = "txt78";
             this.txt78.ReadOnly = true;
@@ -158,7 +159,7 @@
             this.txt58.BackColor = System.Drawing.Color.White;
             this.txt58.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt58.Location = new System.Drawing.Point(1382, 782);
-            this.txt58.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt58.Margin = new System.Windows.Forms.Padding(6);
             this.txt58.Multiline = true;
             this.txt58.Name = "txt58";
             this.txt58.ReadOnly = true;
@@ -171,7 +172,7 @@
             this.txt68.BackColor = System.Drawing.Color.White;
             this.txt68.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt68.Location = new System.Drawing.Point(1490, 782);
-            this.txt68.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt68.Margin = new System.Windows.Forms.Padding(6);
             this.txt68.Multiline = true;
             this.txt68.Name = "txt68";
             this.txt68.ReadOnly = true;
@@ -184,7 +185,7 @@
             this.txt98.BackColor = System.Drawing.Color.White;
             this.txt98.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt98.Location = new System.Drawing.Point(1814, 782);
-            this.txt98.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt98.Margin = new System.Windows.Forms.Padding(6);
             this.txt98.Multiline = true;
             this.txt98.Name = "txt98";
             this.txt98.ReadOnly = true;
@@ -197,7 +198,7 @@
             this.txt48.BackColor = System.Drawing.Color.White;
             this.txt48.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt48.Location = new System.Drawing.Point(1274, 782);
-            this.txt48.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt48.Margin = new System.Windows.Forms.Padding(6);
             this.txt48.Multiline = true;
             this.txt48.Name = "txt48";
             this.txt48.ReadOnly = true;
@@ -210,7 +211,7 @@
             this.txt38.BackColor = System.Drawing.Color.White;
             this.txt38.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt38.Location = new System.Drawing.Point(1166, 782);
-            this.txt38.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt38.Margin = new System.Windows.Forms.Padding(6);
             this.txt38.Multiline = true;
             this.txt38.Name = "txt38";
             this.txt38.ReadOnly = true;
@@ -223,7 +224,7 @@
             this.txt28.BackColor = System.Drawing.Color.White;
             this.txt28.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt28.Location = new System.Drawing.Point(1058, 782);
-            this.txt28.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt28.Margin = new System.Windows.Forms.Padding(6);
             this.txt28.Multiline = true;
             this.txt28.Name = "txt28";
             this.txt28.ReadOnly = true;
@@ -236,7 +237,7 @@
             this.txt18.BackColor = System.Drawing.Color.White;
             this.txt18.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt18.Location = new System.Drawing.Point(950, 782);
-            this.txt18.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt18.Margin = new System.Windows.Forms.Padding(6);
             this.txt18.Multiline = true;
             this.txt18.Name = "txt18";
             this.txt18.ReadOnly = true;
@@ -249,7 +250,7 @@
             this.txt08.BackColor = System.Drawing.Color.White;
             this.txt08.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt08.Location = new System.Drawing.Point(842, 782);
-            this.txt08.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt08.Margin = new System.Windows.Forms.Padding(6);
             this.txt08.Multiline = true;
             this.txt08.Name = "txt08";
             this.txt08.ReadOnly = true;
@@ -262,7 +263,7 @@
             this.txt87.BackColor = System.Drawing.Color.White;
             this.txt87.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt87.Location = new System.Drawing.Point(1706, 685);
-            this.txt87.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt87.Margin = new System.Windows.Forms.Padding(6);
             this.txt87.Multiline = true;
             this.txt87.Name = "txt87";
             this.txt87.ReadOnly = true;
@@ -275,7 +276,7 @@
             this.txt77.BackColor = System.Drawing.Color.White;
             this.txt77.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt77.Location = new System.Drawing.Point(1598, 685);
-            this.txt77.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt77.Margin = new System.Windows.Forms.Padding(6);
             this.txt77.Multiline = true;
             this.txt77.Name = "txt77";
             this.txt77.ReadOnly = true;
@@ -288,7 +289,7 @@
             this.txt57.BackColor = System.Drawing.Color.White;
             this.txt57.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt57.Location = new System.Drawing.Point(1382, 685);
-            this.txt57.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt57.Margin = new System.Windows.Forms.Padding(6);
             this.txt57.Multiline = true;
             this.txt57.Name = "txt57";
             this.txt57.ReadOnly = true;
@@ -301,7 +302,7 @@
             this.txt67.BackColor = System.Drawing.Color.White;
             this.txt67.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt67.Location = new System.Drawing.Point(1490, 685);
-            this.txt67.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt67.Margin = new System.Windows.Forms.Padding(6);
             this.txt67.Multiline = true;
             this.txt67.Name = "txt67";
             this.txt67.ReadOnly = true;
@@ -314,7 +315,7 @@
             this.txt97.BackColor = System.Drawing.Color.White;
             this.txt97.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt97.Location = new System.Drawing.Point(1814, 685);
-            this.txt97.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt97.Margin = new System.Windows.Forms.Padding(6);
             this.txt97.Multiline = true;
             this.txt97.Name = "txt97";
             this.txt97.ReadOnly = true;
@@ -327,7 +328,7 @@
             this.txt47.BackColor = System.Drawing.Color.White;
             this.txt47.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt47.Location = new System.Drawing.Point(1274, 685);
-            this.txt47.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt47.Margin = new System.Windows.Forms.Padding(6);
             this.txt47.Multiline = true;
             this.txt47.Name = "txt47";
             this.txt47.ReadOnly = true;
@@ -340,7 +341,7 @@
             this.txt37.BackColor = System.Drawing.Color.White;
             this.txt37.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt37.Location = new System.Drawing.Point(1166, 685);
-            this.txt37.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt37.Margin = new System.Windows.Forms.Padding(6);
             this.txt37.Multiline = true;
             this.txt37.Name = "txt37";
             this.txt37.ReadOnly = true;
@@ -353,7 +354,7 @@
             this.txt27.BackColor = System.Drawing.Color.White;
             this.txt27.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt27.Location = new System.Drawing.Point(1058, 685);
-            this.txt27.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt27.Margin = new System.Windows.Forms.Padding(6);
             this.txt27.Multiline = true;
             this.txt27.Name = "txt27";
             this.txt27.ReadOnly = true;
@@ -366,7 +367,7 @@
             this.txt17.BackColor = System.Drawing.Color.White;
             this.txt17.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt17.Location = new System.Drawing.Point(950, 685);
-            this.txt17.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt17.Margin = new System.Windows.Forms.Padding(6);
             this.txt17.Multiline = true;
             this.txt17.Name = "txt17";
             this.txt17.ReadOnly = true;
@@ -379,7 +380,7 @@
             this.txt07.BackColor = System.Drawing.Color.White;
             this.txt07.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt07.Location = new System.Drawing.Point(842, 685);
-            this.txt07.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt07.Margin = new System.Windows.Forms.Padding(6);
             this.txt07.Multiline = true;
             this.txt07.Name = "txt07";
             this.txt07.ReadOnly = true;
@@ -392,7 +393,7 @@
             this.txt86.BackColor = System.Drawing.Color.White;
             this.txt86.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt86.Location = new System.Drawing.Point(1706, 588);
-            this.txt86.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt86.Margin = new System.Windows.Forms.Padding(6);
             this.txt86.Multiline = true;
             this.txt86.Name = "txt86";
             this.txt86.ReadOnly = true;
@@ -405,7 +406,7 @@
             this.txt76.BackColor = System.Drawing.Color.White;
             this.txt76.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt76.Location = new System.Drawing.Point(1598, 588);
-            this.txt76.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt76.Margin = new System.Windows.Forms.Padding(6);
             this.txt76.Multiline = true;
             this.txt76.Name = "txt76";
             this.txt76.ReadOnly = true;
@@ -418,7 +419,7 @@
             this.txt56.BackColor = System.Drawing.Color.White;
             this.txt56.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt56.Location = new System.Drawing.Point(1382, 588);
-            this.txt56.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt56.Margin = new System.Windows.Forms.Padding(6);
             this.txt56.Multiline = true;
             this.txt56.Name = "txt56";
             this.txt56.ReadOnly = true;
@@ -431,7 +432,7 @@
             this.txt66.BackColor = System.Drawing.Color.White;
             this.txt66.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt66.Location = new System.Drawing.Point(1490, 588);
-            this.txt66.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt66.Margin = new System.Windows.Forms.Padding(6);
             this.txt66.Multiline = true;
             this.txt66.Name = "txt66";
             this.txt66.ReadOnly = true;
@@ -444,7 +445,7 @@
             this.txt96.BackColor = System.Drawing.Color.White;
             this.txt96.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt96.Location = new System.Drawing.Point(1814, 588);
-            this.txt96.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt96.Margin = new System.Windows.Forms.Padding(6);
             this.txt96.Multiline = true;
             this.txt96.Name = "txt96";
             this.txt96.ReadOnly = true;
@@ -457,7 +458,7 @@
             this.txt46.BackColor = System.Drawing.Color.White;
             this.txt46.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt46.Location = new System.Drawing.Point(1274, 588);
-            this.txt46.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt46.Margin = new System.Windows.Forms.Padding(6);
             this.txt46.Multiline = true;
             this.txt46.Name = "txt46";
             this.txt46.ReadOnly = true;
@@ -470,7 +471,7 @@
             this.txt36.BackColor = System.Drawing.Color.White;
             this.txt36.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt36.Location = new System.Drawing.Point(1166, 588);
-            this.txt36.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt36.Margin = new System.Windows.Forms.Padding(6);
             this.txt36.Multiline = true;
             this.txt36.Name = "txt36";
             this.txt36.ReadOnly = true;
@@ -483,7 +484,7 @@
             this.txt26.BackColor = System.Drawing.Color.White;
             this.txt26.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt26.Location = new System.Drawing.Point(1058, 588);
-            this.txt26.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt26.Margin = new System.Windows.Forms.Padding(6);
             this.txt26.Multiline = true;
             this.txt26.Name = "txt26";
             this.txt26.ReadOnly = true;
@@ -496,7 +497,7 @@
             this.txt16.BackColor = System.Drawing.Color.White;
             this.txt16.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt16.Location = new System.Drawing.Point(950, 588);
-            this.txt16.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt16.Margin = new System.Windows.Forms.Padding(6);
             this.txt16.Multiline = true;
             this.txt16.Name = "txt16";
             this.txt16.ReadOnly = true;
@@ -509,7 +510,7 @@
             this.txt06.BackColor = System.Drawing.Color.White;
             this.txt06.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt06.Location = new System.Drawing.Point(842, 588);
-            this.txt06.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt06.Margin = new System.Windows.Forms.Padding(6);
             this.txt06.Multiline = true;
             this.txt06.Name = "txt06";
             this.txt06.ReadOnly = true;
@@ -522,7 +523,7 @@
             this.txt85.BackColor = System.Drawing.Color.White;
             this.txt85.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt85.Location = new System.Drawing.Point(1706, 492);
-            this.txt85.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt85.Margin = new System.Windows.Forms.Padding(6);
             this.txt85.Multiline = true;
             this.txt85.Name = "txt85";
             this.txt85.ReadOnly = true;
@@ -535,7 +536,7 @@
             this.txt75.BackColor = System.Drawing.Color.White;
             this.txt75.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt75.Location = new System.Drawing.Point(1598, 492);
-            this.txt75.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt75.Margin = new System.Windows.Forms.Padding(6);
             this.txt75.Multiline = true;
             this.txt75.Name = "txt75";
             this.txt75.ReadOnly = true;
@@ -548,7 +549,7 @@
             this.txt55.BackColor = System.Drawing.Color.White;
             this.txt55.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt55.Location = new System.Drawing.Point(1382, 492);
-            this.txt55.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt55.Margin = new System.Windows.Forms.Padding(6);
             this.txt55.Multiline = true;
             this.txt55.Name = "txt55";
             this.txt55.ReadOnly = true;
@@ -561,7 +562,7 @@
             this.txt65.BackColor = System.Drawing.Color.White;
             this.txt65.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt65.Location = new System.Drawing.Point(1490, 492);
-            this.txt65.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt65.Margin = new System.Windows.Forms.Padding(6);
             this.txt65.Multiline = true;
             this.txt65.Name = "txt65";
             this.txt65.ReadOnly = true;
@@ -574,7 +575,7 @@
             this.txt95.BackColor = System.Drawing.Color.White;
             this.txt95.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt95.Location = new System.Drawing.Point(1814, 492);
-            this.txt95.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt95.Margin = new System.Windows.Forms.Padding(6);
             this.txt95.Multiline = true;
             this.txt95.Name = "txt95";
             this.txt95.ReadOnly = true;
@@ -587,7 +588,7 @@
             this.txt45.BackColor = System.Drawing.Color.White;
             this.txt45.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt45.Location = new System.Drawing.Point(1274, 492);
-            this.txt45.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt45.Margin = new System.Windows.Forms.Padding(6);
             this.txt45.Multiline = true;
             this.txt45.Name = "txt45";
             this.txt45.ReadOnly = true;
@@ -600,7 +601,7 @@
             this.txt35.BackColor = System.Drawing.Color.White;
             this.txt35.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt35.Location = new System.Drawing.Point(1166, 492);
-            this.txt35.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt35.Margin = new System.Windows.Forms.Padding(6);
             this.txt35.Multiline = true;
             this.txt35.Name = "txt35";
             this.txt35.ReadOnly = true;
@@ -613,7 +614,7 @@
             this.txt25.BackColor = System.Drawing.Color.White;
             this.txt25.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt25.Location = new System.Drawing.Point(1058, 492);
-            this.txt25.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt25.Margin = new System.Windows.Forms.Padding(6);
             this.txt25.Multiline = true;
             this.txt25.Name = "txt25";
             this.txt25.ReadOnly = true;
@@ -626,7 +627,7 @@
             this.txt15.BackColor = System.Drawing.Color.White;
             this.txt15.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt15.Location = new System.Drawing.Point(950, 492);
-            this.txt15.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt15.Margin = new System.Windows.Forms.Padding(6);
             this.txt15.Multiline = true;
             this.txt15.Name = "txt15";
             this.txt15.ReadOnly = true;
@@ -639,7 +640,7 @@
             this.txt05.BackColor = System.Drawing.Color.White;
             this.txt05.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt05.Location = new System.Drawing.Point(842, 492);
-            this.txt05.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt05.Margin = new System.Windows.Forms.Padding(6);
             this.txt05.Multiline = true;
             this.txt05.Name = "txt05";
             this.txt05.ReadOnly = true;
@@ -652,7 +653,7 @@
             this.txt84.BackColor = System.Drawing.Color.White;
             this.txt84.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt84.Location = new System.Drawing.Point(1706, 395);
-            this.txt84.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt84.Margin = new System.Windows.Forms.Padding(6);
             this.txt84.Multiline = true;
             this.txt84.Name = "txt84";
             this.txt84.ReadOnly = true;
@@ -665,7 +666,7 @@
             this.txt74.BackColor = System.Drawing.Color.White;
             this.txt74.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt74.Location = new System.Drawing.Point(1598, 395);
-            this.txt74.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt74.Margin = new System.Windows.Forms.Padding(6);
             this.txt74.Multiline = true;
             this.txt74.Name = "txt74";
             this.txt74.ReadOnly = true;
@@ -678,7 +679,7 @@
             this.txt54.BackColor = System.Drawing.Color.White;
             this.txt54.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt54.Location = new System.Drawing.Point(1382, 395);
-            this.txt54.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt54.Margin = new System.Windows.Forms.Padding(6);
             this.txt54.Multiline = true;
             this.txt54.Name = "txt54";
             this.txt54.ReadOnly = true;
@@ -691,7 +692,7 @@
             this.txt64.BackColor = System.Drawing.Color.White;
             this.txt64.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt64.Location = new System.Drawing.Point(1490, 395);
-            this.txt64.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt64.Margin = new System.Windows.Forms.Padding(6);
             this.txt64.Multiline = true;
             this.txt64.Name = "txt64";
             this.txt64.ReadOnly = true;
@@ -704,7 +705,7 @@
             this.txt94.BackColor = System.Drawing.Color.White;
             this.txt94.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt94.Location = new System.Drawing.Point(1814, 395);
-            this.txt94.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt94.Margin = new System.Windows.Forms.Padding(6);
             this.txt94.Multiline = true;
             this.txt94.Name = "txt94";
             this.txt94.ReadOnly = true;
@@ -717,7 +718,7 @@
             this.txt44.BackColor = System.Drawing.Color.White;
             this.txt44.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt44.Location = new System.Drawing.Point(1274, 395);
-            this.txt44.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt44.Margin = new System.Windows.Forms.Padding(6);
             this.txt44.Multiline = true;
             this.txt44.Name = "txt44";
             this.txt44.ReadOnly = true;
@@ -730,7 +731,7 @@
             this.txt34.BackColor = System.Drawing.Color.White;
             this.txt34.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt34.Location = new System.Drawing.Point(1166, 395);
-            this.txt34.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt34.Margin = new System.Windows.Forms.Padding(6);
             this.txt34.Multiline = true;
             this.txt34.Name = "txt34";
             this.txt34.ReadOnly = true;
@@ -743,7 +744,7 @@
             this.txt24.BackColor = System.Drawing.Color.White;
             this.txt24.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt24.Location = new System.Drawing.Point(1058, 395);
-            this.txt24.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt24.Margin = new System.Windows.Forms.Padding(6);
             this.txt24.Multiline = true;
             this.txt24.Name = "txt24";
             this.txt24.ReadOnly = true;
@@ -756,7 +757,7 @@
             this.txt14.BackColor = System.Drawing.Color.White;
             this.txt14.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt14.Location = new System.Drawing.Point(950, 395);
-            this.txt14.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt14.Margin = new System.Windows.Forms.Padding(6);
             this.txt14.Multiline = true;
             this.txt14.Name = "txt14";
             this.txt14.ReadOnly = true;
@@ -769,7 +770,7 @@
             this.txt04.BackColor = System.Drawing.Color.White;
             this.txt04.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt04.Location = new System.Drawing.Point(842, 395);
-            this.txt04.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt04.Margin = new System.Windows.Forms.Padding(6);
             this.txt04.Multiline = true;
             this.txt04.Name = "txt04";
             this.txt04.ReadOnly = true;
@@ -782,7 +783,7 @@
             this.txt83.BackColor = System.Drawing.Color.White;
             this.txt83.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt83.Location = new System.Drawing.Point(1706, 300);
-            this.txt83.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt83.Margin = new System.Windows.Forms.Padding(6);
             this.txt83.Multiline = true;
             this.txt83.Name = "txt83";
             this.txt83.ReadOnly = true;
@@ -795,7 +796,7 @@
             this.txt73.BackColor = System.Drawing.Color.White;
             this.txt73.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt73.Location = new System.Drawing.Point(1598, 300);
-            this.txt73.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt73.Margin = new System.Windows.Forms.Padding(6);
             this.txt73.Multiline = true;
             this.txt73.Name = "txt73";
             this.txt73.ReadOnly = true;
@@ -808,7 +809,7 @@
             this.txt53.BackColor = System.Drawing.Color.White;
             this.txt53.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt53.Location = new System.Drawing.Point(1382, 300);
-            this.txt53.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt53.Margin = new System.Windows.Forms.Padding(6);
             this.txt53.Multiline = true;
             this.txt53.Name = "txt53";
             this.txt53.ReadOnly = true;
@@ -821,7 +822,7 @@
             this.txt63.BackColor = System.Drawing.Color.White;
             this.txt63.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt63.Location = new System.Drawing.Point(1490, 300);
-            this.txt63.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt63.Margin = new System.Windows.Forms.Padding(6);
             this.txt63.Multiline = true;
             this.txt63.Name = "txt63";
             this.txt63.ReadOnly = true;
@@ -834,7 +835,7 @@
             this.txt93.BackColor = System.Drawing.Color.White;
             this.txt93.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt93.Location = new System.Drawing.Point(1814, 300);
-            this.txt93.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt93.Margin = new System.Windows.Forms.Padding(6);
             this.txt93.Multiline = true;
             this.txt93.Name = "txt93";
             this.txt93.ReadOnly = true;
@@ -847,7 +848,7 @@
             this.txt43.BackColor = System.Drawing.Color.White;
             this.txt43.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt43.Location = new System.Drawing.Point(1274, 300);
-            this.txt43.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt43.Margin = new System.Windows.Forms.Padding(6);
             this.txt43.Multiline = true;
             this.txt43.Name = "txt43";
             this.txt43.ReadOnly = true;
@@ -860,7 +861,7 @@
             this.txt33.BackColor = System.Drawing.Color.White;
             this.txt33.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt33.Location = new System.Drawing.Point(1166, 300);
-            this.txt33.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt33.Margin = new System.Windows.Forms.Padding(6);
             this.txt33.Multiline = true;
             this.txt33.Name = "txt33";
             this.txt33.ReadOnly = true;
@@ -873,7 +874,7 @@
             this.txt23.BackColor = System.Drawing.Color.White;
             this.txt23.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt23.Location = new System.Drawing.Point(1058, 300);
-            this.txt23.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt23.Margin = new System.Windows.Forms.Padding(6);
             this.txt23.Multiline = true;
             this.txt23.Name = "txt23";
             this.txt23.ReadOnly = true;
@@ -886,7 +887,7 @@
             this.txt13.BackColor = System.Drawing.Color.White;
             this.txt13.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt13.Location = new System.Drawing.Point(950, 300);
-            this.txt13.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt13.Margin = new System.Windows.Forms.Padding(6);
             this.txt13.Multiline = true;
             this.txt13.Name = "txt13";
             this.txt13.ReadOnly = true;
@@ -899,7 +900,7 @@
             this.txt03.BackColor = System.Drawing.Color.White;
             this.txt03.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt03.Location = new System.Drawing.Point(842, 300);
-            this.txt03.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt03.Margin = new System.Windows.Forms.Padding(6);
             this.txt03.Multiline = true;
             this.txt03.Name = "txt03";
             this.txt03.ReadOnly = true;
@@ -912,7 +913,7 @@
             this.txt02.BackColor = System.Drawing.Color.White;
             this.txt02.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt02.Location = new System.Drawing.Point(842, 205);
-            this.txt02.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt02.Margin = new System.Windows.Forms.Padding(6);
             this.txt02.Multiline = true;
             this.txt02.Name = "txt02";
             this.txt02.ReadOnly = true;
@@ -925,7 +926,7 @@
             this.txt12.BackColor = System.Drawing.Color.White;
             this.txt12.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt12.Location = new System.Drawing.Point(950, 205);
-            this.txt12.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt12.Margin = new System.Windows.Forms.Padding(6);
             this.txt12.Multiline = true;
             this.txt12.Name = "txt12";
             this.txt12.ReadOnly = true;
@@ -938,7 +939,7 @@
             this.txt22.BackColor = System.Drawing.Color.White;
             this.txt22.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt22.Location = new System.Drawing.Point(1058, 205);
-            this.txt22.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt22.Margin = new System.Windows.Forms.Padding(6);
             this.txt22.Multiline = true;
             this.txt22.Name = "txt22";
             this.txt22.ReadOnly = true;
@@ -951,7 +952,7 @@
             this.txt32.BackColor = System.Drawing.Color.White;
             this.txt32.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt32.Location = new System.Drawing.Point(1166, 205);
-            this.txt32.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt32.Margin = new System.Windows.Forms.Padding(6);
             this.txt32.Multiline = true;
             this.txt32.Name = "txt32";
             this.txt32.ReadOnly = true;
@@ -964,7 +965,7 @@
             this.txt42.BackColor = System.Drawing.Color.White;
             this.txt42.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt42.Location = new System.Drawing.Point(1274, 205);
-            this.txt42.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt42.Margin = new System.Windows.Forms.Padding(6);
             this.txt42.Multiline = true;
             this.txt42.Name = "txt42";
             this.txt42.ReadOnly = true;
@@ -977,7 +978,7 @@
             this.txt80.BackColor = System.Drawing.Color.White;
             this.txt80.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt80.Location = new System.Drawing.Point(1706, 12);
-            this.txt80.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt80.Margin = new System.Windows.Forms.Padding(6);
             this.txt80.Multiline = true;
             this.txt80.Name = "txt80";
             this.txt80.ReadOnly = true;
@@ -990,7 +991,7 @@
             this.txt71.BackColor = System.Drawing.Color.White;
             this.txt71.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt71.Location = new System.Drawing.Point(1598, 108);
-            this.txt71.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt71.Margin = new System.Windows.Forms.Padding(6);
             this.txt71.Multiline = true;
             this.txt71.Name = "txt71";
             this.txt71.ReadOnly = true;
@@ -1003,7 +1004,7 @@
             this.txt81.BackColor = System.Drawing.Color.White;
             this.txt81.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt81.Location = new System.Drawing.Point(1706, 108);
-            this.txt81.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt81.Margin = new System.Windows.Forms.Padding(6);
             this.txt81.Multiline = true;
             this.txt81.Name = "txt81";
             this.txt81.ReadOnly = true;
@@ -1016,7 +1017,7 @@
             this.txt72.BackColor = System.Drawing.Color.White;
             this.txt72.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt72.Location = new System.Drawing.Point(1598, 205);
-            this.txt72.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt72.Margin = new System.Windows.Forms.Padding(6);
             this.txt72.Multiline = true;
             this.txt72.Name = "txt72";
             this.txt72.ReadOnly = true;
@@ -1029,7 +1030,7 @@
             this.txt92.BackColor = System.Drawing.Color.White;
             this.txt92.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt92.Location = new System.Drawing.Point(1814, 205);
-            this.txt92.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt92.Margin = new System.Windows.Forms.Padding(6);
             this.txt92.Multiline = true;
             this.txt92.Name = "txt92";
             this.txt92.ReadOnly = true;
@@ -1042,7 +1043,7 @@
             this.txt70.BackColor = System.Drawing.Color.White;
             this.txt70.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt70.Location = new System.Drawing.Point(1598, 12);
-            this.txt70.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt70.Margin = new System.Windows.Forms.Padding(6);
             this.txt70.Multiline = true;
             this.txt70.Name = "txt70";
             this.txt70.ReadOnly = true;
@@ -1055,7 +1056,7 @@
             this.txt61.BackColor = System.Drawing.Color.White;
             this.txt61.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt61.Location = new System.Drawing.Point(1490, 108);
-            this.txt61.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt61.Margin = new System.Windows.Forms.Padding(6);
             this.txt61.Multiline = true;
             this.txt61.Name = "txt61";
             this.txt61.ReadOnly = true;
@@ -1068,7 +1069,7 @@
             this.txt91.BackColor = System.Drawing.Color.White;
             this.txt91.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt91.Location = new System.Drawing.Point(1814, 108);
-            this.txt91.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt91.Margin = new System.Windows.Forms.Padding(6);
             this.txt91.Multiline = true;
             this.txt91.Name = "txt91";
             this.txt91.ReadOnly = true;
@@ -1081,7 +1082,7 @@
             this.txt62.BackColor = System.Drawing.Color.White;
             this.txt62.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt62.Location = new System.Drawing.Point(1490, 205);
-            this.txt62.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt62.Margin = new System.Windows.Forms.Padding(6);
             this.txt62.Multiline = true;
             this.txt62.Name = "txt62";
             this.txt62.ReadOnly = true;
@@ -1094,7 +1095,7 @@
             this.txt82.BackColor = System.Drawing.Color.White;
             this.txt82.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt82.Location = new System.Drawing.Point(1706, 205);
-            this.txt82.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt82.Margin = new System.Windows.Forms.Padding(6);
             this.txt82.Multiline = true;
             this.txt82.Name = "txt82";
             this.txt82.ReadOnly = true;
@@ -1107,7 +1108,7 @@
             this.txt50.BackColor = System.Drawing.Color.White;
             this.txt50.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt50.Location = new System.Drawing.Point(1382, 12);
-            this.txt50.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt50.Margin = new System.Windows.Forms.Padding(6);
             this.txt50.Multiline = true;
             this.txt50.Name = "txt50";
             this.txt50.ReadOnly = true;
@@ -1120,7 +1121,7 @@
             this.txt60.BackColor = System.Drawing.Color.White;
             this.txt60.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt60.Location = new System.Drawing.Point(1490, 12);
-            this.txt60.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt60.Margin = new System.Windows.Forms.Padding(6);
             this.txt60.Multiline = true;
             this.txt60.Name = "txt60";
             this.txt60.ReadOnly = true;
@@ -1133,7 +1134,7 @@
             this.txt90.BackColor = System.Drawing.Color.White;
             this.txt90.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt90.Location = new System.Drawing.Point(1814, 12);
-            this.txt90.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt90.Margin = new System.Windows.Forms.Padding(6);
             this.txt90.Multiline = true;
             this.txt90.Name = "txt90";
             this.txt90.ReadOnly = true;
@@ -1146,7 +1147,7 @@
             this.txt51.BackColor = System.Drawing.Color.White;
             this.txt51.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt51.Location = new System.Drawing.Point(1382, 108);
-            this.txt51.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt51.Margin = new System.Windows.Forms.Padding(6);
             this.txt51.Multiline = true;
             this.txt51.Name = "txt51";
             this.txt51.ReadOnly = true;
@@ -1159,7 +1160,7 @@
             this.txt52.BackColor = System.Drawing.Color.White;
             this.txt52.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt52.Location = new System.Drawing.Point(1382, 205);
-            this.txt52.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt52.Margin = new System.Windows.Forms.Padding(6);
             this.txt52.Multiline = true;
             this.txt52.Name = "txt52";
             this.txt52.ReadOnly = true;
@@ -1172,7 +1173,7 @@
             this.txt41.BackColor = System.Drawing.Color.White;
             this.txt41.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt41.Location = new System.Drawing.Point(1274, 108);
-            this.txt41.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt41.Margin = new System.Windows.Forms.Padding(6);
             this.txt41.Multiline = true;
             this.txt41.Name = "txt41";
             this.txt41.ReadOnly = true;
@@ -1185,7 +1186,7 @@
             this.txt31.BackColor = System.Drawing.Color.White;
             this.txt31.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt31.Location = new System.Drawing.Point(1166, 108);
-            this.txt31.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt31.Margin = new System.Windows.Forms.Padding(6);
             this.txt31.Multiline = true;
             this.txt31.Name = "txt31";
             this.txt31.ReadOnly = true;
@@ -1198,7 +1199,7 @@
             this.txt21.BackColor = System.Drawing.Color.White;
             this.txt21.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt21.Location = new System.Drawing.Point(1058, 108);
-            this.txt21.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt21.Margin = new System.Windows.Forms.Padding(6);
             this.txt21.Multiline = true;
             this.txt21.Name = "txt21";
             this.txt21.ReadOnly = true;
@@ -1211,7 +1212,7 @@
             this.txt11.BackColor = System.Drawing.Color.White;
             this.txt11.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt11.Location = new System.Drawing.Point(950, 108);
-            this.txt11.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt11.Margin = new System.Windows.Forms.Padding(6);
             this.txt11.Multiline = true;
             this.txt11.Name = "txt11";
             this.txt11.ReadOnly = true;
@@ -1224,7 +1225,7 @@
             this.txt01.BackColor = System.Drawing.Color.White;
             this.txt01.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt01.Location = new System.Drawing.Point(842, 108);
-            this.txt01.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt01.Margin = new System.Windows.Forms.Padding(6);
             this.txt01.Multiline = true;
             this.txt01.Name = "txt01";
             this.txt01.ReadOnly = true;
@@ -1237,7 +1238,7 @@
             this.txt40.BackColor = System.Drawing.Color.White;
             this.txt40.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt40.Location = new System.Drawing.Point(1274, 12);
-            this.txt40.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt40.Margin = new System.Windows.Forms.Padding(6);
             this.txt40.Multiline = true;
             this.txt40.Name = "txt40";
             this.txt40.ReadOnly = true;
@@ -1250,7 +1251,7 @@
             this.txt30.BackColor = System.Drawing.Color.White;
             this.txt30.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt30.Location = new System.Drawing.Point(1166, 12);
-            this.txt30.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt30.Margin = new System.Windows.Forms.Padding(6);
             this.txt30.Multiline = true;
             this.txt30.Name = "txt30";
             this.txt30.ReadOnly = true;
@@ -1263,7 +1264,7 @@
             this.txt20.BackColor = System.Drawing.Color.White;
             this.txt20.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt20.Location = new System.Drawing.Point(1058, 12);
-            this.txt20.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt20.Margin = new System.Windows.Forms.Padding(6);
             this.txt20.Multiline = true;
             this.txt20.Name = "txt20";
             this.txt20.ReadOnly = true;
@@ -1276,7 +1277,7 @@
             this.txt10.BackColor = System.Drawing.Color.White;
             this.txt10.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt10.Location = new System.Drawing.Point(950, 12);
-            this.txt10.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt10.Margin = new System.Windows.Forms.Padding(6);
             this.txt10.Multiline = true;
             this.txt10.Name = "txt10";
             this.txt10.ReadOnly = true;
@@ -1289,20 +1290,19 @@
             this.txt00.BackColor = System.Drawing.Color.White;
             this.txt00.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt00.Location = new System.Drawing.Point(840, 12);
-            this.txt00.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt00.Margin = new System.Windows.Forms.Padding(6);
             this.txt00.Multiline = true;
             this.txt00.Name = "txt00";
             this.txt00.ReadOnly = true;
             this.txt00.Size = new System.Drawing.Size(70, 66);
             this.txt00.TabIndex = 106;
             this.txt00.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-
             // 
             // btnMove
             // 
             this.btnMove.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMove.Location = new System.Drawing.Point(423, 891);
-            this.btnMove.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnMove.Location = new System.Drawing.Point(423, 890);
+            this.btnMove.Margin = new System.Windows.Forms.Padding(6);
             this.btnMove.Name = "btnMove";
             this.btnMove.Size = new System.Drawing.Size(204, 112);
             this.btnMove.TabIndex = 105;
@@ -1314,7 +1314,7 @@
             // 
             this.btnAttack.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAttack.Location = new System.Drawing.Point(423, 738);
-            this.btnAttack.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnAttack.Margin = new System.Windows.Forms.Padding(6);
             this.btnAttack.Name = "btnAttack";
             this.btnAttack.Size = new System.Drawing.Size(204, 112);
             this.btnAttack.TabIndex = 104;
@@ -1327,7 +1327,7 @@
             this.txtStats.BackColor = System.Drawing.Color.White;
             this.txtStats.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStats.Location = new System.Drawing.Point(2, 2);
-            this.txtStats.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtStats.Margin = new System.Windows.Forms.Padding(6);
             this.txtStats.Name = "txtStats";
             this.txtStats.ReadOnly = true;
             this.txtStats.Size = new System.Drawing.Size(766, 616);
@@ -1338,7 +1338,7 @@
             // 
             this.btnLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLeft.Location = new System.Drawing.Point(30, 829);
-            this.btnLeft.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnLeft.Margin = new System.Windows.Forms.Padding(6);
             this.btnLeft.Name = "btnLeft";
             this.btnLeft.Size = new System.Drawing.Size(87, 82);
             this.btnLeft.TabIndex = 102;
@@ -1350,7 +1350,7 @@
             // 
             this.btnDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDown.Location = new System.Drawing.Point(140, 925);
-            this.btnDown.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnDown.Margin = new System.Windows.Forms.Padding(6);
             this.btnDown.Name = "btnDown";
             this.btnDown.Size = new System.Drawing.Size(87, 82);
             this.btnDown.TabIndex = 101;
@@ -1362,7 +1362,7 @@
             // 
             this.btnRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRight.Location = new System.Drawing.Point(243, 829);
-            this.btnRight.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnRight.Margin = new System.Windows.Forms.Padding(6);
             this.btnRight.Name = "btnRight";
             this.btnRight.Size = new System.Drawing.Size(87, 82);
             this.btnRight.TabIndex = 100;
@@ -1374,7 +1374,7 @@
             // 
             this.btnUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUp.Location = new System.Drawing.Point(140, 732);
-            this.btnUp.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnUp.Margin = new System.Windows.Forms.Padding(6);
             this.btnUp.Name = "btnUp";
             this.btnUp.Size = new System.Drawing.Size(87, 82);
             this.btnUp.TabIndex = 99;
@@ -1382,11 +1382,23 @@
             this.btnUp.UseVisualStyleBackColor = true;
             this.btnUp.Click += new System.EventHandler(this.btnUp_Click);
             // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(653, 891);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(219, 111);
+            this.btnSave.TabIndex = 196;
+            this.btnSave.Text = "Save";
+            this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(2038, 1046);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txt88);
             this.Controls.Add(this.txt78);
             this.Controls.Add(this.txt58);
@@ -1592,6 +1604,7 @@
         private System.Windows.Forms.Button btnDown;
         private System.Windows.Forms.Button btnRight;
         private System.Windows.Forms.Button btnUp;
+        private System.Windows.Forms.Button btnSave;
     }
 }
 
