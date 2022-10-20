@@ -30,7 +30,7 @@ namespace GameDev_Project2
                     break;
 
                 case Character.Movement.Up:
-                    if (map.GetXY(C.GetX() , C.GetY() - 1).GetCurrentTileType() != Tile.TileType.Enemy && map.GetXY(C.GetX() , C.GetY() - 1).GetCurrentTileType() != Tile.TileType.Border) 
+                    if (map.GetXY(C.GetX() , C.GetY() - 1).GetCurrentTileType() != Tile.TileType.Enemy && map.GetXY(C.GetX() , C.GetY() - 1).GetCurrentTileType() != Tile.TileType.Border && map.GetXY(C.GetX(), C.GetY()- 1).GetCurrentTileType() != Tile.TileType.Hero) 
                     { 
                         map.GetXY(C.GetX(), C.GetY()).SetCurrentTileType(Tile.TileType.Empty);
                          C.SetY(C.GetY() - 1);
@@ -38,7 +38,7 @@ namespace GameDev_Project2
                     break;
 
                 case Character.Movement.Down:
-                    if (map.GetXY(C.GetX() , C.GetY() + 1).GetCurrentTileType() != Tile.TileType.Enemy && map.GetXY(C.GetX(), C.GetY() + 1).GetCurrentTileType() != Tile.TileType.Border)
+                    if (map.GetXY(C.GetX() , C.GetY() + 1).GetCurrentTileType() != Tile.TileType.Enemy && map.GetXY(C.GetX(), C.GetY() + 1).GetCurrentTileType() != Tile.TileType.Border && map.GetXY(C.GetX() , C.GetY()+1).GetCurrentTileType() != Tile.TileType.Hero)
                     {
 
                         map.GetXY(C.GetX(), C.GetY()).SetCurrentTileType(Tile.TileType.Empty);
@@ -47,7 +47,7 @@ namespace GameDev_Project2
                     break;
 
                 case Character.Movement.Left:
-                    if (map.GetXY(C.GetX() - 1, C.GetY() ).GetCurrentTileType() != Tile.TileType.Enemy && map.GetXY(C.GetX() - 1, C.GetY() ).GetCurrentTileType() != Tile.TileType.Border)
+                    if (map.GetXY(C.GetX() - 1, C.GetY() ).GetCurrentTileType() != Tile.TileType.Enemy && map.GetXY(C.GetX() - 1, C.GetY() ).GetCurrentTileType() != Tile.TileType.Border && map.GetXY(C.GetX() - 1, C.GetY()).GetCurrentTileType() != Tile.TileType.Hero)
                     {
 
                         map.GetXY(C.GetX(), C.GetY()).SetCurrentTileType(Tile.TileType.Empty);
@@ -57,7 +57,7 @@ namespace GameDev_Project2
                     break;
 
                 case Character.Movement.Right:
-                    if (map.GetXY(C.GetX() + 1, C.GetY()).GetCurrentTileType() != Tile.TileType.Enemy && map.GetXY(C.GetX() + 1, C.GetY()).GetCurrentTileType() != Tile.TileType.Border) 
+                    if (map.GetXY(C.GetX() + 1, C.GetY()).GetCurrentTileType() != Tile.TileType.Enemy && map.GetXY(C.GetX() + 1, C.GetY()).GetCurrentTileType() != Tile.TileType.Border && map.GetXY(C.GetX() + 1, C.GetY()).GetCurrentTileType() != Tile.TileType.Hero) 
                     {
                        map.GetXY(C.GetX(), C.GetY()).SetCurrentTileType(Tile.TileType.Empty);
                        C.SetX(C.GetX() + 1);
