@@ -21,7 +21,7 @@ namespace GameDev_Project2
         }
 
 
-        public override bool CheckRange(Character h, Tile target)
+    /*    public override bool CheckRange(Character h, Tile target)
         {
             //Sets the Inrange boolean to false as the default everytime checkrange begins
             InRange = false;
@@ -81,7 +81,6 @@ namespace GameDev_Project2
                     MagesTargets[i].SetY(h.GetY() + 1);
                 }
             }
-
             //Compares the tile type of each of the tiles within the MagesTargets array and if they are a suitable type (Hero or Enemy) sets the InRange boolean to true
             for (int j = 0; j < MagesTargets.Length; j++)
             {
@@ -94,5 +93,6 @@ namespace GameDev_Project2
             //returns the InRange boolean
             return InRange;
         }
+    */
     }
 }

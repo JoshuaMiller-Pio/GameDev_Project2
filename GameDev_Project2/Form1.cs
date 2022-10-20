@@ -213,17 +213,17 @@ namespace  GameDev_Project2
 
                     if (gameEngine.map.enemies[i].CheckisDead(gameEngine.map.enemies[i]) == true)
                     {
-/*
-                        Item item = items[i];
-                        List<Item> Litems = new List<Item>(items);
-
-                        Litems.RemoveAt(Litems.IndexOf(Litems[i]));
-                        items = Litems.ToArray();
-*/
-
                         gameEngine.map.enemies[i].SetCurrentTileType(Tile.TileType.Empty);
-
                         textBoxes[gameEngine.map.enemies[i].GetY(), gameEngine.map.enemies[i].GetX()].Text = ".";
+
+                        
+                        List<Enemy> Enemies = new List<Enemy>(gameEngine.map.enemies);
+
+                        Enemies.RemoveAt(Enemies.IndexOf(Enemies[i]));
+                        gameEngine.map.enemies = Enemies.ToArray();
+
+
+
                     }
                 }
             }
@@ -320,7 +320,8 @@ namespace  GameDev_Project2
                      }
                 
                 }
-            HeroGameOver();
+            // HeroGameOver();
+            Console.WriteLine(gameEngine.map.GetXY(2, 5).GetCurrentTileType());
         }
 
     }
