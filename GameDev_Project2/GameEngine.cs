@@ -134,7 +134,7 @@ namespace GameDev_Project2
 
 
 
-                if (map.items[i].GetCurrentTileType() == Tile.TileType.Gold)
+                if (map.GetXY(map.items[i].GetX(), map.items[i].GetY()) == map.GetXY(map.hero.GetX(), map.hero.GetY()))
                 {
                     map.hero.SetCurrentHeldGold(map.hero.GetHeldGold() + map.items[i].getCurrentGold());
 
