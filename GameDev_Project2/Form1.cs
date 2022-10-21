@@ -368,6 +368,9 @@ namespace  GameDev_Project2
             gameEngine.Save();
         }
 
-
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+            gameEngine.Load();
+        }
     }
 }

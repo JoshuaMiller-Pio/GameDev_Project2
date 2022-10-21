@@ -264,7 +264,7 @@ namespace GameDev_Project2
                 for (int j = 0; j < map.GetMapHeight(); j++)
                 {
                     string currentTile = Convert.ToString(map.MapArray[i, j]);
-                    writer.Write(currentTile);
+                    writer.Write(currentTile + ",");
                 }
             }
         }
@@ -273,7 +273,13 @@ namespace GameDev_Project2
         {
             BinaryReader reader = new BinaryReader(myUtility.saveFile);
             string loadedmap = Convert.ToString(reader.ReadByte());
-            loadedmap.Split();
+            string[] RegainedMap = loadedmap.Split(',');
+            foreach (var regainedMap in loadedmap)
+            {
+                
+            }
+            
+
         }
     }
 }
