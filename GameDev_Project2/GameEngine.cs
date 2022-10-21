@@ -269,5 +269,11 @@ namespace GameDev_Project2
             }
         }
         
+        public void Load()
+        {
+            BinaryReader reader = new BinaryReader(myUtility.saveFile);
+            string loadedmap = Convert.ToString(reader.ReadByte());
+            loadedmap.Split();
+        }
     }
 }

@@ -33,7 +33,7 @@ namespace GameDev_Project2
         public override string ToString()
         {
 
-            return String.Format("Current Gold:{1}",getCurrentGold());
+            return String.Format("Current Gold:{0}",getCurrentGold());
 
         }
 
