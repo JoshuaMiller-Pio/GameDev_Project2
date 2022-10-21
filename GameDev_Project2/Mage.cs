@@ -36,9 +36,11 @@ namespace GameDev_Project2
             {
                 if(i == 0)
                 {
+                    
                     MagesTargets[i].SetX(h.GetX() - 1);
                     MagesTargets[i].SetY(h.GetY() - 1);
-                    
+                    target = MagesTargets[i];
+
                 }
 
                 if (i == 1)

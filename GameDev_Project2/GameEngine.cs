@@ -273,23 +273,23 @@ namespace GameDev_Project2
 
             for (int i = 0; i < map.enemies.Length; i++)
             {
-                if (C.CheckRange(C, map.hero) == true )
+                if (C.CheckRange(C, map.hero) == true)
                 {
                     C.Attack(map.hero);
-                    
+
                 }
-                else  if (C.CheckRange(C, map.enemies[i]) == true)  
+                else if (C.CheckRange(C, map.enemies[i]) == true)
                 {
                     C.Attack(map.enemies[i]);
-                    
+
                 }
                 else
 
                 {
-                   
+
                 }
 
-
+            }
             
                    
           
@@ -300,12 +300,15 @@ namespace GameDev_Project2
 
         public void Save()
         {
+            //Creates the file stream called savefile
             FileStream saveFile = new FileStream(Directory.GetCurrentDirectory() + "/save.File", FileMode.Create);
+            //Creates the binary writer and directs it toward the current directory
             using (BinaryWriter writer = new BinaryWriter(File.Open(Directory.GetCurrentDirectory() + "/save.File", FileMode.Create), Encoding.UTF8, false))
             {
+                //Writes the values of the current maps width and height to the save file
                 writer.Write(map.GetMapWidth() + ";" + map.GetMapHeight() + ";");
 
-
+                //itterates through the map array and writes the tiletype of each element to the stream by first converting the enum to an int and then converting the int to a string
                 for (int i = 0; i < map.GetMapWidth(); i++)
                 {
                     for (int j = 0; j < map.GetMapHeight(); j++)
@@ -314,11 +317,14 @@ namespace GameDev_Project2
                         writer.Write(currentTile + ",");
                     }
                 }
+                //Semicolon used as a symbol to split the data in the stream
                 writer.Write(";");
+                //Writes the length of the enemies array to the file in order to use the length as a limit for looping later
                 writer.Write(map.enemies.Length);
                 writer.Write(";");
                 for (int i = 0; i < map.enemies.Length; i++)
                 {
+                    //Writes each enemy object to the stream using the ToSaveString method to convert all the required data to a string
                     writer.Write(map.enemies[i].ToSaveString() + ".");
                 }
                 writer.Write(";");
@@ -330,25 +336,33 @@ namespace GameDev_Project2
                 {
                     writer.Write(map.items[j].ToSaveString());
                 }
+                //Closes the StreamWriter
                 writer.Close();
             }
-            //BinaryWriter writer = new BinaryWriter(saveFile));
             
+            //Closes the Stream
             saveFile.Close();
         }
 
         public void Load()
         {
+            //Opens the FileStream at the local directory using the GetCurrentDirectory method and is directed to saveFile
             FileStream saveFile = new FileStream(Directory.GetCurrentDirectory() + "/save.File", FileMode.Open);
+            //Creates a binary reader and directs it toward saveFile
         BinaryReader reader = new BinaryReader(saveFile);
+            //Creates the loaded map string and sets it equal to the readsavefile string
             string loadedmap = Convert.ToString(reader.ReadString());
+            //creates the string array map data and populates each element with the apropriate string as split by the semicolon divider
             string[] MapData = loadedmap.Split(';');
+            //creates the string array Regained map and populates each element with the apropriate string as split by the comma divider
             string[] RegainedMap = MapData[2].Split(',');
             int index = 0;
+            //itterates through the map array height and width as denoted by the int value gained by parseing the mapdata[0] and [1] rspectively through as ints
             for (int i = 0; i < int.Parse(MapData[0]); i++)
             {
                 for (int j = 0; j < int.Parse(MapData[1]); j++)
                 {
+                    //Sets the tile type of the specific element in map array to the apropriate type as denoted by parseing the regained map string as an int (which is read by the tiletype enum
                     map.MapArray[i, j].SetCurrentTileType((Tile.TileType)(int.Parse(RegainedMap[index])));
 
                     index++;
@@ -361,7 +375,7 @@ namespace GameDev_Project2
             {
 
                 string[] data = enemies[i].Split(',');
-
+                //The apropriate enemy type is decided by the data[0] which is reference to the enemy name, either "Swamp Creature" or "Mage"
                 switch (data[0])
                 {
                     case "Swamp Creature"
@@ -376,13 +390,16 @@ namespace GameDev_Project2
                     default:
                         break;
                 }
+                //Sets the specific variable value to the string value parsed as an int
                 map.enemies[i].SetHP(int.Parse(data[3]));
                 map.enemies[i].SetDamage(int.Parse(data[4]));
                 map.enemies[i].SetCurrentHeldGold(int.Parse(data[5]));
-                // map.enemies[i] = new Enemy(enemies[i]);
+                
             }
             string[] Hero = MapData[5].Split(',');
+
             map.hero = new Hero(int.Parse(Hero[4]), int.Parse(Hero[5]), Hero[0]);
+            //Sets the specific variable value to the string value parsed as an int
             map.hero.SetHP(int.Parse(Hero[1]));
             map.hero.SetDamage(int.Parse(Hero[3]));
             map.hero.SetCurrentHeldGold(int.Parse(Hero[6]));
@@ -405,6 +422,7 @@ namespace GameDev_Project2
                         break;
                 }
             }
+            //Closes the reader and the stream
             reader.Close();
             saveFile.Close();
         }
