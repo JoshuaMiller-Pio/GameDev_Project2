@@ -137,7 +137,7 @@
             this.txt88.Multiline = true;
             this.txt88.Name = "txt88";
             this.txt88.ReadOnly = true;
-            this.txt88.Size = new System.Drawing.Size(71, 75);
+            this.txt88.Size = new System.Drawing.Size(58, 66);
             this.txt88.TabIndex = 195;
             this.txt88.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -150,7 +150,7 @@
             this.txt78.Multiline = true;
             this.txt78.Name = "txt78";
             this.txt78.ReadOnly = true;
-            this.txt78.Size = new System.Drawing.Size(71, 75);
+            this.txt78.Size = new System.Drawing.Size(58, 66);
             this.txt78.TabIndex = 194;
             this.txt78.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -163,7 +163,7 @@
             this.txt58.Multiline = true;
             this.txt58.Name = "txt58";
             this.txt58.ReadOnly = true;
-            this.txt58.Size = new System.Drawing.Size(71, 75);
+            this.txt58.Size = new System.Drawing.Size(58, 66);
             this.txt58.TabIndex = 193;
             this.txt58.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -176,7 +176,7 @@
             this.txt68.Multiline = true;
             this.txt68.Name = "txt68";
             this.txt68.ReadOnly = true;
-            this.txt68.Size = new System.Drawing.Size(71, 75);
+            this.txt68.Size = new System.Drawing.Size(58, 66);
             this.txt68.TabIndex = 192;
             this.txt68.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -202,7 +202,7 @@
             this.txt48.Multiline = true;
             this.txt48.Name = "txt48";
             this.txt48.ReadOnly = true;
-            this.txt48.Size = new System.Drawing.Size(71, 75);
+            this.txt48.Size = new System.Drawing.Size(58, 66);
             this.txt48.TabIndex = 190;
             this.txt48.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -215,7 +215,7 @@
             this.txt38.Multiline = true;
             this.txt38.Name = "txt38";
             this.txt38.ReadOnly = true;
-            this.txt38.Size = new System.Drawing.Size(71, 75);
+            this.txt38.Size = new System.Drawing.Size(58, 66);
             this.txt38.TabIndex = 189;
             this.txt38.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -228,7 +228,7 @@
             this.txt28.Multiline = true;
             this.txt28.Name = "txt28";
             this.txt28.ReadOnly = true;
-            this.txt28.Size = new System.Drawing.Size(71, 75);
+            this.txt28.Size = new System.Drawing.Size(58, 66);
             this.txt28.TabIndex = 188;
             this.txt28.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -241,7 +241,7 @@
             this.txt18.Multiline = true;
             this.txt18.Name = "txt18";
             this.txt18.ReadOnly = true;
-            this.txt18.Size = new System.Drawing.Size(71, 75);
+            this.txt18.Size = new System.Drawing.Size(58, 66);
             this.txt18.TabIndex = 187;
             this.txt18.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -254,7 +254,7 @@
             this.txt08.Multiline = true;
             this.txt08.Name = "txt08";
             this.txt08.ReadOnly = true;
-            this.txt08.Size = new System.Drawing.Size(71, 75);
+            this.txt08.Size = new System.Drawing.Size(58, 66);
             this.txt08.TabIndex = 186;
             this.txt08.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -267,7 +267,7 @@
             this.txt87.Multiline = true;
             this.txt87.Name = "txt87";
             this.txt87.ReadOnly = true;
-            this.txt87.Size = new System.Drawing.Size(71, 75);
+            this.txt87.Size = new System.Drawing.Size(58, 66);
             this.txt87.TabIndex = 185;
             this.txt87.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -280,7 +280,7 @@
             this.txt77.Multiline = true;
             this.txt77.Name = "txt77";
             this.txt77.ReadOnly = true;
-            this.txt77.Size = new System.Drawing.Size(71, 75);
+            this.txt77.Size = new System.Drawing.Size(58, 66);
             this.txt77.TabIndex = 184;
             this.txt77.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -293,7 +293,7 @@
             this.txt57.Multiline = true;
             this.txt57.Name = "txt57";
             this.txt57.ReadOnly = true;
-            this.txt57.Size = new System.Drawing.Size(71, 75);
+            this.txt57.Size = new System.Drawing.Size(58, 66);
             this.txt57.TabIndex = 183;
             this.txt57.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -306,7 +306,7 @@
             this.txt67.Multiline = true;
             this.txt67.Name = "txt67";
             this.txt67.ReadOnly = true;
-            this.txt67.Size = new System.Drawing.Size(71, 75);
+            this.txt67.Size = new System.Drawing.Size(58, 66);
             this.txt67.TabIndex = 182;
             this.txt67.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -332,7 +332,7 @@
             this.txt47.Multiline = true;
             this.txt47.Name = "txt47";
             this.txt47.ReadOnly = true;
-            this.txt47.Size = new System.Drawing.Size(71, 75);
+            this.txt47.Size = new System.Drawing.Size(58, 66);
             this.txt47.TabIndex = 180;
             this.txt47.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -345,7 +345,7 @@
             this.txt37.Multiline = true;
             this.txt37.Name = "txt37";
             this.txt37.ReadOnly = true;
-            this.txt37.Size = new System.Drawing.Size(71, 75);
+            this.txt37.Size = new System.Drawing.Size(58, 66);
             this.txt37.TabIndex = 179;
             this.txt37.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -358,7 +358,7 @@
             this.txt27.Multiline = true;
             this.txt27.Name = "txt27";
             this.txt27.ReadOnly = true;
-            this.txt27.Size = new System.Drawing.Size(71, 75);
+            this.txt27.Size = new System.Drawing.Size(58, 66);
             this.txt27.TabIndex = 178;
             this.txt27.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -371,7 +371,7 @@
             this.txt17.Multiline = true;
             this.txt17.Name = "txt17";
             this.txt17.ReadOnly = true;
-            this.txt17.Size = new System.Drawing.Size(71, 75);
+            this.txt17.Size = new System.Drawing.Size(58, 66);
             this.txt17.TabIndex = 177;
             this.txt17.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -384,7 +384,7 @@
             this.txt07.Multiline = true;
             this.txt07.Name = "txt07";
             this.txt07.ReadOnly = true;
-            this.txt07.Size = new System.Drawing.Size(71, 75);
+            this.txt07.Size = new System.Drawing.Size(58, 66);
             this.txt07.TabIndex = 176;
             this.txt07.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -397,7 +397,7 @@
             this.txt86.Multiline = true;
             this.txt86.Name = "txt86";
             this.txt86.ReadOnly = true;
-            this.txt86.Size = new System.Drawing.Size(71, 75);
+            this.txt86.Size = new System.Drawing.Size(58, 66);
             this.txt86.TabIndex = 175;
             this.txt86.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -410,7 +410,7 @@
             this.txt76.Multiline = true;
             this.txt76.Name = "txt76";
             this.txt76.ReadOnly = true;
-            this.txt76.Size = new System.Drawing.Size(71, 75);
+            this.txt76.Size = new System.Drawing.Size(58, 66);
             this.txt76.TabIndex = 174;
             this.txt76.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -423,7 +423,7 @@
             this.txt56.Multiline = true;
             this.txt56.Name = "txt56";
             this.txt56.ReadOnly = true;
-            this.txt56.Size = new System.Drawing.Size(71, 75);
+            this.txt56.Size = new System.Drawing.Size(58, 66);
             this.txt56.TabIndex = 173;
             this.txt56.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -436,7 +436,7 @@
             this.txt66.Multiline = true;
             this.txt66.Name = "txt66";
             this.txt66.ReadOnly = true;
-            this.txt66.Size = new System.Drawing.Size(71, 75);
+            this.txt66.Size = new System.Drawing.Size(58, 66);
             this.txt66.TabIndex = 172;
             this.txt66.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -462,7 +462,7 @@
             this.txt46.Multiline = true;
             this.txt46.Name = "txt46";
             this.txt46.ReadOnly = true;
-            this.txt46.Size = new System.Drawing.Size(71, 75);
+            this.txt46.Size = new System.Drawing.Size(58, 66);
             this.txt46.TabIndex = 170;
             this.txt46.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -475,7 +475,7 @@
             this.txt36.Multiline = true;
             this.txt36.Name = "txt36";
             this.txt36.ReadOnly = true;
-            this.txt36.Size = new System.Drawing.Size(71, 75);
+            this.txt36.Size = new System.Drawing.Size(58, 66);
             this.txt36.TabIndex = 169;
             this.txt36.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -488,7 +488,7 @@
             this.txt26.Multiline = true;
             this.txt26.Name = "txt26";
             this.txt26.ReadOnly = true;
-            this.txt26.Size = new System.Drawing.Size(71, 75);
+            this.txt26.Size = new System.Drawing.Size(58, 66);
             this.txt26.TabIndex = 168;
             this.txt26.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -501,7 +501,7 @@
             this.txt16.Multiline = true;
             this.txt16.Name = "txt16";
             this.txt16.ReadOnly = true;
-            this.txt16.Size = new System.Drawing.Size(71, 75);
+            this.txt16.Size = new System.Drawing.Size(58, 66);
             this.txt16.TabIndex = 167;
             this.txt16.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -514,7 +514,7 @@
             this.txt06.Multiline = true;
             this.txt06.Name = "txt06";
             this.txt06.ReadOnly = true;
-            this.txt06.Size = new System.Drawing.Size(71, 75);
+            this.txt06.Size = new System.Drawing.Size(58, 66);
             this.txt06.TabIndex = 166;
             this.txt06.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -527,7 +527,7 @@
             this.txt85.Multiline = true;
             this.txt85.Name = "txt85";
             this.txt85.ReadOnly = true;
-            this.txt85.Size = new System.Drawing.Size(71, 75);
+            this.txt85.Size = new System.Drawing.Size(58, 66);
             this.txt85.TabIndex = 165;
             this.txt85.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -540,7 +540,7 @@
             this.txt75.Multiline = true;
             this.txt75.Name = "txt75";
             this.txt75.ReadOnly = true;
-            this.txt75.Size = new System.Drawing.Size(71, 75);
+            this.txt75.Size = new System.Drawing.Size(58, 66);
             this.txt75.TabIndex = 164;
             this.txt75.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -553,7 +553,7 @@
             this.txt55.Multiline = true;
             this.txt55.Name = "txt55";
             this.txt55.ReadOnly = true;
-            this.txt55.Size = new System.Drawing.Size(71, 75);
+            this.txt55.Size = new System.Drawing.Size(58, 66);
             this.txt55.TabIndex = 163;
             this.txt55.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -566,7 +566,7 @@
             this.txt65.Multiline = true;
             this.txt65.Name = "txt65";
             this.txt65.ReadOnly = true;
-            this.txt65.Size = new System.Drawing.Size(71, 75);
+            this.txt65.Size = new System.Drawing.Size(58, 66);
             this.txt65.TabIndex = 162;
             this.txt65.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -592,7 +592,7 @@
             this.txt45.Multiline = true;
             this.txt45.Name = "txt45";
             this.txt45.ReadOnly = true;
-            this.txt45.Size = new System.Drawing.Size(71, 75);
+            this.txt45.Size = new System.Drawing.Size(58, 66);
             this.txt45.TabIndex = 160;
             this.txt45.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -605,7 +605,7 @@
             this.txt35.Multiline = true;
             this.txt35.Name = "txt35";
             this.txt35.ReadOnly = true;
-            this.txt35.Size = new System.Drawing.Size(71, 75);
+            this.txt35.Size = new System.Drawing.Size(58, 66);
             this.txt35.TabIndex = 159;
             this.txt35.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -618,7 +618,7 @@
             this.txt25.Multiline = true;
             this.txt25.Name = "txt25";
             this.txt25.ReadOnly = true;
-            this.txt25.Size = new System.Drawing.Size(71, 75);
+            this.txt25.Size = new System.Drawing.Size(58, 66);
             this.txt25.TabIndex = 158;
             this.txt25.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -631,7 +631,7 @@
             this.txt15.Multiline = true;
             this.txt15.Name = "txt15";
             this.txt15.ReadOnly = true;
-            this.txt15.Size = new System.Drawing.Size(71, 75);
+            this.txt15.Size = new System.Drawing.Size(58, 66);
             this.txt15.TabIndex = 157;
             this.txt15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -644,7 +644,7 @@
             this.txt05.Multiline = true;
             this.txt05.Name = "txt05";
             this.txt05.ReadOnly = true;
-            this.txt05.Size = new System.Drawing.Size(71, 75);
+            this.txt05.Size = new System.Drawing.Size(58, 66);
             this.txt05.TabIndex = 156;
             this.txt05.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -657,7 +657,7 @@
             this.txt84.Multiline = true;
             this.txt84.Name = "txt84";
             this.txt84.ReadOnly = true;
-            this.txt84.Size = new System.Drawing.Size(71, 75);
+            this.txt84.Size = new System.Drawing.Size(58, 66);
             this.txt84.TabIndex = 155;
             this.txt84.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -670,7 +670,7 @@
             this.txt74.Multiline = true;
             this.txt74.Name = "txt74";
             this.txt74.ReadOnly = true;
-            this.txt74.Size = new System.Drawing.Size(71, 75);
+            this.txt74.Size = new System.Drawing.Size(58, 66);
             this.txt74.TabIndex = 154;
             this.txt74.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -683,7 +683,7 @@
             this.txt54.Multiline = true;
             this.txt54.Name = "txt54";
             this.txt54.ReadOnly = true;
-            this.txt54.Size = new System.Drawing.Size(71, 75);
+            this.txt54.Size = new System.Drawing.Size(58, 66);
             this.txt54.TabIndex = 153;
             this.txt54.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -696,7 +696,7 @@
             this.txt64.Multiline = true;
             this.txt64.Name = "txt64";
             this.txt64.ReadOnly = true;
-            this.txt64.Size = new System.Drawing.Size(71, 75);
+            this.txt64.Size = new System.Drawing.Size(58, 66);
             this.txt64.TabIndex = 152;
             this.txt64.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -722,7 +722,7 @@
             this.txt44.Multiline = true;
             this.txt44.Name = "txt44";
             this.txt44.ReadOnly = true;
-            this.txt44.Size = new System.Drawing.Size(71, 75);
+            this.txt44.Size = new System.Drawing.Size(58, 66);
             this.txt44.TabIndex = 150;
             this.txt44.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -735,7 +735,7 @@
             this.txt34.Multiline = true;
             this.txt34.Name = "txt34";
             this.txt34.ReadOnly = true;
-            this.txt34.Size = new System.Drawing.Size(71, 75);
+            this.txt34.Size = new System.Drawing.Size(58, 66);
             this.txt34.TabIndex = 149;
             this.txt34.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -748,7 +748,7 @@
             this.txt24.Multiline = true;
             this.txt24.Name = "txt24";
             this.txt24.ReadOnly = true;
-            this.txt24.Size = new System.Drawing.Size(71, 75);
+            this.txt24.Size = new System.Drawing.Size(58, 66);
             this.txt24.TabIndex = 148;
             this.txt24.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -761,7 +761,7 @@
             this.txt14.Multiline = true;
             this.txt14.Name = "txt14";
             this.txt14.ReadOnly = true;
-            this.txt14.Size = new System.Drawing.Size(71, 75);
+            this.txt14.Size = new System.Drawing.Size(58, 66);
             this.txt14.TabIndex = 147;
             this.txt14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -774,7 +774,7 @@
             this.txt04.Multiline = true;
             this.txt04.Name = "txt04";
             this.txt04.ReadOnly = true;
-            this.txt04.Size = new System.Drawing.Size(71, 75);
+            this.txt04.Size = new System.Drawing.Size(58, 66);
             this.txt04.TabIndex = 146;
             this.txt04.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -787,10 +787,9 @@
             this.txt83.Multiline = true;
             this.txt83.Name = "txt83";
             this.txt83.ReadOnly = true;
-            this.txt83.Size = new System.Drawing.Size(71, 75);
+            this.txt83.Size = new System.Drawing.Size(58, 66);
             this.txt83.TabIndex = 145;
             this.txt83.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-           
             // 
             // txt73
             // 
@@ -801,10 +800,9 @@
             this.txt73.Multiline = true;
             this.txt73.Name = "txt73";
             this.txt73.ReadOnly = true;
-            this.txt73.Size = new System.Drawing.Size(71, 75);
+            this.txt73.Size = new System.Drawing.Size(58, 66);
             this.txt73.TabIndex = 144;
             this.txt73.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            
             // 
             // txt53
             // 
@@ -815,10 +813,9 @@
             this.txt53.Multiline = true;
             this.txt53.Name = "txt53";
             this.txt53.ReadOnly = true;
-            this.txt53.Size = new System.Drawing.Size(71, 75);
+            this.txt53.Size = new System.Drawing.Size(58, 66);
             this.txt53.TabIndex = 143;
             this.txt53.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-           
             // 
             // txt63
             // 
@@ -829,10 +826,9 @@
             this.txt63.Multiline = true;
             this.txt63.Name = "txt63";
             this.txt63.ReadOnly = true;
-            this.txt63.Size = new System.Drawing.Size(71, 75);
+            this.txt63.Size = new System.Drawing.Size(58, 66);
             this.txt63.TabIndex = 142;
             this.txt63.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-          
             // 
             // txt93
             // 
@@ -856,10 +852,9 @@
             this.txt43.Multiline = true;
             this.txt43.Name = "txt43";
             this.txt43.ReadOnly = true;
-            this.txt43.Size = new System.Drawing.Size(71, 75);
+            this.txt43.Size = new System.Drawing.Size(58, 66);
             this.txt43.TabIndex = 140;
             this.txt43.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            
             // 
             // txt33
             // 
@@ -870,10 +865,9 @@
             this.txt33.Multiline = true;
             this.txt33.Name = "txt33";
             this.txt33.ReadOnly = true;
-            this.txt33.Size = new System.Drawing.Size(71, 75);
+            this.txt33.Size = new System.Drawing.Size(58, 66);
             this.txt33.TabIndex = 139;
             this.txt33.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-         
             // 
             // txt23
             // 
@@ -884,10 +878,9 @@
             this.txt23.Multiline = true;
             this.txt23.Name = "txt23";
             this.txt23.ReadOnly = true;
-            this.txt23.Size = new System.Drawing.Size(71, 75);
+            this.txt23.Size = new System.Drawing.Size(58, 66);
             this.txt23.TabIndex = 138;
             this.txt23.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-      
             // 
             // txt13
             // 
@@ -898,10 +891,9 @@
             this.txt13.Multiline = true;
             this.txt13.Name = "txt13";
             this.txt13.ReadOnly = true;
-            this.txt13.Size = new System.Drawing.Size(71, 75);
+            this.txt13.Size = new System.Drawing.Size(58, 66);
             this.txt13.TabIndex = 137;
             this.txt13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-       
             // 
             // txt03
             // 
@@ -912,7 +904,7 @@
             this.txt03.Multiline = true;
             this.txt03.Name = "txt03";
             this.txt03.ReadOnly = true;
-            this.txt03.Size = new System.Drawing.Size(71, 75);
+            this.txt03.Size = new System.Drawing.Size(58, 66);
             this.txt03.TabIndex = 136;
             this.txt03.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -925,10 +917,9 @@
             this.txt02.Multiline = true;
             this.txt02.Name = "txt02";
             this.txt02.ReadOnly = true;
-            this.txt02.Size = new System.Drawing.Size(71, 75);
+            this.txt02.Size = new System.Drawing.Size(58, 66);
             this.txt02.TabIndex = 135;
             this.txt02.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-           
             // 
             // txt12
             // 
@@ -939,10 +930,9 @@
             this.txt12.Multiline = true;
             this.txt12.Name = "txt12";
             this.txt12.ReadOnly = true;
-            this.txt12.Size = new System.Drawing.Size(71, 75);
+            this.txt12.Size = new System.Drawing.Size(58, 66);
             this.txt12.TabIndex = 134;
             this.txt12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-    
             // 
             // txt22
             // 
@@ -953,10 +943,9 @@
             this.txt22.Multiline = true;
             this.txt22.Name = "txt22";
             this.txt22.ReadOnly = true;
-            this.txt22.Size = new System.Drawing.Size(71, 75);
+            this.txt22.Size = new System.Drawing.Size(58, 66);
             this.txt22.TabIndex = 133;
             this.txt22.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-       
             // 
             // txt32
             // 
@@ -967,10 +956,9 @@
             this.txt32.Multiline = true;
             this.txt32.Name = "txt32";
             this.txt32.ReadOnly = true;
-            this.txt32.Size = new System.Drawing.Size(71, 75);
+            this.txt32.Size = new System.Drawing.Size(58, 66);
             this.txt32.TabIndex = 132;
             this.txt32.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-       
             // 
             // txt42
             // 
@@ -981,10 +969,9 @@
             this.txt42.Multiline = true;
             this.txt42.Name = "txt42";
             this.txt42.ReadOnly = true;
-            this.txt42.Size = new System.Drawing.Size(71, 75);
+            this.txt42.Size = new System.Drawing.Size(58, 66);
             this.txt42.TabIndex = 131;
             this.txt42.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-        
             // 
             // txt80
             // 
@@ -995,10 +982,9 @@
             this.txt80.Multiline = true;
             this.txt80.Name = "txt80";
             this.txt80.ReadOnly = true;
-            this.txt80.Size = new System.Drawing.Size(71, 75);
+            this.txt80.Size = new System.Drawing.Size(58, 66);
             this.txt80.TabIndex = 130;
             this.txt80.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-         
             // 
             // txt71
             // 
@@ -1009,10 +995,9 @@
             this.txt71.Multiline = true;
             this.txt71.Name = "txt71";
             this.txt71.ReadOnly = true;
-            this.txt71.Size = new System.Drawing.Size(71, 75);
+            this.txt71.Size = new System.Drawing.Size(58, 66);
             this.txt71.TabIndex = 129;
             this.txt71.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-         
             // 
             // txt81
             // 
@@ -1023,10 +1008,9 @@
             this.txt81.Multiline = true;
             this.txt81.Name = "txt81";
             this.txt81.ReadOnly = true;
-            this.txt81.Size = new System.Drawing.Size(71, 75);
+            this.txt81.Size = new System.Drawing.Size(58, 66);
             this.txt81.TabIndex = 128;
             this.txt81.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-          
             // 
             // txt72
             // 
@@ -1037,10 +1021,9 @@
             this.txt72.Multiline = true;
             this.txt72.Name = "txt72";
             this.txt72.ReadOnly = true;
-            this.txt72.Size = new System.Drawing.Size(71, 75);
+            this.txt72.Size = new System.Drawing.Size(58, 66);
             this.txt72.TabIndex = 127;
             this.txt72.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-           
             // 
             // txt92
             // 
@@ -1064,10 +1047,9 @@
             this.txt70.Multiline = true;
             this.txt70.Name = "txt70";
             this.txt70.ReadOnly = true;
-            this.txt70.Size = new System.Drawing.Size(71, 75);
+            this.txt70.Size = new System.Drawing.Size(58, 66);
             this.txt70.TabIndex = 125;
             this.txt70.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-         
             // 
             // txt61
             // 
@@ -1078,10 +1060,9 @@
             this.txt61.Multiline = true;
             this.txt61.Name = "txt61";
             this.txt61.ReadOnly = true;
-            this.txt61.Size = new System.Drawing.Size(71, 75);
+            this.txt61.Size = new System.Drawing.Size(58, 66);
             this.txt61.TabIndex = 124;
             this.txt61.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-          
             // 
             // txt91
             // 
@@ -1105,10 +1086,9 @@
             this.txt62.Multiline = true;
             this.txt62.Name = "txt62";
             this.txt62.ReadOnly = true;
-            this.txt62.Size = new System.Drawing.Size(71, 75);
+            this.txt62.Size = new System.Drawing.Size(58, 66);
             this.txt62.TabIndex = 122;
             this.txt62.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-          
             // 
             // txt82
             // 
@@ -1119,10 +1099,9 @@
             this.txt82.Multiline = true;
             this.txt82.Name = "txt82";
             this.txt82.ReadOnly = true;
-            this.txt82.Size = new System.Drawing.Size(71, 75);
+            this.txt82.Size = new System.Drawing.Size(58, 66);
             this.txt82.TabIndex = 121;
             this.txt82.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-          
             // 
             // txt50
             // 
@@ -1133,10 +1112,9 @@
             this.txt50.Multiline = true;
             this.txt50.Name = "txt50";
             this.txt50.ReadOnly = true;
-            this.txt50.Size = new System.Drawing.Size(71, 75);
+            this.txt50.Size = new System.Drawing.Size(58, 66);
             this.txt50.TabIndex = 120;
             this.txt50.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-           
             // 
             // txt60
             // 
@@ -1147,10 +1125,9 @@
             this.txt60.Multiline = true;
             this.txt60.Name = "txt60";
             this.txt60.ReadOnly = true;
-            this.txt60.Size = new System.Drawing.Size(71, 75);
+            this.txt60.Size = new System.Drawing.Size(58, 66);
             this.txt60.TabIndex = 119;
             this.txt60.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-         
             // 
             // txt90
             // 
@@ -1174,10 +1151,9 @@
             this.txt51.Multiline = true;
             this.txt51.Name = "txt51";
             this.txt51.ReadOnly = true;
-            this.txt51.Size = new System.Drawing.Size(71, 75);
+            this.txt51.Size = new System.Drawing.Size(58, 66);
             this.txt51.TabIndex = 117;
             this.txt51.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-           
             // 
             // txt52
             // 
@@ -1188,10 +1164,9 @@
             this.txt52.Multiline = true;
             this.txt52.Name = "txt52";
             this.txt52.ReadOnly = true;
-            this.txt52.Size = new System.Drawing.Size(71, 75);
+            this.txt52.Size = new System.Drawing.Size(58, 66);
             this.txt52.TabIndex = 116;
             this.txt52.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-           
             // 
             // txt41
             // 
@@ -1202,10 +1177,9 @@
             this.txt41.Multiline = true;
             this.txt41.Name = "txt41";
             this.txt41.ReadOnly = true;
-            this.txt41.Size = new System.Drawing.Size(71, 75);
+            this.txt41.Size = new System.Drawing.Size(58, 66);
             this.txt41.TabIndex = 115;
             this.txt41.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-          
             // 
             // txt31
             // 
@@ -1216,10 +1190,9 @@
             this.txt31.Multiline = true;
             this.txt31.Name = "txt31";
             this.txt31.ReadOnly = true;
-            this.txt31.Size = new System.Drawing.Size(71, 75);
+            this.txt31.Size = new System.Drawing.Size(58, 66);
             this.txt31.TabIndex = 114;
             this.txt31.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-         
             // 
             // txt21
             // 
@@ -1230,10 +1203,9 @@
             this.txt21.Multiline = true;
             this.txt21.Name = "txt21";
             this.txt21.ReadOnly = true;
-            this.txt21.Size = new System.Drawing.Size(71, 75);
+            this.txt21.Size = new System.Drawing.Size(58, 66);
             this.txt21.TabIndex = 113;
             this.txt21.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            
             // 
             // txt11
             // 
@@ -1244,10 +1216,9 @@
             this.txt11.Multiline = true;
             this.txt11.Name = "txt11";
             this.txt11.ReadOnly = true;
-            this.txt11.Size = new System.Drawing.Size(71, 75);
+            this.txt11.Size = new System.Drawing.Size(58, 66);
             this.txt11.TabIndex = 112;
             this.txt11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-          
             // 
             // txt01
             // 
@@ -1258,10 +1229,9 @@
             this.txt01.Multiline = true;
             this.txt01.Name = "txt01";
             this.txt01.ReadOnly = true;
-            this.txt01.Size = new System.Drawing.Size(71, 75);
+            this.txt01.Size = new System.Drawing.Size(58, 66);
             this.txt01.TabIndex = 111;
             this.txt01.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-         
             // 
             // txt40
             // 
@@ -1272,10 +1242,9 @@
             this.txt40.Multiline = true;
             this.txt40.Name = "txt40";
             this.txt40.ReadOnly = true;
-            this.txt40.Size = new System.Drawing.Size(71, 75);
+            this.txt40.Size = new System.Drawing.Size(58, 66);
             this.txt40.TabIndex = 110;
             this.txt40.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-      
             // 
             // txt30
             // 
@@ -1286,10 +1255,9 @@
             this.txt30.Multiline = true;
             this.txt30.Name = "txt30";
             this.txt30.ReadOnly = true;
-            this.txt30.Size = new System.Drawing.Size(71, 75);
+            this.txt30.Size = new System.Drawing.Size(58, 66);
             this.txt30.TabIndex = 109;
             this.txt30.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-         
             // 
             // txt20
             // 
@@ -1300,10 +1268,9 @@
             this.txt20.Multiline = true;
             this.txt20.Name = "txt20";
             this.txt20.ReadOnly = true;
-            this.txt20.Size = new System.Drawing.Size(71, 75);
+            this.txt20.Size = new System.Drawing.Size(58, 66);
             this.txt20.TabIndex = 108;
             this.txt20.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-          
             // 
             // txt10
             // 
@@ -1314,10 +1281,9 @@
             this.txt10.Multiline = true;
             this.txt10.Name = "txt10";
             this.txt10.ReadOnly = true;
-            this.txt10.Size = new System.Drawing.Size(71, 75);
+            this.txt10.Size = new System.Drawing.Size(58, 66);
             this.txt10.TabIndex = 107;
             this.txt10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
- 
             // 
             // txt00
             // 
@@ -1328,10 +1294,9 @@
             this.txt00.Multiline = true;
             this.txt00.Name = "txt00";
             this.txt00.ReadOnly = true;
-            this.txt00.Size = new System.Drawing.Size(71, 75);
+            this.txt00.Size = new System.Drawing.Size(58, 66);
             this.txt00.TabIndex = 106;
             this.txt00.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-       
             // 
             // btnMove
             // 

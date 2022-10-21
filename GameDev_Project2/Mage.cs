@@ -9,7 +9,7 @@ namespace GameDev_Project2
    public class Mage : Enemy
     {
         //Constructor for the mage object
-        public Mage(int x, int y) : base(x, y, 5, 5, 1, "Mage",6)
+        public Mage(int x, int y) : base(x, y, 5, 5, 1, "Mage",6,TileType.Mage)
         {
 
         }

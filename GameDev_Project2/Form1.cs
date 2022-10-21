@@ -30,7 +30,7 @@ namespace  GameDev_Project2
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Size = new Size(1050, 1000);
+            Size = new Size(1500, 1000);
 
            
             Updatestats();
@@ -213,7 +213,8 @@ namespace  GameDev_Project2
 
                     if (gameEngine.map.enemies[i].CheckisDead(gameEngine.map.enemies[i]) == true)
                     {
-                        gameEngine.map.enemies[i].SetCurrentTileType(Tile.TileType.Empty);
+                      
+                        gameEngine.map.GetXY(gameEngine.map.enemies[i].GetX(), gameEngine.map.enemies[i].GetY()).SetCurrentTileType(Tile.TileType.Empty);
                         textBoxes[gameEngine.map.enemies[i].GetY(), gameEngine.map.enemies[i].GetX()].Text = ".";
 
                         
@@ -279,6 +280,7 @@ namespace  GameDev_Project2
                 MessageBox.Show("Game Over");
             }
         }
+        //updates map 
         public void updatemap()
             {
                 TextBox[,] textBoxes =
@@ -307,12 +309,49 @@ namespace  GameDev_Project2
                             break;
 
                             case Tile.TileType.Empty:
-                            textBoxes[i, j].Text = ".";
+                            textBoxes[i, j].Text = "." ;
                             break;
 
-                            case Tile.TileType.Enemy:
-                            textBoxes[i, j].Text = "E";
+                            case Tile.TileType.Enemy :
+                            for (int k = 0; k < gameEngine.map.enemies.Length; k++)
+                            {
+                                if (gameEngine.map.enemies[k].GetCurrentTileType() == Tile.TileType.Enemy)
+                                {
+                                    Console.WriteLine("ass");
+                                    textBoxes[gameEngine.map.enemies[k].GetY(), gameEngine.map.enemies[k].GetX()].Text = "E";
+
+                                }
+                                else if (gameEngine.map.enemies[k].GetCurrentTileType() == Tile.TileType.Mage) 
+                                    {
+                                    Console.WriteLine("ass2");
+                                    textBoxes[gameEngine.map.enemies[k].GetY(), gameEngine.map.enemies[k].GetX()].Text = "M";
+                                
+                                 }
+
+                            }
                             break;
+                            case Tile.TileType.Mage:
+                            for (int k = 0; k < gameEngine.map.enemies.Length; k++)
+                            {
+                                
+                                if (gameEngine.map.enemies[k].GetCurrentTileType() == Tile.TileType.Enemy)
+                                {
+                                    Console.WriteLine("ass3");
+                                    textBoxes[gameEngine.map.enemies[k].GetY(), gameEngine.map.enemies[k].GetX()].Text = "E";
+
+                                }
+                                else if (gameEngine.map.enemies[k].GetCurrentTileType() == Tile.TileType.Mage)
+                                {
+                                    Console.WriteLine("ass4");
+                                    textBoxes[gameEngine.map.enemies[k].GetY(), gameEngine.map.enemies[k].GetX()].Text = "M";
+
+                                }
+                            }
+                            break;
+                      
+                           
+                        
+                            
 
                             default:
                             break;
@@ -321,7 +360,7 @@ namespace  GameDev_Project2
                 
                 }
             // HeroGameOver();
-            Console.WriteLine(gameEngine.map.GetXY(2, 5).GetCurrentTileType());
+       
         }
 
         private void btnSave_Click(object sender, EventArgs e)

@@ -8,7 +8,7 @@ namespace GameDev_Project2
         public string EnemyInfo, EnemyName;
 
         //Constructor for Enemy
-        public Enemy(int x, int y, double MaxHP, double Damage, double Range, string name, int symbol) : base(x, y, TileType.Enemy, symbol, MaxHP, Damage, Range, 0)
+        public Enemy(int x, int y, double MaxHP, double Damage, double Range, string name, int symbol, TileType tiletype) : base(x, y, tiletype, symbol, MaxHP, Damage, Range, 0)
         {
             this.EnemyName = name;
             this.EnemyInfo = "Unset enemy info";
