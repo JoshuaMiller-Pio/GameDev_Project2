@@ -78,7 +78,7 @@ namespace GameDev_Project2
                 case Character.Movement.Left:
 
 
-                    if (map.GetXY(C.GetX() - 1, C.GetY() ).GetCurrentTileType() != Tile.TileType.Enemy && map.GetXY(C.GetX() - 1, C.GetY() ).GetCurrentTileType() != Tile.TileType.Border && map.GetXY(C.GetX() - 1, C.GetY()).GetCurrentTileType() != Tile.TileType.Mage)
+                    if (map.GetXY(C.GetX() - 1, C.GetY()).GetCurrentTileType() != Tile.TileType.Enemy && map.GetXY(C.GetX() - 1, C.GetY()).GetCurrentTileType() != Tile.TileType.Border && map.GetXY(C.GetX() - 1, C.GetY()).GetCurrentTileType() != Tile.TileType.Mage)
 
                     {
 
@@ -127,16 +127,16 @@ namespace GameDev_Project2
         }
 
 
-       public void GoldPickup()
+        public void GoldPickup()
         {
             for (int i = 0; i < map.items.Length; i++)
             {
-               
-                
-                
+
+
+
                 if (map.items[i].GetCurrentTileType() == Tile.TileType.Gold)
                 {
-                   map.hero.SetCurrentHeldGold(map.hero.GetHeldGold() + map.items[i].getCurrentGold());
+                    map.hero.SetCurrentHeldGold(map.hero.GetHeldGold() + map.items[i].getCurrentGold());
 
                 }
             }
@@ -209,7 +209,7 @@ namespace GameDev_Project2
             for (int i = 0; i < map.enemies.Length; i++)
             {
 
-              move = random.Next(0, 5);
+                move = random.Next(0, 5);
                 if (map.enemies[i].GetCurrentTileType() == Tile.TileType.Enemy)
 
                 {
@@ -266,147 +266,148 @@ namespace GameDev_Project2
 
         }
 
-       // allows the enemies to attack to attack the player
-       
-        public void EnemyAttacks(Character C) 
+        // allows the enemies to attack to attack the player
+
+        public void EnemyAttacks(Character C)
         {
 
             for (int i = 0; i < map.enemies.Length; i++)
             {
-                if (C.CheckRange(C, map.hero) == true )
+                if (C.CheckRange(C, map.hero) == true)
                 {
                     C.Attack(map.hero);
-                    
+
                 }
-                else  if (C.CheckRange(C, map.enemies[i]) == true)  
+                else if (C.CheckRange(C, map.enemies[i]) == true)
                 {
                     C.Attack(map.enemies[i]);
-                    
+
                 }
                 else
 
                 {
-                   
+
                 }
 
 
-            
-                   
-          
 
+
+
+
+            }
         }
-            
-       
 
-        public void Save()
-        {
-            FileStream saveFile = new FileStream(Directory.GetCurrentDirectory() + "/save.File", FileMode.Create);
-            using (BinaryWriter writer = new BinaryWriter(File.Open(Directory.GetCurrentDirectory() + "/save.File", FileMode.Create), Encoding.UTF8, false))
+
+
+            public void Save()
             {
-                writer.Write(map.GetMapWidth() + ";" + map.GetMapHeight() + ";");
-
-
-                for (int i = 0; i < map.GetMapWidth(); i++)
+                FileStream saveFile = new FileStream(Directory.GetCurrentDirectory() + "/save.File", FileMode.Create);
+                using (BinaryWriter writer = new BinaryWriter(File.Open(Directory.GetCurrentDirectory() + "/save.File", FileMode.Create), Encoding.UTF8, false))
                 {
-                    for (int j = 0; j < map.GetMapHeight(); j++)
+                    writer.Write(map.GetMapWidth() + ";" + map.GetMapHeight() + ";");
+
+
+                    for (int i = 0; i < map.GetMapWidth(); i++)
                     {
-                        string currentTile = ((int)map.MapArray[i, j].GetCurrentTileType()).ToString();
-                        writer.Write(currentTile + ",");
+                        for (int j = 0; j < map.GetMapHeight(); j++)
+                        {
+                            string currentTile = ((int)map.MapArray[i, j].GetCurrentTileType()).ToString();
+                            writer.Write(currentTile + ",");
+                        }
+                    }
+                    writer.Write(";");
+                    writer.Write(map.enemies.Length);
+                    writer.Write(";");
+                    for (int i = 0; i < map.enemies.Length; i++)
+                    {
+                        writer.Write(map.enemies[i].ToSaveString() + ".");
+                    }
+                    writer.Write(";");
+                    writer.Write(map.hero.ToSaveString());
+                    writer.Write(";");
+                    writer.Write(map.items.Length);
+                    writer.Write(";");
+                    for (int j = 0; j < map.items.Length; j++)
+                    {
+                        writer.Write(map.items[j].ToSaveString());
+                    }
+                    writer.Close();
+                }
+                //BinaryWriter writer = new BinaryWriter(saveFile));
+
+                saveFile.Close();
+            }
+
+            public void Load()
+            {
+                FileStream saveFile = new FileStream(Directory.GetCurrentDirectory() + "/save.File", FileMode.Open);
+                BinaryReader reader = new BinaryReader(saveFile);
+                string loadedmap = Convert.ToString(reader.ReadString());
+                string[] MapData = loadedmap.Split(';');
+                string[] RegainedMap = MapData[2].Split(',');
+                int index = 0;
+                for (int i = 0; i < int.Parse(MapData[0]); i++)
+                {
+                    for (int j = 0; j < int.Parse(MapData[1]); j++)
+                    {
+                        map.MapArray[i, j].SetCurrentTileType((Tile.TileType)(int.Parse(RegainedMap[index])));
+
+                        index++;
                     }
                 }
-                writer.Write(";");
-                writer.Write(map.enemies.Length);
-                writer.Write(";");
-                for (int i = 0; i < map.enemies.Length; i++)
+                int EnemyCount = int.Parse(MapData[3]);
+                map.enemies = new Enemy[EnemyCount];
+                string[] enemies = MapData[4].Split('.');
+                for (int i = 0; i < EnemyCount; i++)
                 {
-                    writer.Write(map.enemies[i].ToSaveString() + ".");
+
+                    string[] data = enemies[i].Split(',');
+
+                    switch (data[0])
+                    {
+                        case "Swamp Creature"
+                        :
+                            map.enemies[i] = new Swamp_Creature(int.Parse(data[1]), int.Parse(data[2]));
+
+                            break;
+                        case "Mage"
+                        :
+                            map.enemies[i] = new Mage(int.Parse(data[1]), int.Parse(data[2]));
+                            break;
+                        default:
+                            break;
+                    }
+                    map.enemies[i].SetHP(int.Parse(data[3]));
+                    map.enemies[i].SetDamage(int.Parse(data[4]));
+                    map.enemies[i].SetCurrentHeldGold(int.Parse(data[5]));
+                    // map.enemies[i] = new Enemy(enemies[i]);
                 }
-                writer.Write(";");
-                writer.Write(map.hero.ToSaveString());
-                writer.Write(";");
-                writer.Write(map.items.Length);
-                writer.Write(";");
-                for (int j = 0; j < map.items.Length; j++)
+                string[] Hero = MapData[5].Split(',');
+                map.hero = new Hero(int.Parse(Hero[4]), int.Parse(Hero[5]), Hero[0]);
+                map.hero.SetHP(int.Parse(Hero[1]));
+                map.hero.SetDamage(int.Parse(Hero[3]));
+                map.hero.SetCurrentHeldGold(int.Parse(Hero[6]));
+                string ItemsNum = MapData[6];
+                string[] Items = MapData[7].Split('.');
+                map.items = new Item[int.Parse(ItemsNum)];
+                for (int k = 0; k < int.Parse(ItemsNum); k++)
                 {
-                    writer.Write(map.items[j].ToSaveString());
+                    string[] data = Items[k].Split(',');
+
+                    switch (data[0])
+                    {
+                        case "Gold"
+                        :
+                            map.items[k] = new Gold(int.Parse(data[1]), int.Parse(data[2]), int.Parse(data[3]));
+
+                            break;
+
+                        default:
+                            break;
+                    }
                 }
-                writer.Close();
+                reader.Close();
+                saveFile.Close();
             }
-            //BinaryWriter writer = new BinaryWriter(saveFile));
-            
-            saveFile.Close();
-        }
-
-        public void Load()
-        {
-            FileStream saveFile = new FileStream(Directory.GetCurrentDirectory() + "/save.File", FileMode.Open);
-        BinaryReader reader = new BinaryReader(saveFile);
-            string loadedmap = Convert.ToString(reader.ReadString());
-            string[] MapData = loadedmap.Split(';');
-            string[] RegainedMap = MapData[2].Split(',');
-            int index = 0;
-            for (int i = 0; i < int.Parse(MapData[0]); i++)
-            {
-                for (int j = 0; j < int.Parse(MapData[1]); j++)
-                {
-                    map.MapArray[i, j].SetCurrentTileType((Tile.TileType)(int.Parse(RegainedMap[index])));
-
-                    index++;
-                }
-            }
-            int EnemyCount = int.Parse(MapData[3]);
-            map.enemies = new Enemy[EnemyCount];
-            string[] enemies = MapData[4].Split('.');
-            for (int i = 0; i < EnemyCount; i++)
-            {
-
-                string[] data = enemies[i].Split(',');
-
-                switch (data[0])
-                {
-                    case "Swamp Creature"
-                    :
-                        map.enemies[i] = new Swamp_Creature(int.Parse(data[1]), int.Parse(data[2]));
-
-                        break;
-                    case "Mage"
-                    :
-                        map.enemies[i] = new Mage(int.Parse(data[1]), int.Parse(data[2]));
-                        break;
-                    default:
-                        break;
-                }
-                map.enemies[i].SetHP(int.Parse(data[3]));
-                map.enemies[i].SetDamage(int.Parse(data[4]));
-                map.enemies[i].SetCurrentHeldGold(int.Parse(data[5]));
-                // map.enemies[i] = new Enemy(enemies[i]);
-            }
-            string[] Hero = MapData[5].Split(',');
-            map.hero = new Hero(int.Parse(Hero[4]), int.Parse(Hero[5]), Hero[0]);
-            map.hero.SetHP(int.Parse(Hero[1]));
-            map.hero.SetDamage(int.Parse(Hero[3]));
-            map.hero.SetCurrentHeldGold(int.Parse(Hero[6]));
-            string ItemsNum = MapData[6];
-            string[] Items = MapData[7].Split('.');
-            map.items = new Item[int.Parse(ItemsNum)];
-            for (int k = 0; k < int.Parse(ItemsNum); k++)
-            {
-                string[] data = Items[k].Split(',');
-                
-                switch (data[0])
-                {
-                    case "Gold"
-                    :
-                        map.items[k] = new Gold(int.Parse(data[1]), int.Parse(data[2]), int.Parse(data[3]));
-
-                        break;
-                  
-                    default:
-                        break;
-                }
-            }
-            reader.Close();
-            saveFile.Close();
         }
     }
-}
