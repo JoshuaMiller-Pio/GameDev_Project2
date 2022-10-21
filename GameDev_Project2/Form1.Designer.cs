@@ -126,6 +126,7 @@
             this.btnRight = new System.Windows.Forms.Button();
             this.btnUp = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
+            this.btnLoad = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txt88
@@ -1313,7 +1314,7 @@
             // btnAttack
             // 
             this.btnAttack.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAttack.Location = new System.Drawing.Point(399, 610);
+            this.btnAttack.Location = new System.Drawing.Point(399, 653);
             this.btnAttack.Margin = new System.Windows.Forms.Padding(6);
             this.btnAttack.Name = "btnAttack";
             this.btnAttack.Size = new System.Drawing.Size(136, 73);
@@ -1394,11 +1395,23 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // btnLoad
+            // 
+            this.btnLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoad.Location = new System.Drawing.Point(399, 552);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(136, 72);
+            this.btnLoad.TabIndex = 197;
+            this.btnLoad.Text = "Load";
+            this.btnLoad.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnLoad.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1559, 936);
+            this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txt88);
             this.Controls.Add(this.txt78);
@@ -1605,6 +1618,7 @@
         private System.Windows.Forms.Button btnRight;
         private System.Windows.Forms.Button btnUp;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnLoad;
     }
 }
 
