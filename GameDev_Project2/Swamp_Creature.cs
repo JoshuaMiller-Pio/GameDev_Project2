@@ -8,7 +8,7 @@ namespace GameDev_Project2
 {
     public class Swamp_Creature : Enemy
     {
-        public Swamp_Creature(int x, int y) : base(x, y, 10, 1, 1, "Swamp Creature",1)
+        public Swamp_Creature(int x, int y) : base(x, y, 10, 1, 1, "Swamp Creature",1,TileType.Enemy)
         {
         }
 

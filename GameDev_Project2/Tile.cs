@@ -15,7 +15,7 @@ namespace GameDev_Project2
         protected char Symbol;
         public enum TileType
         {
-            Hero, Enemy, Gold, Weapon, Border, Empty
+            Hero, Enemy, Gold, Weapon, Border, Empty, Mage
         };
 
         //Region contains all methods used to change variable values
