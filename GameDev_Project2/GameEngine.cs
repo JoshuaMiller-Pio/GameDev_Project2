@@ -266,8 +266,24 @@ namespace GameDev_Project2
                     Console.WriteLine("false" );
                 }
 
+            for (int i = 0; i < map.enemies.Length; i++)
+            {
+                if (C.CheckRange(C, map.hero) == true)
+                {
+                    C.Attack(map.hero);
 
-                 
+                }
+                else if (C.CheckRange(C, map.enemies[i]) == true)
+                {
+                    C.Attack(map.enemies[i]);
+
+                }
+                else
+                {
+
+                }
+                
+            }
             
                    
           
