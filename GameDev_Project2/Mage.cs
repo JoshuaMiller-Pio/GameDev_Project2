@@ -6,33 +6,33 @@ using System.Threading.Tasks;
 
 namespace GameDev_Project2
 {
-   public class Mage : Enemy
+    public class Mage : Enemy
     {
         //Constructor for the mage object
-        public Mage(int x, int y) : base(x, y, 5, 5, 1, "Mage",6,TileType.Mage)
+        public Mage(int x, int y) : base(x, y, 5, 5, 1, "Mage", 6, TileType.Mage)
         {
 
         }
-        
+
         //Always returns noMovement as the mage does not move
         public override Movement ReturnMove(Movement move)
-        {         
+        {
             return Movement.NoMovement;
         }
 
 
         public override bool CheckRange(Character h, Tile target)
         {
-         
+            Tile[] MagesTargets = new Tile[7];
             double CurrentRange = h.GetRange();
             int CurrentDistance = CheckDistanceToTarget(h, target);
             Console.WriteLine(CurrentRange);
-            if (CurrentDistance == CurrentRange || (CurrentDistance * -1) == CurrentRange)
+            for (int i = 0; i < MagesTargets.Length; i++)
             {
 
-                if(i == 0)
+                if (i == 0)
                 {
-                    
+
                     MagesTargets[i].SetX(h.GetX() - 1);
                     MagesTargets[i].SetY(h.GetY() - 1);
                     target = MagesTargets[i];
@@ -81,14 +81,15 @@ namespace GameDev_Project2
                     MagesTargets[i].SetY(h.GetY() + 1);
                 }
 
-            }
-            else
-            {
-                InRange = false;
+
+                else
+                {
+                    InRange = false;
+                }
+                
+
             }
             return InRange;
-        
-    }
-    
+        }
     }
 }

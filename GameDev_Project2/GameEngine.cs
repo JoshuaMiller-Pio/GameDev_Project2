@@ -291,15 +291,15 @@ namespace GameDev_Project2
                 }
 
 
-                }
-
-
-
-
-
-
             }
+
+
+
+
+
+
         }
+
 
 
         public void Save()
@@ -318,6 +318,7 @@ namespace GameDev_Project2
                 {
                     writer.Write(map.GetMapWidth() + ";" + map.GetMapHeight() + ";");
 
+                }
 
                     for (int i = 0; i < map.GetMapWidth(); i++)
                     {
@@ -327,24 +328,7 @@ namespace GameDev_Project2
                             writer.Write(currentTile + ",");
                         }
                     }
-                    writer.Write(";");
-                    writer.Write(map.enemies.Length);
-                    writer.Write(";");
-                    for (int i = 0; i < map.enemies.Length; i++)
-                    {
-                        writer.Write(map.enemies[i].ToSaveString() + ".");
-                    }
-                    writer.Write(";");
-                    writer.Write(map.hero.ToSaveString());
-                    writer.Write(";");
-                    writer.Write(map.items.Length);
-                    writer.Write(";");
-                    for (int j = 0; j < map.items.Length; j++)
-                    {
-                        writer.Write(map.items[j].ToSaveString());
-                    }
-                    writer.Close();
-                }
+                    
 
                 //Semicolon used as a symbol to split the data in the stream
                 writer.Write(";");
@@ -368,7 +352,7 @@ namespace GameDev_Project2
                 //Closes the StreamWriter
                 writer.Close();
             }
-            
+
             //Closes the Stream
             saveFile.Close();
         }
@@ -378,7 +362,7 @@ namespace GameDev_Project2
             //Opens the FileStream at the local directory using the GetCurrentDirectory method and is directed to saveFile
             FileStream saveFile = new FileStream(Directory.GetCurrentDirectory() + "/save.File", FileMode.Open);
             //Creates a binary reader and directs it toward saveFile
-        BinaryReader reader = new BinaryReader(saveFile);
+            BinaryReader reader = new BinaryReader(saveFile);
             //Creates the loaded map string and sets it equal to the readsavefile string
             string loadedmap = Convert.ToString(reader.ReadString());
             //creates the string array map data and populates each element with the apropriate string as split by the semicolon divider
@@ -387,30 +371,28 @@ namespace GameDev_Project2
             string[] RegainedMap = MapData[2].Split(',');
             int index = 0;
             //itterates through the map array height and width as denoted by the int value gained by parseing the mapdata[0] and [1] rspectively through as ints
+
             for (int i = 0; i < int.Parse(MapData[0]); i++)
 
             {
-                FileStream saveFile = new FileStream(Directory.GetCurrentDirectory() + "/save.File", FileMode.Open);
-                BinaryReader reader = new BinaryReader(saveFile);
-                string loadedmap = Convert.ToString(reader.ReadString());
-                string[] MapData = loadedmap.Split(';');
-                string[] RegainedMap = MapData[2].Split(',');
-                int index = 0;
-                for (int i = 0; i < int.Parse(MapData[0]); i++)
+                
+                for (int j = 0; j < int.Parse(MapData[1]); j++)
                 {
 
                     //Sets the tile type of the specific element in map array to the apropriate type as denoted by parseing the regained map string as an int (which is read by the tiletype enum
                     map.MapArray[i, j].SetCurrentTileType((Tile.TileType)(int.Parse(RegainedMap[index])));
 
 
-                        index++;
-                    }
+                    index++;
                 }
-                int EnemyCount = int.Parse(MapData[3]);
-                map.enemies = new Enemy[EnemyCount];
-                string[] enemies = MapData[4].Split('.');
-                for (int i = 0; i < EnemyCount; i++)
-                {
+                
+            }
+
+            int EnemyCount = int.Parse(MapData[3]);
+            map.enemies = new Enemy[EnemyCount];
+            string[] enemies = MapData[4].Split('.');
+            for (int i = 0; i < EnemyCount; i++)
+            {
 
 
                 string[] data = enemies[i].Split(',');
@@ -433,7 +415,7 @@ namespace GameDev_Project2
                 map.enemies[i].SetHP(int.Parse(data[3]));
                 map.enemies[i].SetDamage(int.Parse(data[4]));
                 map.enemies[i].SetCurrentHeldGold(int.Parse(data[5]));
-                
+
             }
             string[] Hero = MapData[5].Split(',');
 
@@ -448,31 +430,28 @@ namespace GameDev_Project2
             for (int k = 0; k < int.Parse(ItemsNum); k++)
             {
                 string[] data = Items[k].Split(',');
-                
+
+               
+
                 switch (data[0])
-
                 {
-                    string[] data = Items[k].Split(',');
+                    case "Gold"
+                    :
+                        map.items[k] = new Gold(int.Parse(data[1]), int.Parse(data[2]), int.Parse(data[3]));
 
-                    switch (data[0])
-                    {
-                        case "Gold"
-                        :
-                            map.items[k] = new Gold(int.Parse(data[1]), int.Parse(data[2]), int.Parse(data[3]));
+                        break;
 
-                            break;
-
-                        default:
-                            break;
-                    }
+                    default:
+                        break;
                 }
-                reader.Close();
-                saveFile.Close();
             }
-
-            //Closes the reader and the stream
             reader.Close();
             saveFile.Close();
-
         }
     }
+}
+           
+
+        
+    
+
