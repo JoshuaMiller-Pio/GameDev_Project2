@@ -13,7 +13,7 @@ namespace GameDev_Project2
         {
 
         }
-
+        
         //Always returns noMovement as the mage does not move
         public override Movement ReturnMove(Movement move)
         {         
@@ -38,6 +38,7 @@ namespace GameDev_Project2
                 {
                     MagesTargets[i].SetX(h.GetX() - 1);
                     MagesTargets[i].SetY(h.GetY() - 1);
+                    
                 }
 
                 if (i == 1)

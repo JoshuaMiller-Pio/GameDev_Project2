@@ -27,5 +27,11 @@ namespace GameDev_Project2
 
         }
 
+        public  string ToSaveString()
+        {
+
+            return String.Format("{0},{1},{2},{3}", TileType.Gold,GetX(), GetY(), getCurrentGold());
+
+        }
     }
 }

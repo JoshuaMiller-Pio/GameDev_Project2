@@ -42,5 +42,10 @@ namespace GameDev_Project2
         {
             return String.Format("Player Stats:\n{0}\nHP: {1}/{2}\nDamage: {3}\nPosition: [{4},{5}]\nGold: {6}", HeroName, GetHP(), this.MaxHP, GetDamage(), GetX() + 1, GetY() + 1, GetHeldGold());
         }
+
+        public string ToSaveString()
+        {
+            return String.Format("{0},{1},{2},{3},{4},{5}],{6}", HeroName, GetHP(), this.MaxHP, GetDamage(), GetX() + 1, GetY() + 1, GetHeldGold());
+        }
     }
 }
