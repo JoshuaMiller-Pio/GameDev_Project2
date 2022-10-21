@@ -8,10 +8,22 @@ namespace GameDev_Project2
 {
     public abstract class Item : Tile
     {
-        public Item(int x, int y, TileType type, int SymbolIndex) : base(x, y, type, SymbolIndex)
+        int CurrentGold;
+        public Item(int x, int y, TileType type, int SymbolIndex, int value) : base(x, y, type, SymbolIndex)
         {
-
+            CurrentGold = value;
         }
+        #region accessors and mutators
+        public void SetCurrentGold(int currentGold)
+        {
+            CurrentGold = currentGold;
+        }
+
+        public int getCurrentGold()
+        {
+            return CurrentGold;
+        }
+        #endregion
         public abstract override string ToString();
     }
 }

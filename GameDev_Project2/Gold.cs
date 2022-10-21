@@ -13,22 +13,12 @@ namespace GameDev_Project2
        private Random random;
 
 
-        public Gold(int x, int y, int ValueOfGold ):base(x,y, TileType.Gold, 2)
+        public Gold(int x, int y, int ValueOfGold ):base(x,y, TileType.Gold, 2, ValueOfGold)
         {
-            random = new Random();
-            ValueOfGold = random.Next(1, 6);
-            
 
         }
 
-        #region accessors and mutators
-        
 
-        public int getCurrentGold() 
-        {
-            return CurrentGold;
-        }
-        #endregion
 
         public override string ToString()
         {

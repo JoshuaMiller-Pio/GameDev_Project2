@@ -13,7 +13,7 @@ namespace GameDev_Project2
         private int MapWidth;
         private int MapHeight;
         private Random randomGenerator;
-
+    
         public Tile[,] MapArray;
 
         public int GetMapWidth()
@@ -69,7 +69,7 @@ namespace GameDev_Project2
             items = new Item[numberOfItems];
             for (int i = 0; i < items.Length; i++)
             {
-                items[i] = (Gold)Create(TileType.Gold);
+                items[i] = (Gold)Create(Tile.TileType.Gold);
             }
             //Calls the create function and tells it to create a hero by passing through the Hero TileType
             hero = (Hero)Create(Tile.TileType.Hero);
@@ -151,6 +151,7 @@ namespace GameDev_Project2
                 case TileType.Gold:
                     //Uses random number generator to assign the value of the gold tile
                     int ValueOfGold = randomGenerator.Next(1, 5);
+                    
                     MapArray[X, Y] = new Gold(X, Y, ValueOfGold);
                     
                     break;
@@ -170,6 +171,7 @@ namespace GameDev_Project2
             {
                 if(items[i].GetX() == currentPosition.GetX() && items[i].GetY() == currentPosition.GetY())
                 {
+                    
                     Item item = items[i];
                     List < Item > Litems = new List<Item>(items);
                     

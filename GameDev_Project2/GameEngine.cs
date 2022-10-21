@@ -126,7 +126,22 @@ namespace GameDev_Project2
             return PlayerMoves;
         }
 
-       // updates the map and tiles where the enemy moves
+       public void GoldPickup()
+        {
+            for (int i = 0; i < map.items.Length; i++)
+            {
+               
+                
+                
+                if (map.items[i].GetCurrentTileType() == Tile.TileType.Gold)
+                {
+                   map.hero.SetCurrentHeldGold(map.hero.GetHeldGold() + map.items[i].getCurrentGold());
+
+                }
+            }
+        }
+
+        // updates the map and tiles where the enemy moves
         public bool MoveEnemy(Character C, Character.Movement m)
         {
 
@@ -248,25 +263,33 @@ namespace GameDev_Project2
        
         public void EnemyAttacks(Character C) 
         {
-           
-           
-                if (C.CheckRange(C, map.hero) == true)
+
+            for (int i = 0; i < map.enemies.Length; i++)
+            {
+                if (C.CheckRange(C, map.hero) == true )
                 {
                     C.Attack(map.hero);
-                    Console.WriteLine("true" );
+                    
+                }
+                else  if (C.CheckRange(C, map.enemies[i]) == true)  
+                {
+                    C.Attack(map.enemies[i]);
+                    
                 }
                 else
                 {
-                    Console.WriteLine("false" );
+                   
                 }
 
+
+            }
                  
             
                    
           
         }
             
-    
+       
 
         public void Save()
         {
