@@ -227,11 +227,16 @@ namespace  GameDev_Project2
 
                     }
                 }
+
+                //game crashes if if statment is not here
+                if (gameEngine.map.enemies.Length != 0)
+                {
+
+                     gameEngine.EnemyAttacks(gameEngine.map.enemies[i]);
+                }
             }
             
-            updatemap();
-            
-            gameEngine.EnemyAttacks();
+                 updatemap();
 
         }
         //allows the hero to move
@@ -242,7 +247,7 @@ namespace  GameDev_Project2
 
             for (int i = 0; i < gameEngine.map.enemies.Length; i++)
             {
-             gameEngine.MoveEnemies(gameEngine.map.enemies[i]);
+               // gameEngine.MoveEnemies(gameEngine.map.enemies[i]);
              
             }
             updatemap();

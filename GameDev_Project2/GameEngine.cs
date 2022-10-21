@@ -236,27 +236,37 @@ namespace GameDev_Project2
                     }
                 }
 
+                EnemyAttacks(map.enemies[i]);
             }
-             
 
-        
-            
-            EnemyAttacks();
+
+
+
         }
 
        // allows the enemies to attack to attack the player
-        public void EnemyAttacks() 
+       
+        public void EnemyAttacks(Character C) 
         {
-            for (int i = 0; i < map.enemies.Length; i++)
-            {
-            
-                if (map.enemies[i].CheckRange(map.enemies[i], map.hero) == true)
+           
+           
+                if (C.CheckRange(C, map.hero) == true)
                 {
-                    map.enemies[i].Attack(map.hero);
+                    C.Attack(map.hero);
+                    Console.WriteLine("true" );
                 }
+                else
+                {
+                    Console.WriteLine("false" );
+                }
+
+                 
+            
+                   
           
-            }
         }
+            
+    
 
         public void Save()
         {
