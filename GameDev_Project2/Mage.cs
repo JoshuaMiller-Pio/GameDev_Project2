@@ -29,7 +29,58 @@ namespace GameDev_Project2
             Console.WriteLine(CurrentRange);
             if (CurrentDistance == CurrentRange || (CurrentDistance * -1) == CurrentRange)
             {
-                InRange = true;
+
+                if(i == 0)
+                {
+                    
+                    MagesTargets[i].SetX(h.GetX() - 1);
+                    MagesTargets[i].SetY(h.GetY() - 1);
+                    target = MagesTargets[i];
+
+                }
+
+                if (i == 1)
+                {
+                    MagesTargets[i].SetX(h.GetX());
+                    MagesTargets[i].SetY(h.GetY() - 1);
+                }
+
+                if (i == 2)
+                {
+                    MagesTargets[i].SetX(h.GetX() + 1);
+                    MagesTargets[i].SetY(h.GetY() - 1);
+                }
+
+                if (i == 3)
+                {
+                    MagesTargets[i].SetX(h.GetX() - 1);
+                    MagesTargets[i].SetY(h.GetY());
+                }
+
+                if (i == 4)
+                {
+                    MagesTargets[i].SetX(h.GetX() + 1);
+                    MagesTargets[i].SetY(h.GetY());
+                }
+
+                if (i == 5)
+                {
+                    MagesTargets[i].SetX(h.GetX() - 1);
+                    MagesTargets[i].SetY(h.GetY() + 1);
+                }
+
+                if (i == 6)
+                {
+                    MagesTargets[i].SetX(h.GetX());
+                    MagesTargets[i].SetY(h.GetY() + 1);
+                }
+
+                if (i == 7)
+                {
+                    MagesTargets[i].SetX(h.GetX() + 1);
+                    MagesTargets[i].SetY(h.GetY() + 1);
+                }
+
             }
             else
             {
