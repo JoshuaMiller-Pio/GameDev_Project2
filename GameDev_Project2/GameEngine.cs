@@ -38,7 +38,7 @@ namespace GameDev_Project2
                     Item i;
                 case Character.Movement.Up:
 
-                    if (map.GetXY(C.GetX(), C.GetY() - 1).GetCurrentTileType() != Tile.TileType.Enemy && map.GetXY(C.GetX(), C.GetY() - 1).GetCurrentTileType() != Tile.TileType.Border && map.GetXY(C.GetX(), C.GetY() - 1).GetCurrentTileType() != Tile.TileType.Hero)
+                    if (map.GetXY(C.GetX(), C.GetY() - 1).GetCurrentTileType() != Tile.TileType.Enemy && map.GetXY(C.GetX(), C.GetY() - 1).GetCurrentTileType() != Tile.TileType.Border && map.GetXY(C.GetX(), C.GetY() - 1).GetCurrentTileType() != Tile.TileType.Mage)
                     {
                         map.GetXY(C.GetX(), C.GetY()).SetCurrentTileType(Tile.TileType.Empty);
                         C.SetY(C.GetY() - 1);
@@ -59,7 +59,7 @@ namespace GameDev_Project2
 
                 case Character.Movement.Down:
 
-                    if (map.GetXY(C.GetX(), C.GetY() + 1).GetCurrentTileType() != Tile.TileType.Enemy && map.GetXY(C.GetX(), C.GetY() + 1).GetCurrentTileType() != Tile.TileType.Border && map.GetXY(C.GetX(), C.GetY() + 1).GetCurrentTileType() != Tile.TileType.Hero)
+                    if (map.GetXY(C.GetX(), C.GetY() + 1).GetCurrentTileType() != Tile.TileType.Enemy && map.GetXY(C.GetX(), C.GetY() + 1).GetCurrentTileType() != Tile.TileType.Border && map.GetXY(C.GetX(), C.GetY() + 1).GetCurrentTileType() != Tile.TileType.Mage)
                     {
 
                         map.GetXY(C.GetX(), C.GetY()).SetCurrentTileType(Tile.TileType.Empty);
@@ -79,7 +79,7 @@ namespace GameDev_Project2
 
                 case Character.Movement.Left:
 
-                    if (map.GetXY(C.GetX() - 1, C.GetY() ).GetCurrentTileType() != Tile.TileType.Enemy && map.GetXY(C.GetX() - 1, C.GetY() ).GetCurrentTileType() != Tile.TileType.Border && map.GetXY(C.GetX() - 1, C.GetY()).GetCurrentTileType() != Tile.TileType.Hero)
+                    if (map.GetXY(C.GetX() - 1, C.GetY() ).GetCurrentTileType() != Tile.TileType.Enemy && map.GetXY(C.GetX() - 1, C.GetY() ).GetCurrentTileType() != Tile.TileType.Border && map.GetXY(C.GetX() - 1, C.GetY()).GetCurrentTileType() != Tile.TileType.Mage)
                     {
 
                         map.GetXY(C.GetX(), C.GetY()).SetCurrentTileType(Tile.TileType.Empty);
@@ -100,7 +100,7 @@ namespace GameDev_Project2
 
                 case Character.Movement.Right:
 
-                    if (map.GetXY(C.GetX() + 1, C.GetY()).GetCurrentTileType() != Tile.TileType.Enemy && map.GetXY(C.GetX() + 1, C.GetY()).GetCurrentTileType() != Tile.TileType.Border && map.GetXY(C.GetX() + 1, C.GetY()).GetCurrentTileType() != Tile.TileType.Hero)
+                    if (map.GetXY(C.GetX() + 1, C.GetY()).GetCurrentTileType() != Tile.TileType.Enemy && map.GetXY(C.GetX() + 1, C.GetY()).GetCurrentTileType() != Tile.TileType.Border && map.GetXY(C.GetX() + 1, C.GetY()).GetCurrentTileType() != Tile.TileType.Mage)
                     {
                         map.GetXY(C.GetX(), C.GetY()).SetCurrentTileType(Tile.TileType.Empty);
                         C.SetX(C.GetX() + 1);
@@ -192,48 +192,52 @@ namespace GameDev_Project2
             for (int i = 0; i < map.enemies.Length; i++)
             {
               move = random.Next(0, 5);
-               
-                switch (move)
+                if (map.enemies[i].GetCurrentTileType() == Tile.TileType.Enemy)
                 {
-                    case 0:
-                        MoveEnemy(map.enemies[i], Character.Movement.NoMovement);
-                        break;
 
-                    case 1:
-                   
+                    switch (move)
+                    {
+                        case 0:
+                            MoveEnemy(map.enemies[i], Character.Movement.NoMovement);
+                            break;
+
+                        case 1:
+
                             MoveEnemy(map.enemies[i], Character.Movement.Up);
-                        
-                      
-                        break;
 
-                    case 2:
-                 
+
+                            break;
+
+                        case 2:
+
                             MoveEnemy(map.enemies[i], Character.Movement.Down);
-                        
-                      
-                        break;
 
-                    case 3:
-                    
+
+                            break;
+
+                        case 3:
+
                             MoveEnemy(map.enemies[i], Character.Movement.Left);
-                      
-                      
-                          
-                        break;
 
-                    case 4:
-                       
+
+
+                            break;
+
+                        case 4:
+
 
                             MoveEnemy(map.enemies[i], Character.Movement.Right);
-                    
-                        break;
 
-                    default:
+                            break;
 
-                        break;
+                        default:
+
+                            break;
+                    }
                 }
 
             }
+             
 
         
             
