@@ -78,7 +78,7 @@ namespace GameDev_Project2
                 case Character.Movement.Left:
 
 
-                    if (map.GetXY(C.GetX() - 1, C.GetY() ).GetCurrentTileType() != Tile.TileType.Enemy && map.GetXY(C.GetX() - 1, C.GetY() ).GetCurrentTileType() != Tile.TileType.Border && map.GetXY(C.GetX() - 1, C.GetY()).GetCurrentTileType() != Tile.TileType.Mage)
+                    if (map.GetXY(C.GetX() - 1, C.GetY()).GetCurrentTileType() != Tile.TileType.Enemy && map.GetXY(C.GetX() - 1, C.GetY()).GetCurrentTileType() != Tile.TileType.Border && map.GetXY(C.GetX() - 1, C.GetY()).GetCurrentTileType() != Tile.TileType.Mage)
 
                     {
 
@@ -127,16 +127,16 @@ namespace GameDev_Project2
         }
 
 
-       public void GoldPickup()
+        public void GoldPickup()
         {
             for (int i = 0; i < map.items.Length; i++)
             {
-               
-                
-                
-                if (map.items[i].GetCurrentTileType() == Tile.TileType.Gold)
+
+
+
+                if (map.GetXY(map.items[i].GetX(), map.items[i].GetY()) == map.GetXY(map.hero.GetX(), map.hero.GetY()))
                 {
-                   map.hero.SetCurrentHeldGold(map.hero.GetHeldGold() + map.items[i].getCurrentGold());
+                    map.hero.SetCurrentHeldGold(map.hero.GetHeldGold() + map.items[i].getCurrentGold());
 
                 }
             }
@@ -209,7 +209,7 @@ namespace GameDev_Project2
             for (int i = 0; i < map.enemies.Length; i++)
             {
 
-              move = random.Next(0, 5);
+                move = random.Next(0, 5);
                 if (map.enemies[i].GetCurrentTileType() == Tile.TileType.Enemy)
 
                 {
@@ -266,9 +266,9 @@ namespace GameDev_Project2
 
         }
 
-       // allows the enemies to attack to attack the player
-       
-        public void EnemyAttacks(Character C) 
+        // allows the enemies to attack to attack the player
+
+        public void EnemyAttacks(Character C)
         {
 
             for (int i = 0; i < map.enemies.Length; i++)
@@ -287,16 +287,20 @@ namespace GameDev_Project2
 
                 {
 
+
                 }
 
-            }
-            
-                   
-          
 
+                }
+
+
+
+
+
+
+            }
         }
-            
-       
+
 
         public void Save()
         {
@@ -310,13 +314,38 @@ namespace GameDev_Project2
 
                 //itterates through the map array and writes the tiletype of each element to the stream by first converting the enum to an int and then converting the int to a string
                 for (int i = 0; i < map.GetMapWidth(); i++)
+
                 {
-                    for (int j = 0; j < map.GetMapHeight(); j++)
+                    writer.Write(map.GetMapWidth() + ";" + map.GetMapHeight() + ";");
+
+
+                    for (int i = 0; i < map.GetMapWidth(); i++)
                     {
-                        string currentTile = ((int)map.MapArray[i, j].GetCurrentTileType()).ToString();
-                        writer.Write(currentTile + ",");
+                        for (int j = 0; j < map.GetMapHeight(); j++)
+                        {
+                            string currentTile = ((int)map.MapArray[i, j].GetCurrentTileType()).ToString();
+                            writer.Write(currentTile + ",");
+                        }
                     }
+                    writer.Write(";");
+                    writer.Write(map.enemies.Length);
+                    writer.Write(";");
+                    for (int i = 0; i < map.enemies.Length; i++)
+                    {
+                        writer.Write(map.enemies[i].ToSaveString() + ".");
+                    }
+                    writer.Write(";");
+                    writer.Write(map.hero.ToSaveString());
+                    writer.Write(";");
+                    writer.Write(map.items.Length);
+                    writer.Write(";");
+                    for (int j = 0; j < map.items.Length; j++)
+                    {
+                        writer.Write(map.items[j].ToSaveString());
+                    }
+                    writer.Close();
                 }
+
                 //Semicolon used as a symbol to split the data in the stream
                 writer.Write(";");
                 //Writes the length of the enemies array to the file in order to use the length as a limit for looping later
@@ -359,20 +388,30 @@ namespace GameDev_Project2
             int index = 0;
             //itterates through the map array height and width as denoted by the int value gained by parseing the mapdata[0] and [1] rspectively through as ints
             for (int i = 0; i < int.Parse(MapData[0]); i++)
+
             {
-                for (int j = 0; j < int.Parse(MapData[1]); j++)
+                FileStream saveFile = new FileStream(Directory.GetCurrentDirectory() + "/save.File", FileMode.Open);
+                BinaryReader reader = new BinaryReader(saveFile);
+                string loadedmap = Convert.ToString(reader.ReadString());
+                string[] MapData = loadedmap.Split(';');
+                string[] RegainedMap = MapData[2].Split(',');
+                int index = 0;
+                for (int i = 0; i < int.Parse(MapData[0]); i++)
                 {
+
                     //Sets the tile type of the specific element in map array to the apropriate type as denoted by parseing the regained map string as an int (which is read by the tiletype enum
                     map.MapArray[i, j].SetCurrentTileType((Tile.TileType)(int.Parse(RegainedMap[index])));
 
-                    index++;
+
+                        index++;
+                    }
                 }
-            }
-            int EnemyCount = int.Parse(MapData[3]);
-            map.enemies = new Enemy[EnemyCount];
-            string[] enemies = MapData[4].Split('.');
-            for (int i = 0; i < EnemyCount; i++)
-            {
+                int EnemyCount = int.Parse(MapData[3]);
+                map.enemies = new Enemy[EnemyCount];
+                string[] enemies = MapData[4].Split('.');
+                for (int i = 0; i < EnemyCount; i++)
+                {
+
 
                 string[] data = enemies[i].Split(',');
                 //The apropriate enemy type is decided by the data[0] which is reference to the enemy name, either "Swamp Creature" or "Mage"
@@ -411,20 +450,29 @@ namespace GameDev_Project2
                 string[] data = Items[k].Split(',');
                 
                 switch (data[0])
-                {
-                    case "Gold"
-                    :
-                        map.items[k] = new Gold(int.Parse(data[1]), int.Parse(data[2]), int.Parse(data[3]));
 
-                        break;
-                  
-                    default:
-                        break;
+                {
+                    string[] data = Items[k].Split(',');
+
+                    switch (data[0])
+                    {
+                        case "Gold"
+                        :
+                            map.items[k] = new Gold(int.Parse(data[1]), int.Parse(data[2]), int.Parse(data[3]));
+
+                            break;
+
+                        default:
+                            break;
+                    }
                 }
+                reader.Close();
+                saveFile.Close();
             }
+
             //Closes the reader and the stream
             reader.Close();
             saveFile.Close();
+
         }
     }
-}
