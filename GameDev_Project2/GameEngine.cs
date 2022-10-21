@@ -1,5 +1,7 @@
 ﻿using System;
 using System.IO;
+using System.Text;
+using System.Threading.Tasks;
 
 
 namespace GameDev_Project2
@@ -256,41 +258,47 @@ namespace GameDev_Project2
 
         public void Save()
         {
-
-            BinaryWriter writer = new BinaryWriter(myUtility.saveFile);
-            writer.Write(map.GetMapWidth() + ";" + map.GetMapHeight() + ";");
-
-
-            for (int i = 0; i < map.GetMapWidth(); i++)
+            FileStream saveFile = new FileStream(Directory.GetCurrentDirectory() + "/save.File", FileMode.Create);
+            using (BinaryWriter writer = new BinaryWriter(File.Open(Directory.GetCurrentDirectory() + "/save.File", FileMode.Create), Encoding.UTF8, false))
             {
-                for (int j = 0; j < map.GetMapHeight(); j++)
+                writer.Write(map.GetMapWidth() + ";" + map.GetMapHeight() + ";");
+
+
+                for (int i = 0; i < map.GetMapWidth(); i++)
                 {
-                    string currentTile = ((int)map.MapArray[i, j].GetCurrentTileType()).ToString();
-                    writer.Write(currentTile + ",");
+                    for (int j = 0; j < map.GetMapHeight(); j++)
+                    {
+                        string currentTile = ((int)map.MapArray[i, j].GetCurrentTileType()).ToString();
+                        writer.Write(currentTile + ",");
+                    }
                 }
+                writer.Write(";");
+                writer.Write(map.enemies.Length);
+                writer.Write(";");
+                for (int i = 0; i < map.enemies.Length; i++)
+                {
+                    writer.Write(map.enemies[i].ToSaveString() + ".");
+                }
+                writer.Write(";");
+                writer.Write(map.hero.ToSaveString());
+                writer.Write(";");
+                writer.Write(map.items.Length);
+                writer.Write(";");
+                for (int j = 0; j < map.items.Length; j++)
+                {
+                    writer.Write(map.items[j].ToSaveString());
+                }
+                writer.Close();
             }
-            writer.Write(";");
-            writer.Write(map.enemies.Length);
-            writer.Write(";");
-            for (int i = 0; i < map.enemies.Length; i++)
-            {
-                writer.Write(map.enemies[i].ToSaveString() + ".");
-            }
-            writer.Write(";");
-            writer.Write(map.hero.ToSaveString());
-            writer.Write(";");
-            writer.Write(map.items.Length);
-            writer.Write(";");
-            for (int j = 0; j < map.items.Length; j++)
-            {
-                writer.Write(map.items[j].ToSaveString());
-            }
-            writer.Close();
+            //BinaryWriter writer = new BinaryWriter(saveFile));
+            
+            saveFile.Close();
         }
 
         public void Load()
         {
-            BinaryReader reader = new BinaryReader(myUtility.saveFile);
+            FileStream saveFile = new FileStream(Directory.GetCurrentDirectory() + "/save.File", FileMode.Open);
+        BinaryReader reader = new BinaryReader(saveFile);
             string loadedmap = Convert.ToString(reader.ReadString());
             string[] MapData = loadedmap.Split(';');
             string[] RegainedMap = MapData[2].Split(',');
@@ -356,6 +364,7 @@ namespace GameDev_Project2
                 }
             }
             reader.Close();
+            saveFile.Close();
         }
     }
 }
