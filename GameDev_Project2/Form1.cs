@@ -231,21 +231,19 @@ namespace  GameDev_Project2
                 //game crashes if if statment is not here
                 if (i > gameEngine.map.enemies.Length )
                 {
-                    i--;
-                    Console.WriteLine("Attack" + i);
+                    i= 0;
+                    
                      gameEngine.EnemyAttacks(gameEngine.map.enemies[i]);
                     
                 }
-                else if (gameEngine.map.enemies.Length == 0)
-                {
-                    break;
-                }
-                else
+               
+                else if (i < gameEngine.map.enemies.Length)
                 {
                      gameEngine.EnemyAttacks(gameEngine.map.enemies[i]);
 
                 }
-                
+                    
+               
             }
             
                  updatemap();

@@ -32,7 +32,7 @@ namespace GameDev_Project2
 
             //populates the MagesTargets tile array with the correct tiles by setting the co-ordinates of each of the apropriate tiles within the array with reference to the apropriate mages co-ordinates (Mage being the character h)
            
-            /*for (int i = 0; i < MagesTargets.Length; i++)
+            for (int i = 0; i < MagesTargets.Length; i++)
             {
                 if(i == 0)
                 {
@@ -89,7 +89,7 @@ namespace GameDev_Project2
                 {
                     InRange = true;
                 }
-            }*/
+            }
             
             //returns the InRange boolean
             return InRange;
