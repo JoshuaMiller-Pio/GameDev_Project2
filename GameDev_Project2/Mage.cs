@@ -21,7 +21,7 @@ namespace GameDev_Project2
         }
 
 
-    /*    public override bool CheckRange(Character h, Tile target)
+        public override bool CheckRange(Character h, Tile target)
         {
             //Sets the Inrange boolean to false as the default everytime checkrange begins
             InRange = false;
@@ -37,6 +37,7 @@ namespace GameDev_Project2
                 {
                     MagesTargets[i].SetX(h.GetX() - 1);
                     MagesTargets[i].SetY(h.GetY() - 1);
+                    
                 }
 
                 if (i == 1)
@@ -93,6 +94,6 @@ namespace GameDev_Project2
             //returns the InRange boolean
             return InRange;
         }
-    */
+    
     }
 }

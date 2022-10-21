@@ -35,5 +35,20 @@ namespace GameDev_Project2
 
             return Movement.NoMovement;
         }
+
+        public override bool CheckRange(Character h, Tile target)
+        {
+            double CurrentRange = 1;
+            int CurrentDistance = CheckDistanceToTarget(h, target);
+            if (CurrentDistance == CurrentRange || (CurrentDistance * -1) == CurrentRange)
+            {
+                InRange = true;
+            }
+            else
+            {
+                InRange = false;
+            }
+            return InRange;
+        }
     }
 }
