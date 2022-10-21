@@ -227,11 +227,16 @@ namespace  GameDev_Project2
 
                     }
                 }
+
+                //game crashes if if statment is not here
+                if (gameEngine.map.enemies.Length != 0)
+                {
+
+                     gameEngine.EnemyAttacks(gameEngine.map.enemies[i]);
+                }
             }
             
-            updatemap();
-            
-            gameEngine.EnemyAttacks();
+                 updatemap();
 
         }
         //allows the hero to move
@@ -239,9 +244,12 @@ namespace  GameDev_Project2
         {
             
            gameEngine.MovePlayer(gameEngine.map.hero, move);
-            
-           gameEngine.MoveEnemies(gameEngine.map.hero);
-          
+
+            for (int i = 0; i < gameEngine.map.enemies.Length; i++)
+            {
+               // gameEngine.MoveEnemies(gameEngine.map.enemies[i]);
+             
+            }
             updatemap();
             
             Updatestats();
@@ -313,41 +321,41 @@ namespace  GameDev_Project2
                             break;
 
                             case Tile.TileType.Enemy :
+                            
+
+                            //if the tile type is an enemy map will update their positionD
                             for (int k = 0; k < gameEngine.map.enemies.Length; k++)
                             {
-                                if (gameEngine.map.enemies[k].GetCurrentTileType() == Tile.TileType.Enemy)
+                               
+                                if (gameEngine.map.GetXY(gameEngine.map.enemies[k].GetX(), gameEngine.map.enemies[k].GetY()).GetCurrentTileType() == Tile.TileType.Enemy)
                                 {
-                                    Console.WriteLine("ass");
-                                    textBoxes[gameEngine.map.enemies[k].GetY(), gameEngine.map.enemies[k].GetX()].Text = "E";
+                                   
+                                    textBoxes[i, j].Text = "E";
+                                    
 
                                 }
-                                else if (gameEngine.map.enemies[k].GetCurrentTileType() == Tile.TileType.Mage) 
-                                    {
-                                    Console.WriteLine("ass2");
-                                    textBoxes[gameEngine.map.enemies[k].GetY(), gameEngine.map.enemies[k].GetX()].Text = "M";
-                                
-                                 }
+                        
+
 
                             }
                             break;
-                            case Tile.TileType.Mage:
+
+                            //if the tile type is an mage map will update their position
+                        case Tile.TileType.Mage:
+
                             for (int k = 0; k < gameEngine.map.enemies.Length; k++)
                             {
-                                
-                                if (gameEngine.map.enemies[k].GetCurrentTileType() == Tile.TileType.Enemy)
+                                   
+                                if (gameEngine.map.GetXY(gameEngine.map.enemies[k].GetX(), gameEngine.map.enemies[k].GetY() ).GetCurrentTileType() == Tile.TileType.Mage)
                                 {
-                                    Console.WriteLine("ass3");
-                                    textBoxes[gameEngine.map.enemies[k].GetY(), gameEngine.map.enemies[k].GetX()].Text = "E";
+                                    
 
-                                }
-                                else if (gameEngine.map.enemies[k].GetCurrentTileType() == Tile.TileType.Mage)
-                                {
-                                    Console.WriteLine("ass4");
                                     textBoxes[gameEngine.map.enemies[k].GetY(), gameEngine.map.enemies[k].GetX()].Text = "M";
 
                                 }
                             }
                             break;
+                       
                       
                            
                         

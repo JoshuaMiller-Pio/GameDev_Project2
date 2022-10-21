@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,14 +40,10 @@ namespace GameDev_Project2
                     Item i;
                 case Character.Movement.Up:
 
-                    if (map.GetXY(C.GetX(), C.GetY() - 1).GetCurrentTileType() != Tile.TileType.Enemy && map.GetXY(C.GetX(), C.GetY() - 1).GetCurrentTileType() != Tile.TileType.Border && map.GetXY(C.GetX(), C.GetY() - 1).GetCurrentTileType() != Tile.TileType.Hero)
+                    if (map.GetXY(C.GetX(), C.GetY() - 1).GetCurrentTileType() != Tile.TileType.Enemy && map.GetXY(C.GetX(), C.GetY() - 1).GetCurrentTileType() != Tile.TileType.Border && map.GetXY(C.GetX(), C.GetY() - 1).GetCurrentTileType() != Tile.TileType.Mage)
                     {
                         map.GetXY(C.GetX(), C.GetY()).SetCurrentTileType(Tile.TileType.Empty);
                         C.SetY(C.GetY() - 1);
-
-
-
-
 
                         i = map.GetItemAtPosition(C.GetX(), C.GetY());
 
@@ -61,7 +57,7 @@ namespace GameDev_Project2
 
                 case Character.Movement.Down:
 
-                    if (map.GetXY(C.GetX(), C.GetY() + 1).GetCurrentTileType() != Tile.TileType.Enemy && map.GetXY(C.GetX(), C.GetY() + 1).GetCurrentTileType() != Tile.TileType.Border && map.GetXY(C.GetX(), C.GetY() + 1).GetCurrentTileType() != Tile.TileType.Hero)
+                    if (map.GetXY(C.GetX(), C.GetY() + 1).GetCurrentTileType() != Tile.TileType.Enemy && map.GetXY(C.GetX(), C.GetY() + 1).GetCurrentTileType() != Tile.TileType.Border && map.GetXY(C.GetX(), C.GetY() + 1).GetCurrentTileType() != Tile.TileType.Mage)
                     {
 
                         map.GetXY(C.GetX(), C.GetY()).SetCurrentTileType(Tile.TileType.Empty);
@@ -81,7 +77,9 @@ namespace GameDev_Project2
 
                 case Character.Movement.Left:
 
-                    if (map.GetXY(C.GetX() - 1, C.GetY()).GetCurrentTileType() != Tile.TileType.Enemy && map.GetXY(C.GetX() - 1, C.GetY()).GetCurrentTileType() != Tile.TileType.Border && map.GetXY(C.GetX() - 1, C.GetY()).GetCurrentTileType() != Tile.TileType.Hero)
+
+                    if (map.GetXY(C.GetX() - 1, C.GetY() ).GetCurrentTileType() != Tile.TileType.Enemy && map.GetXY(C.GetX() - 1, C.GetY() ).GetCurrentTileType() != Tile.TileType.Border && map.GetXY(C.GetX() - 1, C.GetY()).GetCurrentTileType() != Tile.TileType.Mage)
+
                     {
 
                         map.GetXY(C.GetX(), C.GetY()).SetCurrentTileType(Tile.TileType.Empty);
@@ -102,7 +100,7 @@ namespace GameDev_Project2
 
                 case Character.Movement.Right:
 
-                    if (map.GetXY(C.GetX() + 1, C.GetY()).GetCurrentTileType() != Tile.TileType.Enemy && map.GetXY(C.GetX() + 1, C.GetY()).GetCurrentTileType() != Tile.TileType.Border && map.GetXY(C.GetX() + 1, C.GetY()).GetCurrentTileType() != Tile.TileType.Hero)
+                    if (map.GetXY(C.GetX() + 1, C.GetY()).GetCurrentTileType() != Tile.TileType.Enemy && map.GetXY(C.GetX() + 1, C.GetY()).GetCurrentTileType() != Tile.TileType.Border && map.GetXY(C.GetX() + 1, C.GetY()).GetCurrentTileType() != Tile.TileType.Mage)
                     {
                         map.GetXY(C.GetX(), C.GetY()).SetCurrentTileType(Tile.TileType.Empty);
                         C.SetX(C.GetX() + 1);
@@ -193,68 +191,90 @@ namespace GameDev_Project2
             //creates a random number for the specific enemy which creates a movies
             for (int i = 0; i < map.enemies.Length; i++)
             {
-                move = random.Next(0, 5);
 
-                switch (move)
+              move = random.Next(0, 5);
+                if (map.enemies[i].GetCurrentTileType() == Tile.TileType.Enemy)
+
                 {
-                    case 0:
-                        MoveEnemy(map.enemies[i], Character.Movement.NoMovement);
-                        break;
-
-                    case 1:
-
-                        MoveEnemy(map.enemies[i], Character.Movement.Up);
 
 
-                        break;
+                    switch (move)
+                    {
+                        case 0:
+                            MoveEnemy(map.enemies[i], Character.Movement.NoMovement);
+                            break;
 
-                    case 2:
+                        case 1:
 
-                        MoveEnemy(map.enemies[i], Character.Movement.Down);
-
-
-                        break;
-
-                    case 3:
-
-                        MoveEnemy(map.enemies[i], Character.Movement.Left);
+                            MoveEnemy(map.enemies[i], Character.Movement.Up);
 
 
+                            break;
 
-                        break;
+                        case 2:
 
-                    case 4:
+                            MoveEnemy(map.enemies[i], Character.Movement.Down);
 
 
-                        MoveEnemy(map.enemies[i], Character.Movement.Right);
+                            break;
 
-                        break;
+                        case 3:
 
-                    default:
+                            MoveEnemy(map.enemies[i], Character.Movement.Left);
 
-                        break;
+
+
+                            break;
+
+                        case 4:
+
+
+                            MoveEnemy(map.enemies[i], Character.Movement.Right);
+
+
+                            break;
+
+                        default:
+
+                            break;
+                    }
                 }
 
+                EnemyAttacks(map.enemies[i]);
             }
 
 
 
-            EnemyAttacks();
+
+
         }
 
-        // allows the enemies to attack to attack the player
-        public void EnemyAttacks()
+       // allows the enemies to attack to attack the player
+       
+        public void EnemyAttacks(Character C) 
         {
-            for (int i = 0; i < map.enemies.Length; i++)
-            {
-
-                if (map.enemies[i].CheckRange(map.enemies[i], map.hero) == true)
+           
+           
+                if (C.CheckRange(C, map.hero) == true)
                 {
-                    map.enemies[i].Attack(map.hero);
+                    C.Attack(map.hero);
+                    Console.WriteLine("true" );
+                }
+                else
+
+                {
+                    Console.WriteLine("false" );
                 }
 
-            }
+
+                 
+            
+                   
+          
+
         }
+            
+    
 
         public void Save()
         {
