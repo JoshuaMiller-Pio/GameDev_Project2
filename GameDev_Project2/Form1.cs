@@ -229,11 +229,21 @@ namespace  GameDev_Project2
                 }
 
                 //game crashes if if statment is not here
-                if (gameEngine.map.enemies.Length != 0)
+                if (i > gameEngine.map.enemies.Length )
                 {
-
+                    i= 0;
+                    
                      gameEngine.EnemyAttacks(gameEngine.map.enemies[i]);
+                    
                 }
+               
+                else if (i < gameEngine.map.enemies.Length)
+                {
+                     gameEngine.EnemyAttacks(gameEngine.map.enemies[i]);
+
+                }
+                    
+               
             }
             
                  updatemap();
@@ -250,8 +260,8 @@ namespace  GameDev_Project2
                // gameEngine.MoveEnemies(gameEngine.map.enemies[i]);
              
             }
+            gameEngine.GoldPickup();
             updatemap();
-            
             Updatestats();
 
         }
