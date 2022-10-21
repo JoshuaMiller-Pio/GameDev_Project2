@@ -13,5 +13,11 @@ namespace GameDev_Project2
 
         }
         public abstract override string ToString();
+        public string ToSaveString()
+        {
+
+            return String.Format("{0},", TileType.Gold);
+
+        }
     }
 }
